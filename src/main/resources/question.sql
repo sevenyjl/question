@@ -13,10 +13,10 @@
 
  Date: 11/10/2021 23:23:47
 */
-create
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 create DATABASE IF NOT EXISTS `question`;
+use question;
 -- ----------------------------
 -- Table structure for question
 -- ----------------------------
