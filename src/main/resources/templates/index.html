@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <input v-model="searchWord" placeholder="关键词">
+    </div>
+    <div>
+        <div v-for="(item,index) in filterData" key="index">
+            <div v-show="editId!==item.id" style="white-space: pre-line;">
+                <div><span>{{item.id}}. {{item.title}}</span></div>
+                <div><span>{{item.options}}</span></div>
+                <div>
+                    <span>{{item.answer}}</span>
+                    <button @click="editId=item.id">编辑</button>
+                </div>
+            </div>
+            <div v-show="editId===item.id">
+                <div><span>题目：</span><textarea style="width: 100%" v-model="item.title"></textarea></div>
+                <div><span>选项：</span><textarea style="width: 100%" v-model="item.options"></textarea>
+                </div>
+                <div>
+                    <span>答案：</span><textarea style="width: 100%" v-model="item.answer"></textarea>
+                    <button @click="confirmEdit(index)">确定</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+<script th:inline="javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            searchWord: '',
+            list: /*[[${list}]]*/'Sebastian',
+            editId: -1,
+        },
+        methods: {
+            confirmEdit(index) {
+                this.editId = -9991
+                const that=this
+                axios({
+                    method:"post",
+                    url: "/question/update",
+                    data: that.list[index],
+                    header: {'Content-Type': 'application/json'}
+                })
+                    .then(res => {
+                        console.log('res=>', res);
+                    })
+            }
+        },
+        mounted() {
+        },
+        computed: {
+            filterData() {
+                const _this = this;
+                return this.list.filter((item) => item.title.search(_this.searchWord) > -1 || item.options.search(_this.searchWord) > -1)
+            },
+        },
+    });
+</script>
+</body>
+</html>
