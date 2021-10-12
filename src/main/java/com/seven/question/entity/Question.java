@@ -9,6 +9,7 @@ import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.Accessors;
 
 /**
  * <p>
@@ -21,6 +22,7 @@ import lombok.ToString;
 @TableName("question")
 @Getter
 @Setter
+@Accessors(chain = true)
 @ToString
 public class Question implements Serializable {
 
@@ -67,7 +69,7 @@ public class Question implements Serializable {
     /**
      * 题型
      */
-    private String qType;
+    private QuestionType qType;
 
     private boolean hideAnswer;
 
