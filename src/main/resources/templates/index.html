@@ -6,28 +6,39 @@
     <title>Title</title>
     <script type="text/javascript" src="/static/vue.min.js"></script>
     <script type="text/javascript" th:src="@{/static/axios.min.js}"></script>
+<!--    <script src="/static/markdown/lodash.js"></script>-->
+<!--    <script src="/static/markdown/marked.js"></script>-->
 </head>
 <body>
+
 <div id="app">
     <div>
         <input v-model="searchWord" placeholder="关键词">
     </div>
     <div>
         <div v-for="(item,index) in filterData" key="index">
-            <div v-show="editId!==item.id" style="white-space: pre-line;">
-                <div><span>{{item.id}}. {{item.title}}</span></div>
+            <div v-show="editId!==item.id" style="white-space: pre;">
+                <div><span style="font-weight:bold">{{item.id}}. {{item.title}}</span></div>
                 <div><span>{{item.options}}</span></div>
                 <div>
-                    <span>{{item.answer}}</span>
-                    <button @click="editId=item.id">编辑</button>
+                    <span v-show="!item.hideAnswer">{{item.answer}}
+解析：<span>{{item.parsing}}</span>
+                        <button @click="item.hideAnswer=true">隐藏</button>
+                    </span>
+                    <span v-show="item.hideAnswer"><button @click="item.hideAnswer=false">显示答案</button></span>
                 </div>
+                <button @click="editId=item.id">编辑</button>
             </div>
             <div v-show="editId===item.id">
-                <div><span>题目：</span><textarea style="width: 100%" v-model="item.title"></textarea></div>
-                <div><span>选项：</span><textarea style="width: 100%" v-model="item.options"></textarea>
+                <div><span>题目：</span><textarea style="width: 100%;height: 100px" v-model="item.title"></textarea></div>
+                <div><span>选项：</span><textarea style="width: 100%;height: 100px" v-model="item.options"></textarea>
                 </div>
                 <div>
                     <span>答案：</span><textarea style="width: 100%" v-model="item.answer"></textarea>
+                    <span>解析：</span><textarea style="width: 100%;height: 100px" v-model="item.parsing"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" v-model="item.hideAnswer">是否隐藏答案
                     <button @click="confirmEdit(index)">确定</button>
                 </div>
             </div>
@@ -46,9 +57,9 @@
         methods: {
             confirmEdit(index) {
                 this.editId = -9991
-                const that=this
+                const that = this
                 axios({
-                    method:"post",
+                    method: "post",
                     url: "/question/update",
                     data: that.list[index],
                     header: {'Content-Type': 'application/json'}
