@@ -1,43 +1,59 @@
 package com.seven.question.config;
- 
-import com.alibaba.fastjson.JSON;
+
+import com.baomidou.mybatisplus.core.metadata.TableInfoHelper;
+import com.seven.question.entity.Question;
+import com.seven.question.utils.SqlUtil;
+
+import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.cache.CacheKey;
 import org.apache.ibatis.executor.Executor;
+import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.ParameterMapping;
+import org.apache.ibatis.mapping.ParameterMode;
 import org.apache.ibatis.mapping.ResultMap;
 import org.apache.ibatis.plugin.*;
+import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.scripting.xmltags.DynamicContext;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
-import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
+import org.springframework.util.ResourceUtils;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
- 
+
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.io.FileUtil;
+
 /**
  * Created by PG on 2016/12/26.
  */
 @Intercepts(value = {
-        @Signature(type = Executor.class,
-                method = "update",
-                args = {MappedStatement.class, Object.class}),
-        @Signature(type = Executor.class,
-                method = "query",
-                args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class,
-                        CacheKey.class, BoundSql.class}),
-        @Signature(type = Executor.class,
-                method = "query",
-                args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})})
+    @Signature(type = Executor.class,
+        method = "update",
+        args = {MappedStatement.class, Object.class}),
+    @Signature(type = Executor.class,
+        method = "query",
+        args = {
+            MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class,
+            CacheKey.class, BoundSql.class
+        }),
+    @Signature(type = Executor.class,
+        method = "query",
+        args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})
+})
 @Component
 public class SqlInterceptor implements Interceptor {
-    private static final Logger logger = Logger.getLogger(SqlInterceptor.class);
- 
+
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
         Object target = invocation.getTarget();
@@ -49,79 +65,38 @@ public class SqlInterceptor implements Interceptor {
             result = invocation.proceed();
             long end = System.currentTimeMillis();
             final Object[] args = invocation.getArgs();
- 
+
             //获取原始的ms
             MappedStatement ms = (MappedStatement) args[0];
             String commandName = ms.getSqlCommandType().name();
-            String name = method.getName();
-            if(commandName.startsWith("INSERT")){
-               name+="=新增";
-            }else if(commandName.startsWith("UPDATE")){
-                name+="=修改";
-            }else if(commandName.startsWith("DELETE")){
-                name+="=删除";
-            }else if(commandName.startsWith("SELECT")){
-                name+="=查询";
+            String sql = "";
+            if (commandName.equals("UPDATE")) {
+                MapperMethod.ParamMap<?> parameterObject = (MapperMethod.ParamMap<?>) args[1];
+                Object param1 = parameterObject.get("param1");
+                BoundSql boundSql = ms.getBoundSql(parameterObject);
+                List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
+                Configuration cg = TableInfoHelper.getTableInfo(param1.getClass()).getConfiguration();
+
+                sql = SqlUtil.getUpdateSql(param1, cg, boundSql, parameterMappings);
+            } else if (commandName.equals("INSERT")) {
+                Object arg = args[1];
+                sql = SqlUtil.getOneSql(arg);
             }
-            String message = "[SqlInterceptor] execute [" + name + "] cost [" + (end - start) + "] ms";
-            StringBuffer stringBuffer = new StringBuffer();
-            stringBuffer.append(message);
-            stringBuffer.append("\n");
- 
-            Object parameterObject = args[1];
-            BoundSql boundSql = ms.getBoundSql(parameterObject);
-            String sql = boundSql.getSql();
-            List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
-            String parameterObjects = JSON.toJSONString(boundSql.getParameterObject());
- 
- 
- 
-            String id = ms.getId();
-            stringBuffer.append("id="+id);
-            stringBuffer.append("\r\n");
- 
-             stringBuffer.append("sql="+sql);
-            stringBuffer.append("\n");
- 
-            stringBuffer.append("parameterMappings="+parameterMappings);
-            stringBuffer.append("\n");
- 
-            stringBuffer.append("parameterObjects="+parameterObjects);
-            stringBuffer.append("\n");
-           // stringBuffer.append("result="+result);
-            if(result!=null) {
-                if (result instanceof List) {
-                    stringBuffer.append("result=" + ((List) result).size());
-                } else if (result instanceof Collection) {
-                    stringBuffer.append("result=" + ((Collection) result).size());
-                } else {
-                    stringBuffer.append("result=" + 1);
-                }
-            }else{
-                stringBuffer.append("result=NULL");
-            }
-            stringBuffer.append("\n");
-           logger.warn(stringBuffer.toString());
-            //数组可能为空
-            // ParameterMapping mapping = boundSql.getParameterMappings().get(0);
-            // Configuration configuration = ms.getConfiguration();
-            //  DynamicContext context = new DynamicContext(configuration, parameterObject);
-            //   String originSql = context.getSql();
-            //  System.out.println("@@@@originSql:"+originSql);
+            String userDir = System.getProperty("user.dir");
+            String updatePath = userDir + "\\src\\main\\resources\\sql\\question_" + DateUtil.format(new Date(),
+                "yyyy-MM-DD") + "update.sql";
+            FileUtil.appendUtf8String(sql, updatePath);
         }
         return result;
     }
- 
+
     @Override
     public Object plugin(Object target) {
         return Plugin.wrap(target, this);
     }
- 
+
     @Override
     public void setProperties(Properties properties) {
- 
-    }
-    public static void main(String args[]){
-        System.out.println("你好\n我不好");
+
     }
 }
