@@ -6,14 +6,20 @@
     <title>Title</title>
     <script type="text/javascript" src="/static/vue.min.js"></script>
     <script type="text/javascript" th:src="@{/static/axios.min.js}"></script>
-<!--    <script src="/static/markdown/lodash.js"></script>-->
-<!--    <script src="/static/markdown/marked.js"></script>-->
+    <!--    <script src="/static/markdown/lodash.js"></script>-->
+    <!--    <script src="/static/markdown/marked.js"></script>-->
 </head>
 <body>
 
 <div id="app">
     <div>
         <input v-model="searchWord" placeholder="关键词">
+        <button v-show="filterMap.hideAnswer" @click="filterMap.hideAnswer=false">显示所有答案</button>
+        <button v-show="!filterMap.hideAnswer" @click="filterMap.hideAnswer=true">隐藏所有答案</button>
+        <button v-show="!filterMap.likeable" @click="filterMap.likeable=true">我的收藏</button>
+        <button v-show="filterMap.likeable" @click="filterMap.likeable=''">取消我的收藏</button>
+        <button v-show="!filterMap.doubtful" @click="filterMap.doubtful=true">我的存疑</button>
+        <button v-show="filterMap.doubtful" @click="filterMap.doubtful=''">取消我的存疑</button>
     </div>
     <div>
         <div v-for="(item,index) in filterData" key="index">
@@ -42,6 +48,12 @@
                     <button @click="confirmEdit(index)">确定</button>
                 </div>
             </div>
+            <div>
+                <button v-show="!item.likeable" @click="editLikeable(index)">收藏</button>
+                <button v-show="item.likeable" @click="editLikeable(index)">不收藏</button>
+                <button v-show="!item.doubtful" @click="editDoubtful(index)">存疑</button>
+                <button v-show="item.doubtful" @click="editDoubtful(index)">取消存疑</button>
+            </div>
             <hr>
         </div>
     </div>
@@ -50,11 +62,44 @@
     var vm = new Vue({
         el: '#app',
         data: {
+            filterMap: {hideAnswer: true, likeable: '', doubtful: ''},
             searchWord: '',
             list: /*[[${list}]]*/'Sebastian',
             editId: -1,
         },
         methods: {
+            editLikeable(index) {
+                const id = this.filterData[index].id
+                const likeable = !this.filterData[index].likeable;
+                this.filterData[index].likeable = likeable;
+                axios({
+                    method: "post",
+                    url: "/question/update",
+                    data: {
+                        id: id,
+                        likeable: likeable
+                    },
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    console.log('res=>', res);
+                })
+            },
+            editDoubtful(index) {
+                const id = this.filterData[index].id
+                const doubtful = !this.filterData[index].doubtful;
+                this.filterData[index].doubtful = doubtful;
+                axios({
+                    method: "post",
+                    url: "/question/update",
+                    data: {
+                        id: id,
+                        doubtful: doubtful
+                    },
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    console.log('res=>', res);
+                })
+            },
             confirmEdit(index) {
                 this.editId = -9991
                 const that = this
@@ -63,10 +108,9 @@
                     url: "/question/update",
                     data: that.list[index],
                     header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    console.log('res=>', res);
                 })
-                    .then(res => {
-                        console.log('res=>', res);
-                    })
             }
         },
         mounted() {
@@ -77,6 +121,23 @@
                 return this.list.filter((item) => item.title.search(_this.searchWord) > -1 || item.options.search(_this.searchWord) > -1)
             },
         },
+        watch: {
+            filterMap: {//深度监听，可监听到对象、数组的变化
+                handler(val, oldVal) {
+                    const that = this;
+                    console.log(val, oldVal);
+                    axios({
+                        method: "get",
+                        url: "/question/list?hideAnswer=" + val.hideAnswer + "&likeable=" + val.likeable + "&doubtful=" + val.doubtful,
+                        header: {'Content-Type': 'application/json'}
+                    }).then(res => {
+                        console.log(that.list, res.data);
+                        that.list = res.data;
+                    })
+                },
+                deep: true //true 深度监听
+            }
+        }
     });
 </script>
 </body>
