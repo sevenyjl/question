@@ -71,6 +71,8 @@ public class Question implements Serializable {
      */
     private QuestionType qType;
 
-    private boolean hideAnswer;
+    private Boolean hideAnswer;
+    private Boolean likeable;
+    private Boolean doubtful;
 
 }
