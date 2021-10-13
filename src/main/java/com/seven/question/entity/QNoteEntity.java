@@ -1,7 +1,9 @@
 package com.seven.question.entity;
 
 import cn.hutool.json.JSONUtil;
+
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
@@ -34,7 +36,7 @@ public class QNoteEntity {
             if (chars[i] >= 'A' && chars[i] <= 'K') {
                 stringBuilder.append(aChar);
             } else if (chars[i] > 127) {
-//                System.out.println(aChar + "=" + (int) (aChar));
+                //                System.out.println(aChar + "=" + (int) (aChar));
                 break;
             } else {
                 System.err.println("解析可能错误：`" + aChar + "`");
@@ -54,12 +56,14 @@ public class QNoteEntity {
             throw new RuntimeException("没有选择的答案，解析错误：" + titleTemp);
         }
         return new Question()
-                .setAnswer(stringBuilder.toString())
-                .setTitle(titleTemp.substring(0, options - 1))
-                .setOptions(titleTemp.substring(options - 1))
-                .setOriginalInformation(content)
-                .setQType(stringBuilder.length() == 1 ? QuestionType.SINGLE_CHOICE : QuestionType.MULTI_CHOICE)
-                .setHideAnswer(true);
+            .setAnswer(stringBuilder.toString())
+            .setTitle(titleTemp.substring(0, options - 1))
+            .setOptions(titleTemp.substring(options - 1))
+            .setOriginalInformation(content)
+            .setQType(stringBuilder.length() == 1 ? QuestionType.SINGLE_CHOICE : QuestionType.MULTI_CHOICE)
+            .setHideAnswer(true)
+            .setDoubtful(true)
+            .setLikeable(false);
     }
 
 }
