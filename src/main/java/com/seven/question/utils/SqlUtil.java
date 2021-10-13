@@ -13,12 +13,21 @@ import org.apache.ibatis.mapping.ParameterMode;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.RowBounds;
+import org.springframework.util.ResourceUtils;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
+import cn.hutool.core.date.DateUtil;
+
 public class SqlUtil {
+
+
     public static String getOneSql(Object parameterObject){
 
         TableInfo tableInfo = SqlHelper.table(parameterObject.getClass());
@@ -30,7 +39,7 @@ public class SqlUtil {
         // TODO: 2021/10/13 这里可以用拦截器了
         StatementHandler handler = configuration.newStatementHandler(null , mappedStatement,parameterObject, RowBounds.DEFAULT, null, null);
         BoundSql boundSql = handler.getBoundSql();
-        String sql = boundSql.getSql();
+        // String sql = boundSql.getSql();
 
         ErrorContext.instance().activity("setting parameters").object(mappedStatement.getParameterMap().getId());
         List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
@@ -43,6 +52,38 @@ public class SqlUtil {
 //            sql = sql.substring(0, index) + ",id" + sql.substring(index);
 //        }
 
+        return getInertSql(parameterObject, configuration, boundSql, parameterMappings);
+    }
+
+    public static String getUpdateSql(Object parameterObject, Configuration configuration, BoundSql boundSql, List<ParameterMapping> parameterMappings) {
+        String sql = boundSql.getSql();
+        if (parameterMappings != null) {
+            for (int i = 0; i < parameterMappings.size(); i++) {
+                ParameterMapping parameterMapping = parameterMappings.get(i);
+                if (parameterMapping.getMode() != ParameterMode.OUT) {
+                    Object value;
+                    String propertyName = parameterMapping.getProperty();
+                    if (boundSql.hasAdditionalParameter("_parameter."+propertyName)) {
+                        value = boundSql.getAdditionalParameter("_parameter."+propertyName);
+                    } else if (parameterObject == null) {
+                        value = null;
+                    } else {
+                        MetaObject metaObject = configuration.newMetaObject(parameterObject);
+                        value = metaObject.getValue(propertyName);
+                    }
+
+                    sql = sql.replace("\n","");
+                    sql = sql.replaceFirst("\\?",valueType(value));
+
+                }
+            }
+        }
+        sql = sql + ";\n";
+        //        System.out.println(sql);
+        return sql;
+    }
+    public static String getInertSql(Object parameterObject, Configuration configuration, BoundSql boundSql, List<ParameterMapping> parameterMappings) {
+        String sql = boundSql.getSql();
         if (parameterMappings != null) {
             for (int i = 0; i < parameterMappings.size(); i++) {
                 ParameterMapping parameterMapping = parameterMappings.get(i);
@@ -65,7 +106,7 @@ public class SqlUtil {
             }
         }
         sql = sql + ";\n";
-//        System.out.println(sql);
+        //        System.out.println(sql);
         return sql;
     }
 
