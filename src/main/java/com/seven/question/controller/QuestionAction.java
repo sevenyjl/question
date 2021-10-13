@@ -10,6 +10,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.seven.question.entity.QNoteEntity;
 import com.seven.question.utils.QNoteUtils;
 import com.seven.question.utils.SqlUtil;
+
 import org.springframework.ui.Model;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
@@ -48,8 +49,8 @@ public class QuestionAction {
     private QuestionService questionService;
 
     @GetMapping("index")
-    public String index(@RequestParam(required = false) boolean hideAnswer, Model model) {
-
+    public String index(
+        @RequestParam(required = false) boolean hideAnswer, Model model) {
         List<Question> list = questionService.list();
         if (hideAnswer) {
             list.forEach(s -> s.setHideAnswer(true));
@@ -58,20 +59,28 @@ public class QuestionAction {
         return "index";
     }
 
+    @GetMapping("list")
+    @ResponseBody
+    public ResponseEntity list(
+        @RequestParam(required = false) boolean hideAnswer,
+        @RequestParam(required = false) Boolean likeable,
+        @RequestParam(required = false) Boolean doubtful) {
+        QueryWrapper<Question> questionQueryWrapper = new QueryWrapper<>();
+        if (likeable != null) {
+            questionQueryWrapper.lambda().eq(Question::getLikeable, likeable);
+        }
+        if (doubtful != null) {
+            questionQueryWrapper.lambda().eq(Question::getDoubtful, doubtful);
+        }
+        List<Question> list = questionService.list(questionQueryWrapper);
+        list.forEach(s -> s.setHideAnswer(hideAnswer));
+        return new ResponseEntity(list, HttpStatus.OK);
+    }
+
     @PostMapping("update")
     @ResponseBody
     public ResponseEntity update(@RequestBody Question question) {
-        System.out.println(SqlUtil.getOneSql(question));
-//        questionService.updateById(question);
-//        try {
-//            File file = ResourceUtils.getFile("classpath:sql");
-//            String updatePath = file.getCanonicalPath() + "//question_" + DateUtil.format(new Date(), "yyyy-MM-DD") + "update.sql";
-//            System.out.println(updatePath);
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        questionService.updateById(question);
         return new ResponseEntity(HttpStatus.OK);
     }
 
