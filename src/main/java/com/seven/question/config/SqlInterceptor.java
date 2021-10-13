@@ -76,16 +76,13 @@ public class SqlInterceptor implements Interceptor {
                 BoundSql boundSql = ms.getBoundSql(parameterObject);
                 List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
                 Configuration cg = TableInfoHelper.getTableInfo(param1.getClass()).getConfiguration();
-
                 sql = SqlUtil.getUpdateSql(param1, cg, boundSql, parameterMappings);
-            } else if (commandName.equals("INSERT")) {
-                Object arg = args[1];
-                sql = SqlUtil.getOneSql(arg);
+                SqlUtil.writeSql(sql);
             }
-            String userDir = System.getProperty("user.dir");
-            String updatePath = userDir + "\\src\\main\\resources\\sql\\question_" + DateUtil.format(new Date(),
-                "yyyy-MM-DD") + "update.sql";
-            FileUtil.appendUtf8String(sql, updatePath);
+            // else if (commandName.equals("INSERT")) {
+            //     Object arg = args[1];
+            //     sql = SqlUtil.getOneSql(arg);
+            // }
         }
         return result;
     }
