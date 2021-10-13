@@ -89,6 +89,7 @@ public class QuestionAction {
     public ResponseEntity update(@RequestBody List<QNoteEntity> qNoteEntities) {
         List<Question> collect = qNoteEntities.stream().map(QNoteEntity::pares2Question).collect(Collectors.toList());
         questionService.saveBatch(collect);
+        SqlUtil.writeSql(SqlUtil.getListSql(collect));
         return new ResponseEntity(HttpStatus.OK);
     }
 
