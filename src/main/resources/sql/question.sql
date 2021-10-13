@@ -18,7 +18,7 @@ SET NAMES utf8mb4;
 SET
 FOREIGN_KEY_CHECKS = 0;
 creat
-datebase if not exists question;
+create DATABASE if not exists question;
 use
 question;
 
