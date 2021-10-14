@@ -135,6 +135,7 @@ public class SqlUtil {
                 return "'" + value.toString()
                     .replace("?", "？")
                     .replace("\\", "\\\\\\\\")
+                    .replace("\n","\\\\n")
                     .replace("'", "\\\\'")
                     .replace("\"", "\\\\\"") + "'";
             } else if (valueType.equals(int.class) || valueType.equals(Integer.class)) {
@@ -146,7 +147,7 @@ public class SqlUtil {
             } else if (valueType.equals(java.util.Date.class)) {
                 return "'" + value.toString() + "'";
             } else if (valueType.equals(boolean.class) || valueType.equals(Boolean.class)) {
-                return (Boolean.parseBoolean(valueType.toString())) ? 0 + "" : 1 + "";
+                return (Boolean.parseBoolean(valueType.toString())) ? 1+ "" : 0 + "";
             } else if (valueType.equals(double.class) || valueType.equals(Double.class)) {
                 return value.toString();
             } else if (valueType.equals(float.class) || valueType.equals(Float.class)) {
