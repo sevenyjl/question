@@ -20,9 +20,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 
 /**
@@ -46,6 +48,34 @@ public class QuestionAction {
         // List<Question> list = page.getRecords();
         // model.addAttribute("list", list);
         return "index";
+    }
+
+    @GetMapping("exams")
+    public String exams(Model model) {
+        // Page<Question> page = questionService.page(new Page<>(0, 5));
+        // List<Question> list = page.getRecords();
+        // model.addAttribute("list", list);
+        return "exams";
+    }
+
+    @GetMapping("listExams")
+    @ResponseBody
+    public ResponseEntity listExams(@RequestParam() String subject) {
+        QueryWrapper<Question> questionQueryWrapper = new QueryWrapper<>();
+        if (StrUtil.isNotEmpty(subject) && !"综合随机".equals(subject)) {
+            questionQueryWrapper.lambda().eq(Question::getSubject, subject);
+        }
+        List<Question> list = questionService.list(questionQueryWrapper);
+        ArrayList<Question> result = new ArrayList<>();
+        list.sort((o1, o2) -> RandomUtil.randomInt(-10, 10));
+        for (Question question : list) {
+            if (result.size() != 50) {
+                result.add(question);
+            } else {
+                return new ResponseEntity(result, HttpStatus.OK);
+            }
+        }
+        return new ResponseEntity(result, HttpStatus.OK);
     }
 
     @GetMapping("list")
@@ -76,6 +106,18 @@ public class QuestionAction {
         return new ResponseEntity(page, HttpStatus.OK);
     }
 
+    @GetMapping("listSubject")
+    @ResponseBody
+    public ResponseEntity listSubject() {
+        ArrayList<String> subject = new ArrayList<>();
+        subject.add("科目1");
+        subject.add("科目2");
+        subject.add("科目3");
+        subject.add("科目4");
+        subject.add("综合随机");
+        return new ResponseEntity(subject, HttpStatus.OK);
+    }
+
     @PostMapping("update")
     @ResponseBody
     public ResponseEntity update(@RequestBody Question question) {
@@ -91,6 +133,8 @@ public class QuestionAction {
             question.setQType(
                 question.getAnswer().length() == 1 ? QuestionType.SINGLE_CHOICE : QuestionType.MULTI_CHOICE);
         }
+        question.setDoubtful(question.getDoubtful() == null || question.getDoubtful());
+        question.setLikeable(question.getLikeable() == null || question.getLikeable());
         questionService.save(question);
         return new ResponseEntity(HttpStatus.OK);
     }
@@ -104,4 +148,68 @@ public class QuestionAction {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    @GetMapping("answer")
+    @ResponseBody
+    public ResponseEntity answer(@RequestParam int id, @RequestParam String answered) {
+        Question byId = questionService.getById(id);
+        if (byId != null) {
+            if (byId.getAnswer().length() == answered.length()) {
+                String[] split = byId.getAnswer().split("");
+                for (String s : answered.split("")) {
+                    boolean isMatch = false;
+                    for (String s1 : split) {
+                        if (s1.equalsIgnoreCase(s)) {
+                            isMatch = true;
+                            break;
+                        }
+                    }
+                    if (!isMatch) {
+                        // 错误统计
+                        count(id, "error");
+                        return new ResponseEntity(false, HttpStatus.OK);
+                    }
+                }
+                count(id, "right");
+                return new ResponseEntity(true, HttpStatus.OK);
+            } else {
+                // 错误统计
+                count(id, "error");
+                return new ResponseEntity(false, HttpStatus.OK);
+            }
+        }
+        return new ResponseEntity("找不到对应数据", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    /**
+     * @param type error,right,doubted
+     * @return
+     */
+    @GetMapping("count")
+    @ResponseBody
+    public ResponseEntity count(@RequestParam int id, @RequestParam String type) {
+        Question byId = questionService.getById(id);
+        Question temp = new Question();
+        temp.setId(id);
+        if (byId != null) {
+            switch (type) {
+                case "error":
+                    int errorTimes = byId.getErrorTimes();
+                    temp.setErrorTimes(++errorTimes);
+                    break;
+                case "right":
+                    int rightTimes = byId.getRightTimes();
+                    temp.setRightTimes(++rightTimes);
+                    break;
+                case "doubted":
+                    int doubtedTimes = byId.getDoubtedTimes();
+                    temp.setDoubtedTimes(++doubtedTimes);
+                    break;
+                default:
+                    return new ResponseEntity("找不到对应数据", HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+            questionService.updateById(temp);
+            return new ResponseEntity(HttpStatus.OK);
+        }
+        return new ResponseEntity("找不到对应数据", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }
