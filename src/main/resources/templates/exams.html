@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/static/vue.min.js"></script>
+    <script type="text/javascript" th:src="@{/static/axios.min.js}"></script>
+</head>
+<body>
+<div id="app">
+    <div v-show="subjectNow==null">
+        <button v-for="item in subjectList" @click="subjectNow=item">{{item}}</button>
+    </div>
+    <div v-show="subjectNow!=null">
+        <button @click="subjectNow=null">重新选择科目</button>
+        <br>
+        <hr>
+        <div v-for="(item,index) in list" style="white-space: pre;">
+            <div><span style="font-weight:bold">{{index+1}}、{{item.title}}</span></div>
+            <div><span>{{item.options}}</span></div>
+            <div><input v-model="item.answered" placeholder="请输入答案">
+                <button @click="answer(item)">确定</button>
+                <button @click="doubted(item)">存疑</button>
+            </div>
+            <div v-show="!item.hideAnswer">
+                <div>
+                    <span v-show="item.isRight">{{item.answer}}</span>
+                </div>
+                <div>
+                    <span>解析：{{item.parsing}}</span>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+</body>
+<script th:inline="javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            subjectNow: null,
+            subjectList: [],
+            list: [],
+        },
+        methods: {
+            doubted(item) {
+                axios({
+                    method: "get",
+                    url: "/question/count?id=" + item.id + "&type=doubted",
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+
+                })
+            },
+            answer(item) {
+                const that = this;
+                axios({
+                    method: "get",
+                    url: "/question/answer?id=" + item.id + "&answered=" + item.answered,
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    item.isRight = res.data
+                })
+                item.hideAnswer = false
+                console.log(item)
+            },
+            listData() {
+                const that = this;
+                axios({
+                    method: "get",
+                    url: "/question/listExams?subject=" + that.subjectNow,
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    that.list = res.data;
+                })
+            },
+            listSubject() {
+                const that = this;
+                axios({
+                    method: "get",
+                    url: "/question/listSubject",
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    that.subjectList = res.data;
+                })
+            }
+        },
+        mounted() {
+            this.listSubject()
+        }, watch: {
+            subjectNow: {
+                handler(val, oldVal) {
+                    this.listData()
+                },
+            }
+        }
+    });
+</script>
+</html>
