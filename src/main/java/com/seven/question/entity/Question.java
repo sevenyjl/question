@@ -1,8 +1,8 @@
 package com.seven.question.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 
@@ -72,7 +72,17 @@ public class Question implements Serializable {
     private QuestionType qType;
 
     private Boolean hideAnswer;
+    /**
+     * 1 收藏；0 不收藏
+     */
     private Boolean likeable;
+    /**
+     * 1 存疑；0 不存疑
+     * 存疑表示，不确定答案，待资料验证
+     */
     private Boolean doubtful;
 
+    private int errorTimes;
+    private int rightTimes;
+    private int doubtedTimes;
 }
