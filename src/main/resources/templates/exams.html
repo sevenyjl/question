@@ -24,10 +24,13 @@
             </div>
             <div v-show="!item.hideAnswer">
                 <div>
-                    <span v-show="item.isRight">{{item.answer}}</span>
+                    <span>答案：{{item.answer}}</span>
                 </div>
                 <div>
                     <span>解析：{{item.parsing}}</span>
+                </div>
+                <div>
+                    <span>备注：{{item.remark}}</span>
                 </div>
             </div>
             <hr>
