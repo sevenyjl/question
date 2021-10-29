@@ -16,7 +16,11 @@
         <br>
         <hr>
         <div v-for="(item,index) in list" style="white-space: pre;">
-            <div><span style="font-weight:bold">{{index+1}}、{{item.title}}</span></div>
+            <div>
+                <span v-show="item.qtype=='SINGLE_CHOICE'">(单选)</span>
+                <span v-show="item.qtype=='MULTI_CHOICE'">(多选)</span>
+                <span style="font-weight:bold">{{index+1}}、{{item.title}}</span>
+            </div>
             <div><span>{{item.options}}</span></div>
             <div><input v-model="item.answered" placeholder="请输入答案">
                 <button @click="answer(item)">确定</button>
