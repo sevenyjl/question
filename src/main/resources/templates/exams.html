@@ -8,11 +8,17 @@
 </head>
 <body>
 <div id="app">
-    <div v-show="subjectNow==null">
-        <button v-for="item in subjectList" @click="subjectNow=item">{{item}}</button>
+    <div v-show="subjectCondition.subjectNow==null">
+        <button v-for="item in subjectList" @click="subjectCondition.subjectNow=item">{{item}}</button>
+        <span>最少正确数</span><input style="width: 50px" type="number" v-model="subjectCondition.right">
+        <span>最少错误数</span><input style="width: 50px" type="number" v-model="subjectCondition.error">
+        <span>最少质疑数</span><input style="width: 50px" type="number" v-model="subjectCondition.doubted">
     </div>
-    <div v-show="subjectNow!=null">
-        <button @click="subjectNow=null">重新选择科目</button>
+    <div v-show="subjectCondition.subjectNow!=null">
+        <button @click="subjectCondition.subjectNow=null">重新选择科目</button>
+        <span>最少正确数</span><input style="width: 50px" type="number" v-model="subjectCondition.right">
+        <span>最少错误数</span><input style="width: 50px" type="number" v-model="subjectCondition.error">
+        <span>最少质疑数</span><input style="width: 50px" type="number" v-model="subjectCondition.doubted">
         <br>
         <hr>
         <div v-for="(item,index) in list" style="white-space: pre;">
@@ -46,7 +52,12 @@
     var vm = new Vue({
         el: '#app',
         data: {
-            subjectNow: null,
+            subjectCondition: {
+                subjectNow: null,
+                error: 0,
+                right: 0,
+                doubted: 0,
+            },
             subjectList: [],
             list: [],
         },
@@ -76,7 +87,11 @@
                 const that = this;
                 axios({
                     method: "get",
-                    url: "/question/listExams?subject=" + that.subjectNow,
+                    url: "/question/listExams?subject=" + that.subjectCondition.subjectNow
+                        + "&error=" + that.subjectCondition.error
+                        + "&right=" + that.subjectCondition.right
+                        + "&doubted=" + that.subjectCondition.doubted
+                    ,
                     header: {'Content-Type': 'application/json'}
                 }).then(res => {
                     that.list = res.data;
@@ -96,10 +111,11 @@
         mounted() {
             this.listSubject()
         }, watch: {
-            subjectNow: {
+            subjectCondition: {
                 handler(val, oldVal) {
                     this.listData()
                 },
+                deep: true //true 深度监听
             }
         }
     });
