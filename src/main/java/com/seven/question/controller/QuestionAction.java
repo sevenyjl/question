@@ -60,10 +60,24 @@ public class QuestionAction {
 
     @GetMapping("listExams")
     @ResponseBody
-    public ResponseEntity listExams(@RequestParam() String subject) {
+    public ResponseEntity listExams(
+        @RequestParam() String subject,
+        @RequestParam(required = false) Integer error,
+        @RequestParam(required = false) Integer right,
+        @RequestParam(required = false) Integer doubted
+    ) {
         QueryWrapper<Question> questionQueryWrapper = new QueryWrapper<>();
         if (StrUtil.isNotEmpty(subject) && !"综合随机".equals(subject)) {
             questionQueryWrapper.lambda().eq(Question::getSubject, subject);
+        }
+        if (error != null) {
+            questionQueryWrapper.lambda().ge(Question::getErrorTimes, error);
+        }
+        if (right != null) {
+            questionQueryWrapper.lambda().le(Question::getRightTimes, right);
+        }
+        if (doubted != null) {
+            questionQueryWrapper.lambda().ge(Question::getDoubtedTimes, doubted);
         }
         List<Question> list = questionService.list(questionQueryWrapper);
         ArrayList<Question> result = new ArrayList<>();
