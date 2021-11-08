@@ -28,12 +28,12 @@ class QuestionApplicationTests {
     @Test
     void sort() {
         int id = 1;
-        List<String> strings = FileUtil.readLines("E:\\aaa-project\\question\\src\\main\\resources\\sql\\question.sql", StandardCharsets.UTF_8);
+        List<String> strings = FileUtil.readLines("D:\\my\\question-master\\src\\main\\resources\\sql\\question.sql", StandardCharsets.UTF_8);
         for (String string : strings) {
             String str = "INSERT INTO `question` VALUES (";
             int i = string.indexOf(str);
             if (i != -1) {
-                FileUtil.appendString(str + id + string.substring(string.indexOf(", '")) + "\n", "E:\\aaa-project\\question\\src\\main\\resources\\sql\\question2.sql", StandardCharsets.UTF_8);
+                FileUtil.appendString(str + id + string.substring(string.indexOf(", '")) + "\n", "D:\\my\\question-master\\src\\main\\resources\\sql\\question2.sql", StandardCharsets.UTF_8);
                 id++;
             }
         }

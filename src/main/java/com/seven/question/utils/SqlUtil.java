@@ -14,11 +14,7 @@ import org.apache.ibatis.mapping.ParameterMode;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.RowBounds;
-import org.springframework.util.ResourceUtils;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -32,7 +28,7 @@ public class SqlUtil {
     public static void writeSql(String sql) {
         String userDir = System.getProperty("user.dir");
         String updatePath = userDir + "\\src\\main\\resources\\sql\\question_" + DateUtil.format(new Date(),
-            "yyyy-MM-dd-hh") + "update.sql";
+            "yyyy-MM-dd-HH") + "update.sql";
         FileUtil.appendUtf8String(sql, updatePath);
     }
 

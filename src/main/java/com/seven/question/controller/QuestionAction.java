@@ -84,6 +84,7 @@ public class QuestionAction {
         list.sort((o1, o2) -> RandomUtil.randomInt(-10, 10));
         for (Question question : list) {
             if (result.size() != 50) {
+                question.setHideAnswer(true);
                 result.add(question);
             } else {
                 return new ResponseEntity(result, HttpStatus.OK);
@@ -205,6 +206,9 @@ public class QuestionAction {
         Question temp = new Question();
         temp.setId(id);
         if (byId != null) {
+            temp.setErrorTimes(byId.getErrorTimes());
+            temp.setDoubtedTimes(byId.getDoubtedTimes());
+            temp.setRightTimes(byId.getRightTimes());
             switch (type) {
                 case "error":
                     int errorTimes = byId.getErrorTimes();

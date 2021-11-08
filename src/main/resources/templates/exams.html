@@ -15,10 +15,13 @@
         <span>最少质疑数</span><input style="width: 50px" type="number" v-model="subjectCondition.doubted">
     </div>
     <div v-show="subjectCondition.subjectNow!=null">
-        <button @click="subjectCondition.subjectNow=null">重新选择科目</button>
+        <button @click="resetSubject">重新选择科目</button>
         <span>最少正确数</span><input style="width: 50px" type="number" v-model="subjectCondition.right">
         <span>最少错误数</span><input style="width: 50px" type="number" v-model="subjectCondition.error">
         <span>最少质疑数</span><input style="width: 50px" type="number" v-model="subjectCondition.doubted">
+        <span>未答题：{{count.noAnswerTime}}个</span>
+        <span>错误：{{count.errorTime}}个</span>
+        <span>正确：{{count.rightTime}}个</span>
         <br>
         <hr>
         <div v-for="(item,index) in list" style="white-space: pre;">
@@ -33,8 +36,11 @@
                 <button @click="doubted(item)">存疑</button>
             </div>
             <div v-show="!item.hideAnswer">
-                <div>
-                    <span>答案：{{item.answer}}</span>
+                <div v-show="item.isRight">
+                    <span style="color: green">答案：{{item.answer}}</span>
+                </div>
+                <div v-show="!item.isRight">
+                    <span style="color: red">答案：{{item.answer}}</span>
                 </div>
                 <div>
                     <span>解析：{{item.parsing}}</span>
@@ -58,30 +64,54 @@
                 right: 0,
                 doubted: 0,
             },
+            count: {
+                errorTime: 0,
+                rightTime: 0,
+                noAnswerTime: 50
+            },
             subjectList: [],
             list: [],
         },
         methods: {
+            resetSubject() {
+                this.subjectCondition.subjectNow = null;
+                this.count.noAnswerTime = 50;
+                this.count.rightTime = 0;
+                this.count.errorTime = 0;
+            },
             doubted(item) {
                 axios({
                     method: "get",
-                    url: "/question/count?id=" + item.id + "&type=doubted",
-                    header: {'Content-Type': 'application/json'}
+                    url: "/question/count?id=" + item.id + "&type=doubted"
                 }).then(res => {
 
                 })
             },
             answer(item) {
                 const that = this;
-                axios({
-                    method: "get",
-                    url: "/question/answer?id=" + item.id + "&answered=" + item.answered,
-                    header: {'Content-Type': 'application/json'}
-                }).then(res => {
-                    item.isRight = res.data
-                })
-                item.hideAnswer = false
-                console.log(item)
+                if (item.answered === '') {
+                    alert("请输入答案")
+                } else {
+                    axios({
+                        method: "get",
+                        url: "/question/answer?id=" + item.id + "&answered=" + item.answered
+                    }).then(res => {
+                        item.isRight = res.data
+                        that.count.noAnswerTime = 0;
+                        that.count.rightTime = 0;
+                        that.count.errorTime = 0;
+                        that.list.forEach(function (v, i) {
+                            if (v.isRight === undefined) {
+                                that.count.noAnswerTime++;
+                            } else if (v.isRight) {
+                                that.count.rightTime++;
+                            } else {
+                                that.count.errorTime++;
+                            }
+                        });
+                    })
+                    item.hideAnswer = false
+                }
             },
             listData() {
                 const that = this;
