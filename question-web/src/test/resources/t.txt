@@ -1,0 +1,1898 @@
+1、为了促进开源回馈被社区接纳，下述哪个行为不值得推荐(D)
+A.在社区邮件列表/issue列表里充分交流提交的方案，并根据意见反复修改
+B.在社区线下会议上介绍自己的方案，赢得社区的认可
+C.和社区维护者进行沟通，理解对方的规划思路
+D.由于社区一直未采纳提交补丁，自己在社区中fork一个新项目出来维护
+2、某产品在引入编译工具时，发现该编译工具中有调用Linux内核shadow加密功能，导致编译出的二进制有时间戳差异，应该如何消除这种差异(C)
+A.差异不解决，内核引起差异，不需要与认证机构、客户说明原因
+B.通过修改源代码方式解决
+C.使用辅助工具BepKit消除
+D.无需确认，直接删除该功能
+3、欺骗(Deception)是使用混淆和舞蹈手段干扰攻击者，比如部署蜜罐系统，以下哪个目录是通过欺骗无法达成的(A)
+A.将系统进行划分，以限制成功攻击的传播和损害
+B.消耗攻击者的攻击能力和时间，为联动防御或反制等提供时间差
+C.发现正在进行的攻击和潜在实施的攻击
+D.为反击取证和提供支撑
+4、二叉树的第k层（根为第一层）的节点数最多为()(C)
+A.2的k次方-1
+B.2k-1
+C.2的k-1次方
+D.2k+1
+5、以下几种不同的隐私保护技术中，对数据进行加躁处理，用于匿名数据收集和统计分析方法是()(A)
+A.差分隐私
+B.枚举
+C.截断
+D.掩码
+6、给定一颗含有N个节点的红黑树，在最坏的情况下，红黑树的删除节点操作的时间复杂度是()(D)
+A.O(N^1/2)
+B.O(N)
+C.O(N^2)
+D.O(logN)
+7、关于软件工程，以下说法错误的是(B)
+A.软件工程发展的目的就是希望找到合适的方法和技术适用软件系统
+B.软件工程仅指实现软件生产开发的活动序列
+C.软件工程是一门研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科，它涉及程序设计语言、数据库、软件开发工具、系统平台、标准、设计模式灯方面
+D.软件工程的目的是支持专业化的软件开发、而不仅仅是个人编程
+8、已知一颗7层完全二叉树的第6层（设根为第1层）有7个叶节点，则该完全二叉树的节点个数最多是()(A)
+A.113
+B.120
+C.51
+D.38
+9、下面关于系统之系统描述错误的是(D)
+A.系统之系统中的系统的不同部分可分别对应不同的管理和控制策略和规则
+B.系统之系统中并不存在一个对系统各个部分进行管理的管理者
+C.系统之系统是两个或以上独立管理和治理的系统的集合
+D.系统之系统不可能是最小规模系统，如包含不同提供商提供的服务的较小的系统，大规模系统经常是系统之系统
+10、关于过载控制设计原则，下列说法错误的是(B)
+A.自保恢复原则：负荷下降到设计能力范围之内后，网元可以立即恢复处理能力
+B.业务保证原则：确保在出现大流量冲击时所有业务不被丢弃
+C.及早控制原则：应尽可能在业务流程处理前端或业务处理较早的处理单元（网元/单板/芯片等）或底层协议层次上控制业务接入
+D.优先级保证原则：系统过载时保证高优先级的业务能够优先获得资源，优先得到处理
+11、gcc编译器中，动态链接的ELF二进制程序使用称为全局偏移表(GOT)的查找表去动态编译位于共享库中的函数，那么GOT表全局保护选项的正确写法是？(C)
+A. -relro,-z,now
+B.-Wl,-z,relro
+C,-Wl,-z,relro,-z,now
+D.-Wl,-z,now
+12、故障隔离技术的核心思想是降低故障影响范围，防止产生（）(A)
+A.级联故障
+B.随机故障
+C.间歇性故障
+D.单点故障
+13、以下描述关于网络韧性工程的架构/技术的描述错误的是(C)
+A.非持久性是在有限的时间内保留信息、服务和连接，从而减少攻击者利用漏洞并建立持久立足点的机会
+B.权限限制是指根据关键性和信任模型，限制使用网络资源所需的权限，以及分配给用户和网络实体的权限，以最大限度的减少对手活动的潜在后果
+C.多样性使用异构技术（例如 硬件、软件、固件、协议），这样增加了网络建设的成本，运维的难度，是不可取的
+D.分割可以根据系统的重要级别进行划分，以限制成功攻击的传播或损害
+14、有如下一个类似调表的数据结构，每层都是已经排好序的链表，level1层的链表有所有元素，levelN层的链表只有level N-1的一般元素，level N层的节点指向levelN-1层中相同的节点，现在要查找32，需要经过的比较次数是(B)
+http://image.huawei.com/tiny-lts/v1/images/2ff0026cc77e30a82cd3_554x297.jpg@900-0-90-f.jpg
+A.6
+B.5
+C.4
+D.3
+15、关于冗余设计，下面说法错误的是(B)
+A.主用单元和备用单元的故障检测率都直接影响冗余系统可用度
+B.系统的冗余设计是硬件独立完成的，与软件关系不大
+C.电信产品要求具备高可用性，但同时也需要考虑成本等多方面的因素，所有冗余设计并不是使用的越多越好
+D.资源池冗余设计中要考虑负载均衡
+16、以下哪个选项开启后，编译器会将编译告警视为错误？(C)
+A.-Wextra
+B.-Wall
+C.-Werror
+D.-Wformat
+17、在开源软件引入选型中，以下哪项符合候选软件的引入要求？(C)
+A.ADAPDX master
+B.Apache Struts 1.1rc2
+C.cryptojs 3.19
+D.Apache ZooKeeper 3.5.4-beta
+18、某特性设计文档已经在DBOX（文档管理系统）完成基线，由于特性接口需要变更，那么该特性设计文档应如何处理(A)
+A.根据实际的特性接口变更规则，通过便跟过流程更新已基线的特性设计文档
+B.更新特性设计文档，更新后的设计文档归档在小名工作电脑的专属文件夹，并共享给相关模块的开发工程师进行参考
+C.由于特性设计文档不参与版本构建，所以特性设计文档没有人查阅，不用更新
+D.由于该特性设计文档已经基线，所以不能更新
+19: 下列递归算法中，f(10)调用了函数f()多少次？(C)
+Int f(int x){
+    if (x<=2)
+    return 1;
+    return f(x-2)+f(x-4)+1;
+}
+A.20
+B.25
+C.15
+D.10
+20、对于下列关键字序列，不可能构成某二叉排序树中一条查找路径的序列是()(D)
+A.92,20,91,34,88,35
+B.12,25,71,68,33,34
+C.21,89,77,29,36,38
+D.95,22,91,24,94,71
+21、关于每日站立会议，下面的()说法是错误的(B)
+A.站会的要求是高效，并且让每个人都集中精力
+B.Scrum Master应该对成员所描述的任务内容进行评价
+C.它是一个简短的团队会议，由所有团队成员在每天固定的时间和地点进行
+D.它不是一个汇报会议，而是开发团队内部的沟通会议，以便快速发现问题
+22、针对FOSSID上扫描出来的，和开源相似的代码，是否可以确认为自研，判断原则是什么？(A)
+A.判断原则是基于事实，编码前没阅读过开源代码编写出的代码可判定为自研，其他任何形式直接参考开源写的代码是属于开源
+B.判断原则是基于工具，如果FOSSID无法扫描出来，则都是自研代码
+C.判断原则是相似度，如果相似度很低，如低于5%可以判断为自研
+D.判断原则是基于目录结构，自研目录下的都是自研代码，open_source目录下都是开源软件
+23、20XX年XX月，某认证机构对华为产品软件版本的二进制一致性提出质疑，且该认证机构对华为产品软件的二进制一致性验证结论为不一致，未解决该问题，公司成立BEP（二进制一致性）项目组，关于BEP，下列说法错误的是(C)
+A.BepKit工具是为了提升二进制一致性差异消除的效率而开发的辅助工具
+B.BEP的目标是基于相同的源码、相同的环境，实现同一版本可重复构建，且构建结果完全一致
+C.差异识别即基于相同的环境、相同的源代码编译两次，对两次编译结果通过beyond compare进行比较，不完全一致即存在差异，由于时间戳引起的二进制一致性差异可以忽略
+D.直接比较产品软件源代码统一构建的最终结果（产品软件版本），一般无法解释所产生的差异，需要从源代码、编译过程，直到最终发布的二进制包逐层分析产生二进制一致性差异的原因
+24、工程师小A在工作中对开源软件进行了特性修改，他知道这个修改未来会成为负债，因此决定贡献给社区，以下哪个做法是提倡的做法？(A)
+A.遵循社区规则，及时提交社区讨论互动
+B.为了避免暴露公司员工的身份，用个人邮箱提交给社区
+C.若华为规范与社区规范冲突，认为华为的规范更加合理，提交过程保留了华为的规范要求
+D.为了抓紧特性修改被社区合入，未经评审往社区提交
+25、无向图G有12条边，6个3度定点，其余定点的度均小于3，则G中可以有()个顶点(ABC)
+A.9
+B.10
+C.11
+D.8
+26、某产品在进行源码交付时被认证机构认定为所集成的A平台源码无法溯源，经过确认发现了根源，产品经理小强通过文件夹共享方式获取到A平台的联调版本并集成了该版本，A平台二进制对应的源码信息未做基线，产品在正式发布版本仍然使用A平台该联调版本，源码交付后，认证机构经过验证发现A平台源码缺失，上述行为违背了哪些配置管理原则(ABCD)
+A.A平台二进制及源码没有进行配置标识及基线，导致源码缺失
+B.产品正式发布的版本应配套使用A平台的正式发布版本，不应使用A平台的联调版本
+C.联调版本没有通过联调版本发布流程发布，而是通过文件共享方式私下进行传递
+D.具备在任意时刻都能交付二进制对应的准确源代码的能力
+27、()与()需求是产品的质量属性之一，也是客户的基本诉求，产品需结合合规、准入及现网安全风险将其构筑在研发过程中(CD)
+A.最优惠的价格
+B.设备平稳运行
+C.网络安全
+D.隐私保护
+28、关于开源使用，下列说法错误的是(ABD)
+A.某产品开发一款仅给内部一线行销员工使用的APP，并上架华为手机应用市场开放下载（但必须华为员工账号产能登录使用），该AAPP通过静态编译方式使用了一款AGPL开源软件，由于只是内部一线行销员工才能登录使用，可以不需要履行开源义务
+B.公有云服务产品A通过静态链接的方式集成使用了license为GPL V2.0的开源软件，服务产品A可以不履行代码开源义务
+C.某员工在业余时间以个人名义，在github开源了X项目，该员工在公司办公环境下载该X项目代码集成到产品A中使用，产品A不需要履行开源义务
+D.产品A自研开发且对外开源XXComb软件，并捐献到Apache基金会成为顶级项目，产品B选用社区XXComb软件，仍应认定XXComb软件为自研软件
+29、已知一颗完全二叉树的第8层（设根为第1层）有10个叶节点，则该完全二叉树的节点个数可能有（）(BD)
+A.329
+B.137
+C.201
+D.491
+30、为了有效支撑事后审计，并向内部、外部客户证明研发过程风险是可控的，须准确记录所有参与软件研发环节的相关人员的信息和其交付件的信息，保证获取的上下游信息准确，需跟踪和记录的研发过程阶段有（）(ABCD)
+A.验证发布
+B.现网部署
+C.需求分析与设计
+D.软件编码与构建
+31、下面关于-fPIChe -fPIE -pie选项描述正确的是(AD)
+A.-fPIE -pie用于可执行程序
+B.两者作用相似可以互相替换
+C.-fPIC用于静态库
+D.-fPIC是编译选项
+32、有关第三方软件引入的评估标准，正确的是（）(BC)
+A. 已EOSS/即将停止销售的第三方软件不建议引入
+B. 业界无替代的第三方软件，可能存在供应风险
+C. 未签署供应商网络安全协议的软件禁止引入
+D. 供应商发布的软件正式版本，可以引入
+33、以下关于开源选型的说法，哪些是正确的(BD)
+A.铲平A使用一款tinyxml软件，内存分配和解析速度均可满足产品要求，且现网已稳定运行10+年，社区近期发布了tinyxml2，且社区也表示后续主要在tinyxml2上进行维护，其解析速度为tinyxml的5倍，但综合考虑升级成本及新版本的影响，产品确定继续使用tinyxml
+B.Json-lib软件社区2013年后社区已无人贡献，建议产品独臂Jackson、fastJson、Gson等同类软件，结合产品使用场景，选择生态、license较友好的开源软件
+C.XML解析开源软件SAX性能比Dom4j快10倍，SAX 2004年发布最后一个稳定版本，当前平均每周下载量34+次，对性能要求较高，且使用场景为只读不写（文件）的产品可以考虑选择此软件
+D.Log4j日志组件的作者2015年发布log4j2.X和logback；性能比log4j1.X高10倍，建议使用log4j1.X的产品考虑切换到log2.X或logback
+34、某电商公司的网站（单体应用，约100W行Java代码）的部署周期（需求提出到部署产品环境的时间）为4周（工作日20天），其中需求分析3天，开发时间为5天，测试人员手动进行功能测试时间为6天，环境准备和部署时间为4天，该公司为了提升自身竞争力，目标在半年内将部署周期降低到2周，以下哪些DevOps时间可以帮助该公司实现目标(ABC)
+A.功能测试自动化
+B.自动化部署
+C.软件开发过程引入敏捷、精益思维，最小化需求范围(MVP)
+D.微服务拆分
+35、为保证业务的正常运行，提高产品和解决方案的安全和韧性，可以从以下哪些方面进行设计？(ABCD)
+A.不利情况发生后恢复业务
+B.不利情况下维持核心业务
+C.限制不利情况发生时的损害
+D.降低攻击成功可能性
+36、下面的（）不是敏捷开发的基本原则(B)
+A.坚持不懈的追求技术卓越和良好设计
+B.严格遵循计划和流程
+C.尽早和持续的交付有价值软件
+D.要面对面进行交流
+37、一个软件通过柱状图、地图等多种方式显示铁路实时订票情况，该功能使用观察者模式实现的话，其中的观察者对象和被观察者（即主题）对象分别是什么(A)
+A.观察者是各个不同的显示视图，被观察者是铁路实时订票数据
+B.观察者是铁路实时订票数据，被观察者是各个不同的显示视图
+C.观察者是整个实时监控界面，被观察者是铁路实时订票数据
+D.观察者是铁路实时订票数据，被观察者是整个实时监控界面
+38、运维人员在对某电商网站进行手动升级后第二天发生线上事故，影响了整个西安地区的所有用户。接到用户投诉后，运维人员进行手动回滚，约1小时恢复正常。事后分析发现，事故的根本原因是代码逻辑存在问题，在特定数据（西安地区用户）的场景下，会出现错误，以下哪些实践可以有效减少或者防止类似问题出现(BDE)
+A.为增强团队对产品的敬畏心，防止类似事故出现，引发事故的产品经理，开发，测试已经实施变更运维人员全年绩效不得超过B+
+B.引入灰度发布，功能先对小范围用户开放，然后增量开放给其他用户
+C.引入自动化测试，减少测试人员手工测试可能导致的错误
+D.自动化产品的部署和回滚，降低失败对用户的影响时间
+E.预生产环境数据准备要接近生产环境，可以更好的针对生产环境数据进行验证
+39、以下哪一条是软件选课系统的质量需求，并且满足原子性要求？(A)
+A.用户规模不超过5千人时，登录密码验证时间不超过2秒，用户规模不超过2万人时，登录密码验证不超过5秒
+B.课程属性与学生专业属性不符时不允许选课
+C.系统应当在2018年9月1日之前上线部署运行
+D.系统可按照院系统计学生选课请款个，指定统计范围后1秒内返回统计结果
+40、故障预测预防设计，可采用哪些方法(AD)
+A.基于故障机理模型的故障预测
+B.基于代码的故障预测
+C.基于文档的故障预测
+D.基于数据驱动的故障预测
+41、某公司产品开发人员，功能实现时预留后门，在特定场景下可以绕过支付机制获利，并成功在商用版本中发布，可以通过哪项活动避免该问题出现(D)
+A.威胁建模
+B.软件包完整性保护
+C.设计架构审查
+D.代码检视
+42、对于个人数据保护，系统更应该提供一些技术机制，如下哪些属于匿名化技术(ABCD)
+A.截断：舍弃属性值的后几位信息来保证数据的模糊性
+B.置换：在表中某字段各记录的数据随机进行打乱(shuffling)
+C.掩码：将属性值的部分字符替换为固定的特殊字符（例如*）
+D.加噪：对原始数据增加一个随机值
+43、关于开源义务履行，下列说法错误的是(B)
+A.修改声明是指公司做出的对修改过的开源软件就修改时间，修改的代码以及修改过的文件做出的声明，但建议产品在修改GPL/LGPL类开源软件时，履行该义务
+B.不同该许可证的开源代码不存在兼容性问题（如GPL License与BDS License），只要申请后即可按规范使用
+C.代码对外开源义务是指按照开源许可证要求将一定范围内的代码对外开源，开源范围视具体许可证的要求和产品具体使用方式而定
+D.原则上只要使用了开源软件，就需要履行开源使用声明义务
+44、面向服务的方法的好处：(ABCD)
+A.服务提供商会公开服务的信息，任何获得授权的用户都可以使用相应服务
+B.组织内部或外部的服务提供商都可以提供服务
+C.服务的用户能根据使用而不是提供商提供的服务来付费
+D.应用能够延迟服务绑定直到这些服务被部署或执行
+45、基于威胁建模的测试设计方法需要在安全测试活动中哪个阶段使用？(B)
+A.动态分析和Fuzz测试
+B.测试方案设计
+C.总体测试策略
+D.静态分析
+46、假设每个三元组代表有向图中的一条边，其中元素分别表示边的起点、终点、权重，对于如下有向图：(1,2,1),(1,3,3),(1,4,5),(2,5,7),(4,5,4)，则节点1到节点5的最短路径权重之和为（）(B)
+A.7
+B.8
+C.10
+D.5
+47、下面的（）不是Scrum主管的职责(C)
+A.组织每日站立会议
+B.引导团队正确应用敏捷实践
+C.定义产品需求
+D.促进团队紧密协作
+48、FMEA(Failure Mode and Effects Analysis)是一种可靠性分析方法，FMEA分析过程中，我们常说的补偿措施，不包括以下哪个选项（）(C)
+A.通过负荷分担保护业务
+B.主备单板倒换
+C.现场更换单板
+D.自动复位单板
+49、关于“开放设计安全原则”，下面描述不正确的是（）(C)
+A.涉及加密算法选择时，多使用业界公开标准的成熟算法，而不要设计私有的，自以为安全可靠的算法
+B.设计不应该是秘密的，不应依赖对设计和实现的保密，以及攻击者的无知
+C.加密秘钥要公开开放
+D.密钥禁止硬编码
+50、来源可靠是开源及第三方软件管理的要求之一，如下软件来源一定可靠的是（）(B)
+A.Maven、npm、Pypi
+B.开源软件发布的官方网站，或官方指定的获取渠道
+C.GitHub
+D.华军软件园
+51、产品计划引入选型OpenSSL软件，下列说法正确的是(D)
+A.可以从任意网址下载OpenSSL源码包，只要扫描不出病毒
+B.修改的OpenSSL软件源码如果得到作者的认可，产品可以不用回馈社区直接引入选型OpenSSL
+C.从官网下载OpenSSL源码太麻烦，可以直接使用git命令下载github上的openssl源码
+D.openssl-fips是OpenSSL的一个分支开源的独立项目，应该以新软件的方式引入
+52、关于开源使用，如下描述错误的是(D)
+A.原则上，为区分自研与开源代码，确保使用和修改可追溯，开源修改的patch文件需要独立存放管理
+B.开源及第三方软件与自研代码独立存放，目录隔离，从该产品代码目录结构区分出open_source目录、vendor目录、code自研目录
+C.要求产品无代码片段引用，可借助FOSSID扫描工具辅助分析代码片段使用情况，并进行整改
+D.整包使用开源软件，版本名称可以根据产品版本定制命名
+53、小张是某产品的CME（配置管理工程），在产品的TR2评审会上，小张汇报了本阶段的配置项的基线情况，请问小张的工作属于配置管理的哪个活动(C)
+A.分支管理
+B.版本管理
+C.配置状态发布
+D.管理配置库
+54、在进行二进制文件差异消除时，需要根据不同的差异引入原因拟定差异消除方案进行业务功能性能测试，确保差异消除不影响业务功能和性能，下列差异消除方案哪一个是不合适的？(D)
+A.通过BepKit辅助消除python编译pyc文件时引入的时间差异
+B.为消除自验代码中时间宏引入的二进制差异，可以选择删除DATE/TIME宏，并测试删除后是否影响业务功能
+C.对于arj等压缩引入二进制差异的情况，可以通过反解的方式辅助进行差异消除
+D.gcc lto优化引入二进制差异，直接删除lto优化选项消除差异，无需对业务性能进行测试
+55、关于故障预测预防技术，以下说法错误的是（）(B)
+A.通过故障预测预防，用户可以根据故障出现的概率以及出现的位置，采取相应的手段提前避免这些有可能出现的故障
+B.故障预测预防是一种被动故障处理技术
+C.故障预测预防技术是一种有效的主动故障处理技术
+D.故障预测可以在系统故障出现之前，通过分析系统的状态得到故障可能出现的概率以及出现的故障种类
+56、某CT产品3年前从供应商购买的一款第三方软件X，并在产品V1R1C00软件版本中配套A01单板使用。目前现网V1R1C01版本存量大，客户反馈较稳定，产品准备新立项V1R4C00版本，发现第三方软件X存在新版本，并且新版本也兼容A01单板，但切换测试成本较大，同时该软件版本标准维保即将到期，但供应商表示可以为华为单独提供延长维保服务，根据第三方软件生命周期规则，产品应该采取的策略是：(A)
+A.切换第三方版本X的新版本，确保能享受供应商完整的保障能力
+B.由于不是新产品，不考虑升级第三方软件X新版本
+C.考虑测试成本，通过购买供应商延长维保服务，继续使用X的老版本
+D.由于架构未调整，不考虑升级第三方软件X新版本
+57、当一个企业不得不支持许多相似但不完全相同的系统时，最有效的一种复用方法是（）(A)
+A.软件产品工程SPLE
+B.分布式系统
+C.应用框架
+D.应用系统复用
+58、关于GPL V2 License的规避产品开源方式，以下做法正确的是(AC)
+A.若无法直接进程隔离，则可制作隔离层，将该软件包装为一个进程（需开源），通过隔离层进行交互
+B.在内核态中对Linux kernel进行调用，以避免GPL传染
+C.可以采用进程隔离方式使用，即产品与GPL软件在不同进程中运行，通过进程间通信进行交互
+D.以动态链接的方式使用GPL软件，使产品代码不会被GPL传染
+59、以下属于代码安全检视方法的是(ABD)
+A.静态工具扫描
+B.关键字扫描
+C.根因分析法
+D.自上而下分析法
+60、安全合规成为政府持续关注的焦点，业界在持续探索安全应对策略，平衡好监管和创新之间的关系，业界对业务风险本身的关注点从封闭网络的互联网出口延伸到系统内部模块，从业务结果风险可控，延伸到研发过程风险控制及可视化。针对以上变化点，下列说法正确的是（）(ABC)
+A.在研发过程中对各个环节的关键基础设施落地严格的风险应对措施，如对代码仓尽心更严格的访问、完整性方案设计，保障产品软件开发过程的完整性，一致性，不因恶意篡改导致最终的功能特性与客户预期不相符，设置损害客户利益
+B.产品要做到结果风险可控，须通过有效执行研发过程的安全活动控制项要求。
+C.产品要做到具备威胁无处不在的视角，通过有效的基础设施及环境保护应对研发过程恶意篡改风险。
+D.通过后端测试保证产品质量即可，研发过程风险无须过多关注
+61、选用开源软件时，需考虑以下哪些方面(ABCD)
+A.合法合规
+B.网络安全风险
+C.生命周期情况
+D.开源软件的技术生态
+62、在软件需求工程中，需求管理贯穿整个过程，需求管理最基本的任务是明确需求，使项目团队和用户达成共识，建立(D)
+A.      需求跟踪说明
+B.      需求变更管理文档
+C.      需求分析设计
+D.      需求基线
+63、软件需求管理是软件项目开发过程中控制和维持需求约定的活动，包括版本控制、需求跟踪、需求状态跟踪等活动外，还包括(B)
+A.需求发现
+B.需求变更控制
+C.需求排序
+D.需求评估
+64、对需求分析的理解，下面描述正确的是(ABC)
+A.需求分析中，对不明确的功能需求，要进行细致调查后进行具体化。
+B.需求分析时，对项目目标，涉及的问题和场景，都需要考虑。
+C.需求分析过程中，需要将需求转化成形式化的功能规约，如需求规格说明书。
+D.采用敏捷流程后，需求分析完成后，可以不用输出形式化的功能规约。
+65、下面需求分析的结果和描述示例，哪些不满足需求分析的质量要求？(ABC)
+A.对特殊的异常场景，不做分析。
+B.特性的可交付性和服务代表要求不一致。
+C.对性能的描述：整体系统的响应时间不小于2秒。
+D.需求的来源和开发阶段的影响，通过IR/SR/AR进行了关联。
+66、某大学图书馆需要新建一个管理系统，下列需求哪些属于功能性需求(AB)
+A.用户可以根据图书名搜索到该图书
+B.系统可以查询到某用户当前已借的图书
+C.系统应该24小时可用，宕机时间不超过5秒
+D.用户输入书名后应在2秒内查询到该书信息
+E.管理员应该在1H培训后可以使用该系统的管理功能
+F.应将每个学生的学生编号作为该学生的唯一标识
+67、使用UML对系统进行动态建模，不能使用以下哪种图？(B)
+A.顺序图
+B.类图
+C.状态图
+D.活动图
+68、某软件公司承接了为某工作流语言开发解释器的工作。该工作流语言由多种活动节点构成，具有类XML的语法结构。用户要求解释器工作时，对每个活动节点进行一系列的处理，包括执行活动、日志记录、调用外部应用程序等，并且要求处理过程具有可扩展能力。针对这种需求，公司采用一下哪个设计模式最为恰当？(C)
+A.适配器模式(ADAPTER)
+B.迭代器模式(ITERATOR)
+C.访问者模式(VISITOR)
+D.观察者模式(OBSERVER)
+69、以下关于结构型模式说法正确的是(ACD)
+A.结构型模式可以在不破坏类封装性的基础上，实现新的功能。
+B.结构型模式主要用于创建一组对象。
+C.结构型模式可以创建一组类的统一访问接口。
+D.结构型模式可以在不破坏类封装性的基础上，使得类可以同不曾估计到的系统进行交互。
+70、当应用工厂方法模式时要考虑下面哪些问题？(BCD)
+A.必须提供工厂方法的默认实现
+B.参数化工厂方法
+C.所有语言的特点
+D.使用模板以避免创建子类
+71、函数搬移是代码重构的一个重要方法，下列重构使用了函数搬移方法的是(C)
+A.从类A派生出子类B和C，在类B和C中均有ChangeName的操作，将ChangeName提取到类A中。
+B.将类A中的接口InterfaceA和InterfaceB搬移到一个单独的新类B中。
+C.当发现类A某个函数不仅仅适用于当前类，还适用于其他的类时，将该函数抽取为独立函数放入工具类中，供其他类使用。
+D.类A和类B均对同一对象做相同的设置操作，通过提取一个基类消除这部分重复的数据及相关操作。
+72、在拆解一个大函数时，对拆解出来的小函数，通常我们如何为其命名？(B)
+A.根据函数处理流程方法，即怎么做。
+B.根据函数所要达到的目的，即做什么。
+C.根据函数的使用场景，即何时用。
+D.根据函数的输入参数决定，即对哪些。
+73、针对重构方法，下列说法错误的是(ABD)
+A.提取接口(Extract Interface)和提取超类(Extract Superclass)本质上是一回事，均可提取通用代码。
+B.隐藏委托关系会使代码层次更清晰，因此委托类的功能越多越好。
+C.当发现某个子类并未带来该有的派生价值时，就需要考虑把他和父类合并(折叠)起来。
+D.将值域上移到父类会有效减少子类的成员变量，只需要做搬移值域，不需要搬移对该值域的操作方法。
+74、关于重构，下列说法错误的是(BCDE)
+A.重构尽量以微小的步伐修改程序，直接重构一个模块是非常冒险的行为，需要谨慎应对。
+B.程序"如果没有坏(功能可用)，就不要去修复它"，是代码是否需要选择重构的必要条件。
+C.重构方法非常复杂，重构也常常会引入问题，普通开发人员不要自行重构一段功能正常的代码。
+D.重构一定要在开发过程中作为独立的阶段实施，并由独立的团队执行，便于版本进度和质量控制。
+E.使用各种有利于解耦的设计模式常常会导致代码执行流程变长，对于性能要求高的代码，一定要少用设计模式。
+75、从数据组织重构的角度看，下面描述不合理的是(A)
+A.开发初期如果类中有一个字段location标识位置信息，但随着不断迭代开发，发现该字段需要提取出小区、楼栋号、单元号、房间号甚至更多的其他信息，这时可以通过在该类中不断增加新接口来完成这些新增信息的提取处理。
+B.对象取代数据值：就是要求对象尽可能使用更具体的子类表示该对象，避免用通用的父类来标识。
+C.对于数据结构，要求封装出增删改查和遍历接口，封装后的语义要更稳定，便于后续修改，且对上层业务不用感知。
+76、当我们做简单业务，通过数据连接池，获得一个数据库连接Connection，执行一个Statement，获得一个ResultSet后，就结束业务了，那么下面错误的是？(ABCD)
+A.我们可以通过关闭Connection，就顺带着关闭ResultSet和Statement，不需要在代码中显示地关闭ResultSet和Statement，保持代码简单和简洁。
+B.我们需要先关闭Connection，接着显示地关闭ResultSet和Statement。
+C.我们需要先关闭Connection，接着显示地关闭Statement和ResultSet。
+D.我们需要先关闭ResultSet和Statement，然后Connection就自动关闭了，不需要显示地关闭Connection。
+78、违反秘钥用途单一规则的有(A)
+A.      同一个预共享秘钥，既可以用于认证，又可以用于完整性保护。
+B.      一个秘钥可以通过算法派生两个秘钥，一个用于计算MAC值以验证数据的完整性，一个用于敏感数据加密以保证数据的机密性。
+C.      分组密码算法中的某些工作模式，如GCM、CCM，可以同时提供加密和消息认证服务
+D.      数字签名可以同时提供身份认证，数据完整性以及抗抵赖服务
+79、为保证数据在存储和传输过程中不被篡改，需要提供哪种密码学服务(B)
+A.      机密性
+B.      完整性
+C.      真实性
+D.      不可抵赖性
+80、下面哪些涉及是符合权限最小化原则的？(ABCD)
+A.      一个帐号或帐号组只能拥有必需的角色和必需的权限，一个角色只能拥有必需的权限，不分配不必要的权限。
+B.      权限划分的粒度尽可能最小化，帐号权限应基于“need-to-know”和“case-by-case”的原则
+C.      不使用“administrator”、 “Root”、”sa”、“sysman”、“Supervisor”和其他特权帐号来运行应用程序或连接Web服务接口、数据库和其它中间件。
+D.      根据运行所需的操作系统权限的不同以及暴露给用户的访问权限的不同，对其进行划分和授权，采用不同权限的帐号运行。
+80、针对目前开源的二进制一致性改进项目(BEP)发现的差异中，截止19年底，引起差异的原因比例最高的是(A)
+A.      时间宏引起的差异
+B.      编译脚本中引入绝对路径
+C.      开源第三方引入差异
+D.      加密引起的差异
+81、public class JITTEST {(ABC)
+ private static final long NUM = 20000;
+ public static long doubleIndex(long i) {
+  return 2*i;
+ }
+ public static long sum(long arg) {
+  long sum = 0;
+  for (long i = 1; i <= arg; i++) {
+   sum += doubleIndex(i);
+  }
+  return sum;
+ }
+ public static void main(String[] args) {
+  List<Long> result = new LinkedList<>();
+  for (long i = NUM; i >= 0; i--) {
+   result.add(sum(i));
+  }
+ }
+以上代码默认jvm参数运行时，会做哪些优化？
+A.JITTest.doubleIndex被内联
+B.JITTest.doubleIndex会被编译成机器码执行
+C.JITTest.sum会被编译成机器码执行
+D.拆箱和装箱
+82、以下关于Full GC和Minor GC描述正确的有(CD)
+A.Full GC不对MetaSpace进行GC
+B.GC调优是追求消除Major GC和Minor GC
+C.性能优化的三个指标：吞吐量、延迟、内存占用
+D.JVM垃圾收集三个基本原则：
+ Minor GC最多原则、GC内存最大化原则、GC调优(吞吐量、延迟、内存占用)的3选2原则。
+83、-Xdebug–Xrunjdwp:transport=dt_socket,server=y,address=5432,suspend=n,nothrow=java.io.IOException,launch=/sbin/echo这段jvm参数说明正确的是：(ABCE)
+A. 在java8中，-Xdebug可有可无
+B．transport类型可以是dt_socket和dt_shmem，其中dt_shmem只适用于windows平台
+C. 使用-Xrunjdwp后，将以调试模式启动java进程
+D. suspend指明是否支持断点   --- 调试客户端建立连接之后启动VM，调试启动问题
+E．onthrow指明是否在发生指定异常时中断执行，进行调试
+84、使用javac编译时，包含以下哪几个过程：(ABD)
+A.语义分析及生成字节码
+B.词法分析及填充符号表
+C.Server Compiler
+D.注解处理
+E.Client Compiler
+解析：词法分析 语法分析 填充符号表 语义分析 字节码生成
+85、关于构建脚本如Makefile、maven pom文件等，如下说法错误的是(D)
+A.构建脚本是源代码的一部分，要和源代码一起配置管理。
+B.构建脚本在提交入库的时候，一样要进行规范检查。
+C.Committer在处理MR的时候，也要对构建脚本的正确性、简洁性、是否高效等进行把关。
+D.为了提供开发和维护效率，各个子系统和模块可以自由选择最熟悉的脚本来编写构建脚本，可以多种脚本语言并存。
+E.为了提供可移植性，不应该使用与OS强相关的脚本语言或者命令(如shell或bat脚本)，而是尽量选择maven,cmake,gradle这样的构建工具和对应的而语言。
+86、关于构建过程中文件路径的使用，如下说法那个是错误的(D)
+A.  构建脚本中必须使用相对路径，禁止使用绝对路径。
+B.  构建工程中禁止依赖特定的安装路径。
+C.  禁止在构建的时候使用网络共享驱动器
+D.  构建工程和脚本应该对工具安装路径做明确的要求，明确写在脚本中，比如工具必须安装在/usr/build/tools目录下，这样方便对构建环境进行规范化和溯源。
+87、关于maven中依赖范围说法正确的是？(ABCDE)
+A.compile：默认的依赖范围，编译、测试、运行期都需要
+B.provided：表示在编译和测试期需要，但是运行期不需要
+C.test：表示在测试期需要，编译和运行时都不需要
+D.system：表示非maven仓库引入的jar，使用时需要显式的用systemPath元素提供一个本地系统中jar文件的路径
+E.runtime：表示在测试和运行期需要，但在编译的时候不需要
+88、某测试环境发现部署的java进程(pid=17212)经常Full GC，长期内存占用很高，疑似内存泄露。现在想要确定是哪些类的实例占用内存较多，那么应该用下列选项中的哪个命令？(A)
+A. jmap –histo 17212
+B. top –Hp 17212
+C. jstack 17212
+D. jstat –gcutil 17212
+89、关于java虚拟机的参数，那些说法是错误的？(B)
+A. 通过-XX:ThreadStackSize可以设置线程堆栈大小
+B. 相比server模式，JVM client模式可以获得更好的性能
+C. 通过-Xms和-Xmx可以设置Java堆的大小
+D. 通过-XX:MetaspaceSize和-XX:MaxMetaspaceSize可以设置元数据区(Metaspace)的大小
+90、如下两个测试用例，违法了测试实现的什么原则(D)
+ @Test
+ public void testMethod1() {
+  ...
+ }
+ @Test
+ public void testMethod2() {
+  testMethod1()；
+  ...
+ }
+A.自动化
+B.可重复
+C.运行稳定
+D.独立性
+91、以下程序如果采用路径覆盖法进行测试，则至少需要()个测试用例(C)
+ if (result = null || result.getRowCount() == 0) {
+  found = false;
+  System.out.println("没有结果!!!");
+ } else if (type == 1) {
+  found = true;
+ } else {
+  found = false;
+ }
+A.2
+B.3
+C.4
+D.5
+92、给定如下代码(BC)
+public class Person {
+ private int age;
+ public Person(int age) {
+  this.age = age;
+ }
+public boolean canVote() {
+  if (age <= 0) {
+   throw new IllegalArgumentException("age error");
+  }
+  if (age <= 18) {
+   return false;
+  } else {
+   return true;
+  }
+ }
+}
+93、下列单元测试用例能通过的有(BC)
+A. @Test
+ public void canVote_throwIllegalArgumentExceptionForZeroAge0() {
+  Person person = new Person(0);
+  person.canVote();
+ }
+B. @Test(expected = IllegalArgumentException.class)
+ public void canVote_throwIllegalArgumentExceptionForZeroAge() {
+  Person person = new Person(0);
+  person.canVote();
+ }
+C. @Rule
+ public ExpecetedException thrown = ExpecetedException.none();
+ @Test
+ public void canVote_throwIllegalArgumentExceptionForZeroAge() {
+  Person person = new Person(0);
+  thrown.expect(IllegalArgumentException.class);
+  person.canVote();
+ }
+D. @Rule
+ public ExpecetedException thrown = ExpecetedException.none();
+ @Test(expected = IllegalArgumentException.class)
+ public void canVote_throwIllegalArgumentExceptionForZeroAge() {
+  Person person = new Person(0);
+  thrown.expect(IllegalArgumentException.class);
+  thrown.expectMessage("age error");
+  person.canVote();
+ }
+93、在对代码配置库进行分支合并时经常会遇到修改冲突，下列场景中不会引起冲突的是(D)
+A.两个分支均修改了同一个文件的同一行，并且修改结果不同。
+B.同一个文件在两个分支上被重命名为不同的文件名。
+C.同一个文件在一个分支上被删除，在另一个分支上该文件被修改。
+D.两个分支分别修改了不同文件的内容。
+94、代码库中可能会用到配置文件来记录数据或者配置信息，如下说法错的是(A)
+A.可以使用Excel文件来作为配置文件。
+B.可以使用文本格式的ini文件座位配置文件。
+C.可以使用yaml作为配置文件。
+D.可以使用json格式的文件作为配置文件。
+E.可以使用xml文件作为配置文件。
+95、软件的可追溯需要具备的能力有(AB)
+A.对单个软件项目的软件生产过程中产生业务对象的过程及对象间的关系的准确记录。
+B.开发过程中软件跨项目的需求以及配套依赖的关系的准确记录。
+C.产品支持不同业务平面的网络流量安全隔离。
+D.敏感数据需要具备加密保存能力。
+96、关于开源使用，以下描述或做法不正确的是（）(ACDE)
+A. 客户要求使用开源软件新版本，产品A集成使用的开源软件B近3年无人维护且无可替代软件，产品A将开源软件B及修改的代码在github以新项目C开源并且自行维护，再将开源软件C集成到产品A中进行使用。
+B. 开源软件的选用，是产品在需求分析和架构设计时决定的；产品需基于全量全视角管理产品和平台使用的开源及第三方软件，确保使用的开源及三方版本归一和满足生命周期要求。
+C. 产品A软件开发在编写代码时，拷贝Apache license 2.1、 的 XXC++ 开源代码中的排序算法实现代码，已提升开发效率。
+D. 产品A 使用的开源软件被爆出存在严重漏洞（CVSS>7）,产品A的安全SE分析发现该漏洞涉及的代码A未调用，可以不需要对产品A的现网版本打补丁。
+E. 某产品共130K行代码，其中仅10行代码与开源代码相似度较高; 该10行代码可以确认为自研代码。
+97、在业务版本发布前，对于版本中的开源及第三方软件的网络安全要求，以下描述正确的有(ABCD)
+A.为保证来源可靠，业务版本使用的开源及第三方软件必须来自保存在华为PDM库中的软件副本
+B.非A/B类红线安全问题，如果是高风险(CVSS评分>=7)的安全问题则在版本发布前解决或规避，如果是中低风险(CVSS评分<7)的安全问题则可待供应商/合作方修复后再同步其修复版本
+C.在业务版本的研发过程中，开源及第三方软件需随产品代码一起开展产品网络安全测试
+D.A类红线和高风险(CVSS评分>=7)的B类红线问题在版本发布前解决或规避，中低风险(CVSS评分<7)的B类红线问题则可待供应商/合作方修复后再同步修复版本
+98、关于DevOps，如下哪种描述更为恰当？(C)
+A.一种新的角色，同时具备开发和运维技能。
+B.一个专门的团队，同时具备开发和运维能力。
+C.是指开发和运维一起参与到整个软件生命周期过程的实践-从开发、测试、部署上线到维护。
+D.和传统的运维区别不大，只是使用了一些新的工具去实现自动化。
+99、已知一棵二叉树，如果先序遍历的节点顺序是：KDCEFGHB，中序遍历是：CDEFGHKB，则后序遍历结果为(D)
+A.CFHGEBDK
+B.CDFEGHBK
+C.FGHCDEBK
+D.CFHGEDBK
+100、以下代码会产生编译错误的语句是(D)
+public Class Something {
+ public static void main(String[] args){
+     final Other o = new Other();
+  new Something().addOne(o); //1
+ }
+ public void addOne(Other o) {
+  o.increase(); //2
+  o = new Other(); //3
+ }
+}
+A.1
+B.2
+C.3
+D.没有错误
+101、需要关闭资源，下面哪个写法更好？(B)
+A. InputStream in = ...;
+ Exception ex = null;
+ try {
+  try {
+   //code that might throw exceptions
+  } catch (Exception e) {
+   ex = e;
+   throw e;
+  }
+ } finally {
+  try {
+   in.close();
+  } catch (Exception e) {
+   if (ex == null) throw e;
+  }
+ }
+B. try (Scanner in = new Scanner(new FileInputStream("7usr/share/dict/words"), "UTF-8"); PrintWriter out = new PrintWriter("out.txt")) {
+  while (in.hasNext()) {
+   out.println(in.next().toUpperCase());
+  }
+ }
+C. InputStream in = ...
+ try {
+  //code that might throw exceptions
+ } finally {
+  in.close();
+ }
+102、假设整数数组A[n]中的数都介于1到n^6之间，下述什么排序算法有O(n)的时间复杂度？(B)
+A.没有任何算法
+B.基数排序
+C.计数排序
+D.快速排序
+103、如果数据是正整数，并且数据的范围和数据个数差不多，哪个排序算法最有效？(C)
+A. 插入排序
+B. 冒泡排序
+C. 计数排序
+D. 选择排序
+104、如下代码片断都是意图实现判断容器中是否存在指定的字符串，其中哪种做法的平均时间复杂度最低？(C)
+A. ArrayList<String> list = ...;
+ if (list.contains("Martin")) {
+  ...
+ }
+B.  LinkedList<String> list = ...;
+ for (String value : list) {
+  if (value.contains("Martin")) {
+   ...
+  }
+ }
+C. HashSet<String> set = ...;
+ if (set.contains("Martin")) {
+  ...
+ }
+D. Vector<String> vec = ...;
+ if (vec.contains("Martin")) {
+  ...
+ }
+105、以下单例实现正确的是(BCD)
+A. public final class Sinleton {
+  private static Sinleton instance;
+  private Sinleton() {}
+  public static Sinleton getInstance() {
+   if (instance = null) {
+    synchronized (Sinleton.class) {
+     if (instance == null) {
+      instance = new Sinleton();
+     }
+    }
+   }
+   return instance;
+  }
+ }
+B. public final class Sinleton {
+  private static class Sinleton {
+   private static Sinleton instance = new Sinleton();
+  }
+  private Sinleton() {}
+  public static Sinleton getInstance() {
+   return SinletonHolder.instance;
+  }
+ }
+C. public final class Sinleton {
+  private static volatile Sinleton instance;
+  private Sinleton() {}
+  public static Sinleton getInstance() {
+   if (instance == null) {
+    synchronized (Sinleton.class) {
+     if (instance == null) {
+      instance = new Sinleton();
+     }
+    }
+   }
+   return instance;
+  }
+ }
+D. public final class Sinleton {
+  private static Sinleton instance = new Sinleton();
+  private Sinleton() {}
+  public static Sinleton getInstance() {
+   return instance;
+  }
+ }
+106、下面选项中的泛型代码片段哪些是正确的？(AD)
+A. static class Fruit{}
+ static class Apple extends Fruit{}
+ static class BigApple extends Apple {}
+ public static void main(String[] args) {
+  List<? super Apple> list = new ArrayList<>();
+  list.add(new BigApple());
+  list.add(new Apple());
+ }
+B. static class Fruit{}
+ static class Apple extends Fruit{}
+ public static void main(String[] args) {
+  List<? extends Fruit> list = new ArrayList<>();
+  list.add(new Apple());
+ }
+C. public class ShowTest<T> {
+  public static void show(T t) {
+   System.out.println(t.toString());
+  }
+ }
+D.  static class Fruit {}
+ static class Apple extends Fruit {}
+ public static void main(String[] args) {
+  List<Fruit> fruitList = new ArrayList<>();
+  List<Appler> appleList = new ArrayList<>();
+  fruitList.addAll(appleList);
+ }
+107、如下线程堆栈，说法正确的是？(ABC)
+"DEADLOCK_TEST-1" daemon prio=6 tid=0x000000000690f800 nid=0x1820 waiting for monitor entry [0x000000000805f000]
+ java.lang.Thread.State: BLOCKED (on object monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.goMonitorDeadlock(ThreadDeadLockState.java:197)
+ - waiting to lock <0x00000007d58f5e60> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.monitorOurLock(ThreadDeadLockState.java:182)
+ - locked <0x00000007d58f5e48> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.run(ThreadDeadLockState.java:135)
+ Locked ownable synchronizers:
+ - None
+"DEADLOCK_TEST-2" daemon prio=6 tid=0x0000000006858800 nid=0x17b8 waiting for monitor entry [0x000000000815f000]
+ java.lang.Thread.State: BLOCKED (on object monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.goMonitorDeadlock(ThreadDeadLockState.java:197)
+ - waiting to lock <0x00000007d58f5e78> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.monitorOurLock(ThreadDeadLockState.java:182)
+ - locked <0x00000007d58f5e60> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.run(ThreadDeadLockState.java:135)
+ Locked ownable synchronizers:
+ - None
+"DEADLOCK_TEST-3" daemon prio=6 tid=0x0000000006859000 nid=0x25dc waiting for monitor entry [0x000000000825f000]
+ java.lang.Thread.State: BLOCKED (on object monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.goMonitorDeadlock(ThreadDeadLockState.java:197)
+ - waiting to lock <0x00000007d58f5e48> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.monitorOurLock(ThreadDeadLockState.java:182)
+ - locked <0x00000007d58f5e78> (a com.nbp.theplatform.threaddump.ThreadDeadLockState$Monitor)
+ at com.nbp.theplatform.threaddump.ThreadDeadLockState$DeadlockThread.run(ThreadDeadLockState.java:135)
+A.线程DEADLOCK_TEST-1处于死锁状态
+B.线程DEADLOCK_TEST-2处于死锁状态
+C.线程DEADLOCK_TEST-3处于死锁状态
+D.DEADLOCK_TEST-1、DEADLOCK_TEST-2、DEADLOCK_TEST-3均没有处于死锁状态
+108、以下可能造成死锁的代码是(ABCD)
+A. public class LeftRightLock {
+  private final Object left = new Object();
+  private final Object right = new Object();
+  public void functionA() {
+   synchronized (left) {
+    synchronized (right) {
+     doSomething();
+    }
+   }
+  }
+  public void functionB() {
+   synchronized (right) {
+    synchronized(left) {
+     doSomething();
+    }
+   }
+  }
+ }
+ ......
+B. public void transferMony(Account fromAccount, Account toAccount, int amount) {
+  synchronized (fromAccount) {
+   synchronized(toAccount) {
+    fromAccount.debit(amount);
+    toAccount.credit(amount);
+   }
+  }
+ }
+C. public class Taxi {
+  private Point location;
+  private Point destinztion;
+  private final Dispatcher dispatcher;
+  public Taxi(Dispatcher dispatcher) {
+   this.dispatcher = dispatcher;
+  }
+  public synchronized Point getLocation() {
+   return location;
+  }
+  public synchronized void setLocation(Point location) {
+   this.location = location;
+   if (this.location.equals(destinztion)) {
+    dispatcher.notifyAvailable(this);
+   }
+  }
+  ......
+ }
+ public class Dispatcher {
+  private final Set<Taxi> taxis = new HashSet<>();
+  private final Set<Taxi> availableTaxis = new HashSet<>();
+  public synchronized void notifyAvailable(Taxi taxi) {
+   availableTaxis.add(taxi);
+  }
+  public synchronized Image getImage() {
+   final Image image = new Image();
+   for (final Taxi taxi : taxis) {
+    image.drawMarket(taxi.getLocation());
+   }
+   return image;
+  }
+  ......
+ }
+D. private final ExecutorService executor = Executors.newSingleThreadExecutor();
+ public void renderPage() throws InterruptedException, ExecutionException {
+  Future<String> page = executor.submit(new RenderPageTask());
+  frame.set(page.get());
+ }
+ public class RenderPageTask implements Callable<String> {
+  @Override
+  public String call() throws Exception {
+   final Future<String> header = executor.submit(new LoadFileTask("head.html"));
+   final Future<String> foot = executor.submit(new LoadFileTask("foot.html"));
+   return header.get() + "page" + foot.get();
+  }
+ }
+109、20XX年XX月，客户指出华为平台向产品发布的版本存在被篡改、调包的风险，那么关于平台版本的完整性保护的说法错误的是：(D)
+A.平台软件包再发布时，对软件包实施数字签名
+B.产品在使用平台发布的文件前，应进行数字签名校验，确保产品使用的文件与平台发布的文件是一致的。
+C.平台版本通过正式的发布渠道发布
+D.平台版本不需要实施数字签名
+110、某产品在向认证机构进行该产品软件版本11.1的源码交付时，开发工程师小王提取代码后完成了传递。由于小王操作失误，提取的代码并不是需要交付的11.1版本，而是10.1版本，小王重新提取产品软件版本11.1对应的源代码并重新向认证机构传递，并告知该认证机构应使用第二次传递的源代码。对于这一现象，下列说法正确的是(B)
+A. 版本在GA前已经达到了源码交付能力，所以源码加交付前直接提取即可，无需验证，小王没有错。
+B. 源代码与二进制版本的对应关系应该通过配置库、产品软件全量信息树等手段进行管理，不能靠人的责任心保障正确性。
+C. 源码交付时，小王及时发现所传递的源代码存在的问题并纠正，说明人工确认可以保障源码交付的准确性。
+D. 小王没有使用已基线的配套的源码标签进行提取导致源码提取错误是个人问题，流程保障、系统管理没有问题。
+111、如下哪些编译参数会导致编译告警被关闭？(BC)
+A.-werror
+B.-nowarn
+C.-Xlint:none
+D.-X
+112、下列选项中，不属于故障隔离设计方法是(B)
+A．隔离舱设计
+B．故障域划分设计
+C．断路器隔离设计
+D．重试设计
+解析：故障隔离设计：隔离仓 断路器 组合切片 可靠性沙箱 有限重试
+113、下列选项中，属于故障检测技术的是（）(B)
+A．隔离仓设计
+B．时间检查（如：心跳检测）
+C．软件复位
+D．单板重启
+解析： 故障检测的常用方法1、数值范围检查 2、数据完整性检查 3、比较测试 4、时间检测
+114、关于jinfo的用法，下面说法不正确的是？(A)
+A. 可以查看java进程的内存使用情况
+B. 可以查看java系统参数
+C. 可以调整JVM参数
+D. 可以查看某个JVM参数
+115、以下关于开源软件patch式管理说法不正确的是？(C)
+A. 原则上，为区分自研与开源代码、确保使用和修改可追溯，开源修改的patch文件需要独立存放管理。
+B. 华为修改开源软件的patch代码量，必须严格控制，修改代码建议不超过5%。
+C. 开源软件社区发布的补丁要和自研修改的补丁做成一个patch进行统一管理。
+D. 基于开源软件修改的自研Patch中可以包含开源权利人声明
+116、元素a、b、c、d、e、f、g依次放入一个初始为空的栈中，若元素进栈后可以立即出栈、也可停留，直到所有元素都出栈，出栈顺序为b、d、c、f、e、a、g，则栈容量最小为多少？(A)
+A. 3
+B. 1
+C. 6
+D. 2
+117、Symfony是一个开源软件，当前的社区有稳定的路标规划，代码稳定增长，开发人员保持稳定。当前该项目主要存在以下几个版本(D)
+1.开发过程版本4.3-DEV
+2.最新在维护期内的LTS（Long-term Support）版本3.4.26
+3.最新版本4.2.7
+4.社区当前已知漏洞最少但非LTS的版本4.0
+产品如要选用该软件，应该选择哪个版本最为合适：
+A．4.0
+B．4.3-DEV
+C．4.2.7
+D．3.4.26
+118、下面哪些做法，不符合持续交付的理念。(D)
+A． 只要有环节失败，就停止整个流水线
+B． 构建失败后不要提交新代码
+C． 每次修改都能经过一次编译、测试、验证的过程
+D． 将失败的测试用例注释掉，以提高构建成功率
+119、下述哪段代码正确实现了升序排列的冒泡排序算法（）(A)
+A． for (int j = arr.length - 1; j >= 0; j--) {
+    for (int k = 0; k < j; k++) {
+        if (arr[k] > arr[k+1]) {
+            int tmp = arr[k];
+            arr[k] = arr[k + 1];
+            arr[k + 1] = tmp;
+        }
+    }
+}
+B．全都不是
+C． for (int j = arr.length - 1; j >= 0; j--) {
+    for (int k = 0; k < j; k++) {
+        if (arr[k] < arr[k+1]) {
+            int tmp = arr[k];
+            arr[k] = arr[k + 1];
+            arr[k + 1] = tmp;
+        }
+    }
+}
+D． for (int j = arr.length; j >= 0; j--) {
+    for (int k = 0; k < j; k++) {
+        if (arr[k] > arr[k+1]) {
+            int tmp = arr[k];
+            arr[k] = arr[k + 1];
+            arr[k + 1] = tmp;
+        }
+    }
+}
+120、使用jstat -gcutil {pid} 2000命令对进程id分别为10001,20001，30001的三个JVM进程做内存使用状态检查，输出结果如下，下列说法最准确的是：(D)
+A：相比另外两个进程，进程20001有更大的风险发生OutOfMemoryError
+B：10001，20001,30001三个进程都没有发生OutOfMemoryError的风险
+C：相比另外两个进程，进程10001有更大的风险发生OutOfMemoryError
+D：相比另外两个进程，进程30001有更大的风险发生OutOfMemoryError
+121、下列关于Maven命令的用法中，哪一个是错误的？(A)
+A．使用mvn install构建出的jar包，团队中其他人也可以直接使用。
+B．使用mvn test来运行该项目的所有maven module的单元测试。
+C．使用mvn clean清理掉上一次Maven构建出的所有文件。
+D．可以使用mvn dependency:tree命令分析项目依赖关系。
+122、使用数组作为队列时，最实用的方式是循环队列，即在达到数组结尾时，重复利用数组头的剩余空间。假定用长度为N的数组长来存储一个循环队列，队列头用front表示，队列尾用rear表示。当队列初始化为空时front=rear=0，每一次成功入队时rear++，每一次成功出队时front++，在front和rear永远不会溢出（溢出是指front或rear达到数据类型允许的最大值之后翻转为最小值。）的情况下，关于队列存放的最大元素数目正确的是参考(B)
+A：队列最大只能存放N-2个元素
+B：队列最大只能存放N-1个元素
+C：队列最多只能存放N+1个元素
+D：队列最多只能存放N个元素
+123、在移动设备上，用户可以通过应用权限设置开启或关闭应用对敏感信息访问。该功能满足隐私保护的（）属性要求？(A)
+A．可干预性
+B．机密性
+C．透明性
+D．不可关联性
+124、关于冗余系统的可用度 ，下面说法错误的是：(B)
+A．故障修复能力越差，则冗余系统可用度越低。
+B．倒换成功率越高，则冗余系统可用度越低。
+C．每个单元的失效率越高，则冗余系统可用度越低。
+D．备用单元故障检测率越高，则冗余系统可用度越高。
+125、Maven 项目配置文件的<dependency> 中引入的<scope>, 主要管理依赖的部署。对scope的取值描述有误的是：(D)
+A. runtime：只在运行时使用
+B. test：只在测试时使用，用于编译和运行测试代码。不会随项目发布
+C. provided：期望JDK,容器或使用者会提供这个依赖。如servlet.jar 。
+D. system：适用于所有阶段，会随着项目一起发布。
+126、工程师老张将写作好的模块设计文档保存在工作电脑的磁盘中，而且有多篇设计文档命名类似，徒弟小李进入项目组熟悉模块架构时，老张却无法确认哪一篇是最新的设计文档。关于这个现象，老张应该怎么做？(BCD)
+A.为了进行高效共享，老张应该在本地磁盘修改后，将架构设计文档的最新版本及时共享给项目组成员，而不需要提交统一的配置库
+B.老张应该将该架构设计文档提交评审流程，评审通过后进行基线
+C.架构设计文档是关键的配置项，老张应该对架构设计文档进行配置项识别，按照配置项管理要求归档在统一的配置中
+D.老张要按照配置项命名规范对架构设计文档进行规范化命名，而不能随意命名为相似的名称
+127、对升序数组，下述哪段代码实现的二分查找算法是有问题的？参考(ABD)
+A.
+static int recursive(int arr[], int low, int high, int key)
+{
+ if (low > high) {
+  return -1;
+ }
+ int mid = low + (high - low) / 2;
+ if (arr[mid] == key) {
+  return mid;
+ } else if (arr[mid] < key) {
+  return recursive(arr, mid, high, key);
+ } else {
+  return recursive(arr, low, mid - 1, key);
+ }
+}
+B.
+static int recursive(int arr[], int low, int high, int key)
+{
+ if (low > high) {
+  return -1;
+ }
+ int mid = low + (high + low) / 2;
+ if (arr[mid] == key) {
+  return mid;
+ } else if (arr[mid] < key) {
+  return recursive(arr, mid - 1, high, key);
+ } else {
+  return recursive(arr, low, mid + 1, key);
+ }
+}
+C.
+static int recursive(int arr[], int low, int high, int key)
+{
+ if (low > high) {
+  return -1;
+ }
+ int mid = low + (high - low) / 2;
+ if (arr[mid] == key) {
+  return mid;
+ } else if (arr[mid] < key) {
+  return recursive(arr, mid + 1, high, key);
+ } else {
+  return recursive(arr, low, mid - 1, key);
+ }
+}
+D.
+static int recursive(int arr[], int low, int high, int key)
+{
+ if (low > high) {
+  return -1;
+ }
+ int mid = low + (high - low) / 2;
+ if (arr[mid] == key) {
+  return mid;
+ } else if (arr[mid] < key) {
+  return recursive(arr, low, mid - 1, key);
+ } else {
+  return recursive(arr, mid + 1, high, key);
+ }
+}
+128、有以下一段代码参考(AEG)
+import java.util.ArrayList;
+import java.util.List;
+public class ItemContainer {
+ private List items = new ArrayList(10);   //Line 1
+ public void addItems(String item) {
+  items.add(item);               //Line 2
+ }
+ public void print() {
+  items.forEach(System.out::println);  //Line 3
+ }
+ public static void main(String[] args) {
+  ItemContainer container = new ItemContainer();  //Line 4
+  container.addItems("hello ");                 //Line 5
+  container.addItems("world!");                //Line 6
+  container.print();                          //Line 7
+ }
+}
+使用如下命令进行编译时，
+javac -source 1.8 -Xlint:all ItemContainer.java
+会在哪几行产生编译告警？
+A.line 1
+B.line 4
+C.line 7
+D.line 6
+E.line 2
+F.line 5
+G.line 3
+解析：http://image.huawei.com/tiny-lts/v1/images/903b726cc77e34713b5d_491x205.jpg@900-0-90-f.jpg
+129、关于Maven构建依赖，下列选项中描述正确的是：()(ACD)
+A：mvn dependency:tree指令可以用于分析解决依赖冲突
+B：A,B和C的依赖关系定义为A->B->C->D 2.0和A->E->D 1.0，则构建A时将使用D2.0，因为2.0的版本更高
+C：dependency的scope的取值范围有：compile, privided, runtime, test, system, import, 其中import只能应用于dependencyManagement下的配置
+D：通过dependencies->dependency节点配置依赖
+E：通过dependencyManagement->dependencies->dependency节点配置依赖
+130、以下哪个说法是正确的：()(BCD)
+A：顺序表在使用时，长度可随意变动
+B：顺序表查找的时间复杂度为O(1)
+C：顺序表存储空间连续，即允许元素的随机访问
+D：顺序表插入变动的时间复杂度为O(n)
+134、一个二叉树的前序遍历：abdefgc，中序遍历：debgfac， 后序遍历为：(C)
+A egdfbca
+B cgefdba
+C edfgbca
+D cegdfba
+135、重新执行已经进行过的一些测试，以确保所做修改没有导致非预期的副作用，指哪一种测试(C)
+A集成测试
+B单元测试
+C回归测试
+D系统测试
+136、Pom中定义使用maven-dependency-plugin插件的位置：（）(B)
+A．<parent>
+maven-dependency-plugin
+</parent>
+B <build>
+       <plugins>
+maven-dependency-plugin
+       </plugins>
+    </build>
+C <dependencies>
+< dependency>
+maven-dependency-plugin
+</ dependency>
+</ dependencies>
+D <modules>
+maven-dependency-plugin
+</modules>
+137、用有序的双向链表存储一个支持“增”、“删”、“改”三个功能的赋值系统，这三个功能中有几个功能能做到时间复杂度为O(1)?(D)
+A. 3
+B. 2
+C. 0
+D. 1
+138、 项目A使用maven工具构建，现在有这样的依赖关系,A->B->Y(2.0)，A->E->Y(1.0)，Y是A的传递依赖，并且在A的pom文件中，E的声明顺序在B之前，那么最终项目A会依赖Y的哪个版本？(A)
+A. 1.0
+B. 1.0和2.0都会被引入
+C. 无法确定
+D. 2.0
+解析：Maven依赖冲突解决原则是 1) 最短路径优先 2）同路径先声明优先
+139、 以下可用于分析线程死锁问题的命令是（）(B)
+A jstat [options] <pid>
+B jstack [options] <pid>
+C jmap [options] <pid>
+D jhat [options] <pid>
+解析：
+(jstat,令行的监控，包括了对Heap size和垃圾回收状况的监控。可见，Jstat是轻量级的、专门针对JVM的工具)
+(jstack是java虚拟机自带的一种堆栈跟踪工具。 jstack用于生成java虚拟机当前时刻的线程快照。)
+( Jmap是一个可以输出所有内存中对象的工具)
+(jhat是用来分析dump文件的一个微型的HTTP/HTML服务器)
+Jinfo的作用是实时查看虚拟机的各项参数信息jps –v可以查看虚拟机在启动时被显式指定的参数信息，但是如果你想知道默认的一些参数信息呢？除了去查询对应的资料以外，jinfo就显得很重要了
+jps是参照Unix系统的取名规则命名的，而他的功能和ps的功能类似，可以列举正在运行的饿虚拟机进程并显示虚拟机执行的主类以及这些进程的唯一ID
+140、以下哪个说法是错误的：(D)
+A 链表在使用时，长度可以随意变动
+B 链表查找的时间复杂度为 O(n)
+C 链表插入变动的时间复杂度为 O(1)
+D 链表存储空间全都连续，即允许元素的随机访问
+141、可靠性测试FIT（Fault Insertion Test） 的定义是（）(B)
+A通过向系统注入代码bug，观察系统功能性能变化，故障检测、定位、隔离以及故障恢复情况，发现产品缺陷、评估系统可靠性的测试方法
+B通过向系统注入在实际应用中可能发生的故障，观察系统功能性能变化，故障检测、定位、隔离以及故障恢复情况，发现产品缺陷、评估系统可靠性的测试方法
+C采用温度循环加振动的应力来筛选生产阶段产品，剔除产品中有早期缺陷产品的测试方法。
+D 通过设置逐级递增的加严的环境应力，来加速暴露试验样品的缺陷和薄弱点的一种测试方法。
+142、源码到发布交付构建流程是怎样的？
+1.制定交付计划
+2.启动发布&一致性验证
+3.代码合入代码库
+4.封版
+5.版本自动归档
+6.CI构建
+7.启动转测试
+8.自验(B)
+A 31465728
+B 13465872
+C 31456287
+D 13645728
+143、以下哪个JVM工具可以查看堆内存的使用情况？(B)
+A jstack
+B jmap
+C jps
+D javah
+144、以下关于-Wl,-z,noexecstack选项描述正确的是(AC)
+A.可以保护堆的不可执行
+B.只能保护栈的不可执行
+C.可有效提高缓冲区溢出的难度，但仍可以被ret2lib、rop等攻击绕过
+D.不能保护段的不可执行
+145、 当拆解一个大函数时，对拆解出来的小函数，通常我们如何为其命名？(B)
+A.      根据函数处理流程方法，即怎么做。
+B.      根据函数所要达到的目的，即做什么
+C.      根据函数的使用场景，即何时用
+D.      根据函数的输入参数决定，即对哪些
+146、关于重构，下列说法错误的是(BCDE)
+A.      重构尽量以微小的步伐修改程序，直接重构一个模块是非常冒险的行为，需要谨慎应对。
+B.      程序“如果没有坏（功能可用），就不要去修复它”，是代码是否需要选择重构的必要条件。
+C.      重构方法非常复杂，重构也常常会引入问题，普通开发人员不要自行重构一段功能正常的代码。
+D.      重构一定要在开发过程中作为独立的阶段实施，并由独立的团队执行，便于版本进度和质量控制。
+E.       使用各种有利于解耦的设计模式常常回导致代码执行流程变长，对于性能要求高的代码，一定要少用设计模式。
+147、从数据组织的角度看，下面描述不合理的是(A)
+A.      开发初期如果一个类中有一个字段location表示位置信息，但随着不断迭代开发，发现该字段需要提取出小区、楼栋号、单元号、房间号甚至更多的其他信息，这时可以通过在该类中不断增加新接口来完成这些新增信息的提取处理。
+B.      对象取代数据值，就是要求对象尽可能使用更具体的子类表示该对象，避免用通用的父类来标识。
+C.      对于数据结构，要求封装出增、删、改、查和遍历接口，封装后的语义要更稳定，便于后续修改，且对上层业务不用感知。
+148、下面哪种操作是编程规范推荐的写法？(C)
+A.      System.out.print(“Hello, World!\n”);
+B.      System.out.print(“Hello, World!\r\n”);
+C.      System.out.print(“Hello world!” + System.lineSeperator());
+149     根据Java编程规范这段代码存在的主要问题是什么？(C)
+public static List<String> decorate (String[]personDescs){
+    if (personDescs == null || personDescs.length == 0) {
+        return null;
+    }
+    List<String> personNames = new ArrayList<>(personDescs.length);
+    for (String personDesc : personDescs) {
+        String personName = getPersonName(personDesc);
+        if (personName.length() != 0) {
+            personNames.add(personName);
+        }
+    }
+    return personNames;
+}
+public static void main (String ...args){
+    String[] persionDesc = {"a", "b", "c"};
+    List<String> personNames = decorate(persionDesc);
+    if (null == personNames) {
+        return;
+    }
+    for (String personName : personNames) {
+        //Do something here.
+    }
+}
+A.      使用类名调用静态方法，而不要使用实例或表达式来调用
+B.      方法的代码块嵌套过深，超过4层
+C.      对于返回数组或者容器的方法，应返回长度为0的数组或容器
+D.      Person Name变量没有判断是否为null
+150、下面命名中适合小驼峰的有哪些(ABCD)
+A.      类的字段
+B.      方法参数
+C.      方法
+D.      局部变量
+151、对快速排序算法，在最差情况下，它的时间复杂度的递归公式和时间复杂度是（）(B)
+A T(n) = T(n-2) + O(n) 和 O(n^2)
+B T(n) = T(n-1) + O(n) 和 O(n^2)
+C T(n) = 2T(n/2) + O(n) 和 O(nLogn)
+D T(n) = T(n/10) + T(9n/10) + O(n) 和 O(nLogn)
+152、产品在开源软件使用的过程中，下面哪项对开源软件的使用描述是不恰当的？(C)
+A 涉及源代码交付，对开源源生代码进行修改的代码，使用Patch方式管理
+B 禁止片段引用开源软件
+C 经评审不得随意修改开源源生代码，但基于开源定制的代码规模无限制
+D 代码库中的开源原始包需和开源社区原始包一致
+151、 若一个栈的入栈顺序为1,2,3，……，N，在入栈过程中随机出栈随机序列，若第一个元素是i，则第j个出栈元素是（）(D)
+A 不确定
+B j-i-1
+C i-j
+D i-j+1
+151、 下面哪些情况可能出现死锁 （）(D)
+A 一个进程进入死循环
+B 多个进程竞争使用共享的设备
+C 进程资源释放
+D 多个进程竞争资源出现了循环等待
+151、 某二叉树节点的中序遍历为 abcdefg ，后序遍历为 bdcafge，则其左子树中节点数目为（）(C)
+A 2
+B 3
+C 4
+D 5
+151、 假设有一个栈，元素一次进栈的顺序是A，B，C，D，E。 下列不可能的出栈顺序有？（）(c)
+A B,C,D,E,A
+B A,B,C,D,E
+C E,A,B,C,D
+D E,D,C,B,A
+解析：出栈的第一个元素是在原来的次序中是第几个，那么他的前面的元素必然都还在栈中
+151、 下列选项中，不属于故障恢复方法的是（）(D)
+A 倒换
+B 重建
+C 软件复位
+D 告警
+151、 某局“A”设备的“B”板异常挂死，所有B单板上的业务全部中断，维护人员插拔单板后业务恢复，但是该问题后来在网上多次出现，造成业务多次长时间中断。研发人员首先提供软件补丁，在“B”单板该死后可自动复位，尽快恢复运行。经过长时间分析，最后定位原因是设备对“0”字节包处理不当，导致设备异常，版本升级后问题解决。上述网上事故案例，从可靠性设计角度考虑，下面说法正确的是（）(BC)
+A 维护人员水平低，不应该只插拔单板，而应该进行系统复位，完全恢复业务。
+B系统设计方案缺少对B单板业务的自动故障检测和故障恢复功能，是造成业务长时间中断
+C原设计方案缺少对异常报文的容错能力，是导致B单板业务全部中断的主要原因。
+D “0”字节报文属于异常报文，应要求局方改善网络质量，而不是对A设备打补丁或升级软件。
+161、 产品A计划选择一款加密算法软件，实现主控板从上电到启动过程中对比加载文件和芯片中保存的文件是否一致，当不一致时禁止单板启动，并发告警给用户。以下选型不建议的是(ABE)
+A 整包引入业界主流软件OpenSSL，并采用部分编译的方式，仅编译其使用的5%左右的代码
+B 拷贝OpenSSL软件中密码算法功能相关的部分文件
+C 向其配置的底层平台提需求，由其实现此功能，并对上层提供统一接口。
+D 对比、测试、分析 &应用业界主流的加密算法软件，权衡性能和占用的单板空间
+E 参考OpenSSL中密码算法的实现，调增代码逻辑，对部分代码实现进行封装后作为自研代码使用
+1、 配置管理改进总体思路：基于产品（），拉通研发和配置管理活动(A)
+A. 全量全视角的软件信息树设计
+B. 软件架构设计
+C. 配置识别和配置控制
+1、 小张是某产品的CME（配置管理工程师），在产品的TR2评审会上，小张汇报了本阶段配置项的基线情况，请问小张的工作属于配置管理的哪个活动(C)
+A. 版本管理
+B. 分支管理
+C. 配置状态发布
+D. 管理配置库
+1、 配置管理可保证交付产品的什么特征(ACD)
+A. 完整性
+B. 正确性
+C. 一致性
+D. 可追溯性
+1、 某特性设计文档已经在DBOX完成基线，由于特性接口需要变更，那么该特性设计文档应如何处理(A)
+A. 根据实际的特性接口变更规则，通过便跟过流程更新已基线的特性设计文档
+B. 更新特性设计文档，更新后的设计文档归档在小名工作电脑的专属文件夹，并共享给相关模块的开发工程师进行参考
+C. 由于特性设计文档不参与版本构建，所以特性设计文档没有人查阅，不用更新
+D. 由于该特性设计文档已经基线，所以不能更新
+1、 运维人员在对某电商网站进行手动升级后第二天发生线上事故，影响了整个西安地区的所有用户。接到用户投诉后，运维人员进行手动回滚，约1小时恢复正常。事后分析发现，事故的根本原因是代码逻辑存在问题，在特定数据（西安地区用户）的场景下，会出现错误，以下哪些实践可以有效减少或者防止类似问题出现(BCDE)
+A. 为增强团队对产品的敬畏心，防止类似事故出现，引发事故的产品经理开发测试以及实施变更运维人员全年绩效不得超过B+
+B. 引入灰度发布，功能先对小范围用户开放，然后增量开放给其他用户
+C. 引入自动化测试，减少测试人员手工测试可能导致的错误
+D. 自动化产品的部署和回滚，降低失败对用户的影响时间
+E. 预生产环境数据准备要接近生产环境，可以更好的针对生产环境数据进行验证
+1、 某局”A“设备的”B“板异常挂死，所有B单板上业务全部中断，维护人员插拔单板后业务恢复。但该问题后来在网上多次出现，造成业务多次长时间中断，研发人员首先提供软件补丁，在”B“单板挂死后可以自动复位，尽快恢复业务；经过长时间分析，最后定位根本原因是设备对”0“字节包处理不当，导致设备异常，版本升级后问题解决。上述网上事故案例，从可靠性设计角度考虑，下面说法正确的是(AB)
+A. 系统设计方案缺少对B单板业务的自动故障检测和故障恢复功能，是造成业务长时间中断的主要原因
+B. 原设计方案缺少对异常报文的容器处理能力，是导致B单板业务全部中断的主要原因
+C. “0”字节报文属于异常报文，应要求局方改善网络质量，而不是对A设备打补丁或升级软件
+D. 维护人员水平低，不应该只拔插单板，而应进行系统复位，完全恢复业务
+1、 产品的安全属性，一般是指(ABC)
+A. 机密性
+B. 完整性
+C. 可用性
+D. 可靠性
+1、 系统的可信目标可以通过如下哪些方式被确定的(ACDE)
+A. 通过分析利益相关人的可信诉求而确定
+B. 客户需求就是可信目标
+C. 参考相关行业共识而确定
+D. 参考相关国际标准而确定
+E. 参考产品相关可信认证要求而确定
+F. 根据产品开发的安全部测试用例而确定
+1、 威胁分析和建模流程STRIDE包含哪些关键元素(ABCDEF)
+A. 仿冒
+B. 篡改
+C. 抵赖
+D. 信息泄露
+E. 拒绝服务
+F. 权限提升
+G. 隐私
+6、 STRIDE High level威胁分析基于数据流图中各元素进行S、T、R、I、D、E多个维度的分析，而ASTRIDE High Level威胁分析是基于架构视图中的什么进行S、T、R、I、D、E多个维度的分析(AB)
+A. 组件
+B. 接口
+C. 报文
+D. 参数
+1、 关于ASTRIDE High Level威胁分析，说法正确的有(AB)
+A. 基于产品架构视图进行威胁分析
+B. 重点分析业务组件和接口
+C. 基于产品数据流进行威胁分析
+D. 重点识别产品特性安全威胁
+1、 风险管理的秩序体现在：基于全面的、结构化的信息模型包括清晰的风险评价准则、影响准则、风险接受准则；基于授权和问责机制，在以下()实施一致的风险管理(BCD)
+A. 战略级(strategy level)
+B. 组织级(organization level)
+C. 业务级(business level)
+D. 技术级(system level)
+1、 华为可信框架中可信任特征包括(ABCDEF)
+A. 韧性(Resilience)
+B. 安全(Security)
+C. 隐私(Privacy)
+D. 安全(Safety)
+E. 可靠(Reliability)
+F. 可用(Availability)
+G. 完整性(Integrity)
+H. 可维护(Maintainability)
+11、 可靠/可用性设计的目的，是预测和预防产品所有可能发生的故障，通过设计预防和设计改进，有效地消除隐患和薄弱环节，使产品达到规定的可靠/可用性要求。故障管理是可靠/可用性设计的重要内容，包括(ABCD)
+A. 故障检测
+B. 故障诊断
+C. 故障隔离
+D. 故障恢复
+11、 移动设备上用户可以通过应用权限设置开启或关闭应用对敏感信息的访问，该功能满足隐私保护的()属性要求(B)
+A. 不可关联性
+B. 可干预性
+C. 透明性
+D. 机密性
+11、 描述关于网络韧性工程的架构/技术的描述错误的是(D)
+A. 非持久性是在有限时间内保留信息，服务和连接，从而减少攻击者利用漏洞并建立持久立足点的机会
+B. 分割可以根据系统的重要级别进行划分，以限制成功攻击的传播和损害
+C. 权限限制是指根据关键性和信任模型，限制使用网络资源所需的权限，以及分配用户和网络实体的权限，以最大限度地减少对手活动潜在的后果。
+D. 多样性使用异构技术（例如，硬件，软件，固件，协议），这样增加了网络建设的成本，运维的难度，是不可取的
+11、 违反密钥用途单一规则的有(A)
+A. 同一个预共享密钥，既可以用于认证，又可以用于完整性保护
+B. 一个密钥可以通过算法派生两个密钥，一个用于计算MAC值以验证数据的完整性，一个用于敏感数据加密以保证数据的机密性
+C. 分组密码算法中的某些工作模式，如GCM、CCM，可以同时提供加密和消息认证服务
+D. 数字签名可以同时提供身份认证、数据完整性以及抗抵赖服务
+11、 代码安全检视有哪些分析方法(ABD)
+A. 自上而下分析法
+B. 关键字搜索
+C. 根因分析法
+D. 静态工具扫描
+解析：Half of the people think the answer is ABD and the other half think the answer is ABCD(source)
+15 CSF(Cybersecurity Framework)核心框架包含5个功能IPDRR，其中P代表保护功能（Protect Function），保护功能可以限制或抑制网络安全事件的潜在影响。以下哪一组全部属于核心架构中的保护功能项(A)
+A. 身份管理和访问控制、数据安全、信息保护流程和步骤、安全运维
+B. 身份管理和访问控制、数据安全、安全运维、安全连续监控
+C. 身份管理和访问控制、数据安全、安全运维、风险评估
+D. 身份管理和访问控制、数据安全、信息保护流程和步骤、安全连续监控
+11、 常见的安全编码问题不包括(A)
+A. 认证绕过
+B. 缓冲区溢出
+C. 命令注入
+D. 整数溢出
+解析：安全编码Top问题
+17 FMEA是一种可靠性分析方法，可以用于产品的设计阶段。下列哪个选项不是设计阶段FMEA分析的输出(D)
+A. FMEA分析表
+B. 软件故障需求管理
+C. 硬件故障需求管理
+D. 软件功能需求
+11、 过载控制是指确保设备在业务过载场景下仍能保持较高业务处理能力的一种设计方法。下列选项中，哪个是常用的过载控制方案(C)
+A. 拒绝所有业务
+B. 接入所有业务
+C. 服务降级
+D. 复位系统
+11、 从浴盆曲线来看，电子产品的失效包括以下哪几个阶段(ABD)
+A. 偶然失效期
+B. 早期失效期
+C. 生产失效期
+D. 耗损失效期
+E. 市场失效期
+21、 程序在处理外部数据时必须经过严格的合法性校验，编程人员在处理外部数据过程中必须时刻保持这种思维意识，不能做出任何外部数据符合预期的假设，外部数据必须经过严格判断后才能使用。下列选项中属于外部数据的是(ABCD)
+A. 进程间通信（包括管道、消息、共享内存、socket、RPC等）
+B. 函数参数（对于API）、全局变量（在本函数内，其它线程会修改全局变量）
+C. 用户输入（包括命令行、界面）、用户态数据（对于内核程序）
+D. 文件（包括程序的配置文件）、注册表、网络、环境变量
+21、 安全风险评估就是从风险管理角度，运用科学的方法和手段，系统地分析网络与信息系统所面临的威胁及其存在的脆弱性。评估安全风险等级主要依赖于(D)
+A. 资产的购买价值
+B. 已有的风险消减措施
+C. 社会工程
+D. 安全风险发生可能性和业务影响性
+21、 开展PIA时，区分数据控制者与数据处理者的关键原则是(A)
+A. 决定个人数据处理的目的及方式
+B. 管理数据分配时间
+C. 管理访问数据权限
+D. 决定数据存储方式
+21、 根据《华为隐私保护总体政策》要求，在业务活动中构筑隐私保护时，如下哪些不是收集个人数据的原则(A)
+A. 机密性
+B. 目的相关性
+C. 必要性
+D. 最小限度
+24 GDPR针对数据跨境转移有一定要求，如必须满足特定规则后才可传输，以下哪个场景不属于跨境转移场景(A)
+A. 作为数据处理者的法国供应商，基于成本考虑将数据转移到德国处理
+B. 在中国的维护终端上，远程查看和分析德国服务器上的个人数据
+C. 德国子公司的个人数据传输到俄罗斯处理
+D. 德国子公司个人数据传输到美国处理
+21、 关于故障管理设计原则，下列说法错误的是(B)
+A. 冗余系统中，主备用模块的故障都需要检测，避免静默故障
+B. 对于不引起系统故障只导致系统或服务KPI下降的亚健康异常不需要检测
+C. 故障定时检测的周期，需综合考虑对CPU占用率的影响和检测延迟对业务恢复速度的影响
+D. 应及时监控有特殊寿命（如Flash有撰写次数限制）要求的器件健康状态，通过提前预警采取维护措施
+21、 欺骗(Deception)是使用混淆和误导手段来干扰攻击者，比如部署蜜罐系统。以下哪个目标是通过欺骗(Deception)无法达成的(D)
+A. 为反击取证和提供支撑
+B. 消耗攻击者的攻击能力和时间，为联动防御或反制等提供时间差
+C. 发现正在进行的攻击和潜在实施的攻击
+D. 将系统进行划分，以限制成功攻击的传播和损害
+21、 下列选项中，属于故障检测技术的是(C)
+A. 单板重启
+B. 软件复位
+C. 时间检查（如：心跳检测）
+D. 隔离仓设计
+21、 下列哪项描述是正确的(A)
+A. 所有的软件bug都会导致安全漏洞
+B. 从成本上考虑，在验证阶段发现多数bug是比较好的
+C. 多数的安全bug不重要，因为攻击者不可能注意到
+D. 所有的软件都有bug，只有一些bug才是安全漏洞
+21、 （）与（）需求是产品的质量属性之一，也是客户的基本诉求，产品需结合合规、准入及现网安全风险将其构筑在研发过程中(CD)
+A. 最优惠的价格
+B. 设备平稳运行
+C. 网络安全
+D. 隐私保护
+31、 容灾系统包括()三个级别(ABC)
+A. 数据级
+B. 应用级
+C. 业务级
+D. 代码级
+31、 以下几种不同的隐私保护技术中，对数据进行加躁处理，用于匿名数据收集和统计分析方法是(A)
+A. 差分隐私
+B. 枚举
+C. 截断
+D. 掩码
+31、 关于过载控制设计原则，下列说法错误的是(B)
+A.　自保恢复原则：负荷下降到设计能力范围之内后，网元可以立即恢复处理能力
+B.　业务保证原则：确保在出现大流量冲击时所有业务不被丢弃
+C.　及早控制原则：应尽可能在业务流程处理前端或业务处理较早的处理单元（网元/单板/芯片等）或底层协议层次上控制业务接入
+D.　优先级保证原则：系统过载时保证高优先级的业务能够优先获得资源，优先得到处理
+31、 为保证业务的正常运行，提高产品和解决方案的安全和韧性，可以从以下哪些方面进行设计(ABCD)
+A. 不利情况发生后恢复业务
+B. 不利情况下维持核心业务
+C. 限制不利情况发生时的损害
+D. 降低攻击成功可能性
+31、 基于威胁建模的测试设计方法需要在安全测试活动中哪个阶段使用(B)
+A. 动态分析和Fuzz测试
+B. 测试方案设计
+C. 总体测试策略
+D. 静态分析
+31、 关于故障预测预防技术，以下说法错误的是(B)
+A.通过故障预测预防，用户可以根据故障出现的概率以及出现的位置，采取相应的手段提前避免这些有可能出现的故障
+B.故障预测预防是一种被动故障处理技术
+C.故障预测预防技术是一种有效的主动故障处理技术
+D.故障预测可以在系统故障出现之前，通过分析系统的状态得到故障可能出现的概率以及出现的故障种类"
+31、 安全合规成为政府持续关注的焦点，业界在持续探索安全应对策略，平衡好监管和创新之间的关系，业界对业务风险本身的关注点从封闭网络的互联网出口延伸到系统内部模块，从业务结果风险可控，延伸到研发过程风险控制及可视化。针对以上变化点，下列说法正确的是(ABC)
+A.在研发过程中对各个环节的关键基础设施落地严格的风险应对措施，如对代码仓尽心更严格的访问、完整性方案设计，保障产品软件开发过程的完整性，一致性，不因恶意篡改导致最终的功能特性与客户预期不相符，设置损害客户利益
+B.产品要做到结果风险可控，须通过有效执行研发过程的安全活动控制项要求。
+C.产品要做到具备威胁无处不在的视角，通过有效的基础设施及环境保护应对研发过程恶意篡改风险。
+D.通过后端测试保证产品质量即可，研发过程风险无须过多关注
+31、 故障预测预防设计，可采用哪些方法(AD)
+A. 基于故障机理模型的故障预测
+B. 基于代码的故障预测
+C. 基于文档的故障预测
+D. 基于数据驱动的故障预测
+31、 下面选项中，不属于故障隔离设计方法是(A)
+A. 重试设计
+B. 故障域划分设计
+C. 隔离舱设计
+D. 断路器隔离设计
+41、 以下关于安全设计原则的描述，正确的有(ABCD)
+A. 一个账号或账号组只能拥有必须的角色和必须的权限，一个角色只能拥有必需的权限，不分配不必要的权限，符合“权限最小化原则”
+B. 账户登录失败N此后可以暂时锁定账户X分钟，符合“失败-默认安全原则”
+C. 对资源访问的共享数量和使用应尽可能最小化，符合“最小公共化原则”
+D. 将直接对外交互的高权限高风险进程拆分为两个进程，一个负责外部交互，一个负责内部业务逻辑，符合“权限分离原则”
+41、 如下对提高产品的可用度描述正确的是(ABCD)
+A. 产品架构采用必要的冗余设计措施
+B. 冗余设计相关的要素如故障检测和回复措施得到合理设计和验证
+C. 采用更高可靠性等级的器件
+D. 采用必要的简化设计措施，降低复杂度
+41、 关于容灾设计，以下说法错误的是(B)
+A. 容灾指除了生产站点以外，用户另外建立的冗余站点，当灾难发生后，生产站点受到破坏时，冗余站点管用户业务
+B. 容灾设计重点在于业务接管，数据可靠性不是其重点
+C. 衡量容灾系统的主要指标有RPO和RTO
+D. 容灾系统包括三个级别：数据级、应用级和业务级
+41、 下面关于故障恢复的描述，正确的是(ABC)
+A. 冗余系统如果发生了影响业务的软、硬件故障后，应能通过主备倒换或符合分担实现自动的故障恢复
+B. 在非冗余系统中，对于影响业务的软件故障或硬件故障瞬间故障，可通过自动触发单板复位或局部复位等方式，系统恢复正常状态
+C. 系统自动执行故障恢复动作，可大大减少业务中断时间，但注意一定要保证判断的准确性，避免误动作。同需要在系统设计复杂性和减少业务中断时间之间权衡
+D. 通常的故障恢复技术包括进程复位、主备倒换
+41、 下列关于数字签名的叙述中错误的是(B)
+A. 保证信息传输过程中的完整性
+B. 保证数据传输的机密性
+C. 发送者身份认证
+D. 防止交易中的抵赖行为发生
+7、 LGPL：开源软件本身（包含修改）&与其静态链接部分必须以LGPL许可对外开源，最措施是(C)
+A. 不修改使用
+B. 自研修改部分开源
+C. 动态链接使用，或者进程隔离
+1、 开源软件及第三方软件使用的管控内容不包括(C)
+A. 软件有明确的许可证或签订有相关使用协议
+B. 对于开源软件履行开源义务，避免导致产品开源或公司声誉受损
+C. 产品使用第三方软件须先使用后申请
+D. 建立优选库路标库，减少种类和数量，牵引使用优选软件，禁选软件禁止使用
+11、 开源软件要严进宽用，在引入时需经过严格网络安全选型评估，其主要评估内容包括(ABC)
+A. 已知安全问题及漏洞扫描，如：对业界公开的严重级别的安全漏洞已修复
+B. 病毒扫描
+C. 软件完整性及一致性检查
+D. 高风险模块静态代码扫描分析和代码人工检视
+11、 以下关于公司IPD中开源及第三方软件风险管控活动的说法有误的是(A)
+A. 产品在TR4前必须进行开源认证
+B. 产品使用开源及第三方软件必须先申请后使用
+C. 在产品发布前，需进行开源认证
+D. 开源软件中心会定期将开源软件漏洞通知到产品
+11、 产品代码开源包外发前为了保证不泄露关键信息资产，必须使用KIA扫描IPD流程中开源及第三方软件相关活动的顺序正确的是(A)
+A. 开源入库选型—>开源使用申请—>开源认证—>开源义务履行—>漏洞闭环处理
+11、 如下哪些描述符合开源及第三方软件管理要求(ABCD)
+A. 如果需要使用优选等级为‘DXX（禁选）’或者EOX的软件，或者应用技术风险为‘高’的软件，需要提供对应备案纪要
+B. 优先使用优选等级为‘B （优选）’的版本
+C. 不允许使用应用技术风险为‘高’的软件
+D. 不允许使用优选等级为‘DXX（禁选）’和EOX的软件
+11、 如下哪些情况需要入库PDM(ABC)
+A. 如果待入库的的开源及第三方软件在PDM中已存在，需要引入新版本
+B. 如果待入库的开源及第三方软件在PDM中已存在，且版本号未更新，但供应商因为修改bug等原因更新了软件包
+C. 如果待入库的开源及第三方软件在PDM中不存在
+D. 供应商提供的软件包本身没有变化，且已经入库PDM，我司人员在其上进行的二次开发/编译的部分需要入库PDM
+21、 以下哪个软件可以作为开元第三方的选型(C)
+A. XXXX master
+B. XXXX 1.1.11-beta
+C. XXXX.3..19
+D. XXXX.1.1.12rc2
+21、 关于开源使用，一下描述或做法不正确的是(ABCD)
+A. 客户要求使用开源软件新版本，产品A集成使用的开源软件B近3年无人维护且无可代替软件，产品A将该开源软件B及修改的代码在GitHub以新项目C开源并自行维护，再将开源软件C集成到产品A中使用。
+B. 产品A使用的开源软件被爆出存在严重漏洞(CVSSL>7)，产品A的安全SE分析发现该漏洞涉及的代码产品A未调用，可以不需要对产品A的现网版本打补丁。
+C. 产品A软件开发人员在编写代码时，拷贝Apache license 2.0的XXC++开源软件中的排序算法实现代码，以提升开发效率。
+D. 某产品共130K行代码，其中仅10行diamante与开源代码相似度较高；该10行代码可以确认为自研代码。
+E. 开源软件的选用，是产品在需求分析和架构设计时决定的；产品需基于全量全视角视图管理产品和平台使用的开源及第三方软件，确保使用的开源及第三方版本归一和满足生命周期需求。
+21、 关于开源使用，下列说法错误的是(ABCD)
+A. 产品A自研开发且对外开源XXComb软件，并捐献到Apache基金会成为顶级项目，产品B选用社区XXComb软件，仍应认定XXComb软件为自研软件。
+B. 某产品开发一款仅给内部一线行销员工使用的APP（必须华为员工账号才能使用），并上架华为手机应用市场供一线行销人员下载，该APP通过静态链接方式集成使用了一款AGPL开源软件，由于只是内部一线行销员工使用，可以不需要履行开源义务。
+C. 某员工在业余时间以个人名义，在GitHub开源了X项目；该员工在公司办公环境下载该X项目代码集成到产品A中使用，产品A不需要履行开源义务。
+D. 公有云服务产品A通过静态链接的方式集成使用了license为GPL V2.0的开源软件，服务产品A可以不履行代码开源义务。
+解析：Some(b8398575, b8338303) think the answer is ABD while others(b8325823, b8302521, b8214821) think the answer is ABCD
+21、 有关第三方软件引入的评估标准，正确的是(BC)
+A. 已EOSS/即将停止销售的第三方软件不建议引入
+B. 业界无替代的第三方软件，可能存在供应风险，不建议引入
+C. 未签署供应商网络安全协议的软件禁止引入
+D. 供应商发布的软件正式版本，可以引入
+解析：BC - b8302521, b8194499
+BCD - b8299143, b8262667, b8262667
+ABC - b8214821, b8186353
+21、 在业务版本发布前，对于版本中的开源及第三方软件的网络安全要求，以下描述正确的有(ABCD)
+A. 为保证来源可靠，业务版本使用的开源及第三方软件必须来自保存在华为PDM库中的软件副本
+B. A类红线和高风险(CVSS评分>=7)的B类红线问题在版本发布前解决或规避，中低风险(CVSS评分<7)的B类红线问题则可待供应商/合作方修复后再同步其修复版本
+C. 非A/B类红线安全问题，如果是高风险的安全问题则在版本发布前解决或规避，如果是中低风险的安全问题可待供应商/合作方修复后再同步其修复版本
+D. 在业务版本的研发过程中，开源及第三方软件需随产品代码一起开源产品网络安全测试
+21、 产品A计划选择一款加密算法软件，实现主控板从上电到启动过程中对比加载文件和芯片中保存的文件是否一致，当不一致时则禁止单板启动，并告诉用户，以下选型不建议的是(DE)
+A. 向其配套的底层平台提需求，由其实现此功能并对上层提供统一的接口
+B. 对比，测试，分析&应用业界主流的加密算法软件，权衡性能和占用的单板看空间
+C. 整包引入业界主流软件OpenSSL，并采用部分编译的方式，仅编译其使用的5%左右的代码
+D. 拷贝OpenSSL软件密码算法功能相关的部分文件
+E. 参考OpenSSL中的密码算法的实现，完整的代码逻辑，对部分代码实现进行封装后作为自研代码使用
+26 GPL V2 License 的规避产品开源方式，以下做法正确的是(AC)
+A. 若无法直接进程隔离，则可制作隔离层，将该软件包装为一个进程（需开源），通过隔离层进行交互
+B. 在内核态中对Linux kernel进行调用，以避免GPL传染
+C. 可以采用进程隔离方式使用，即产品与GPL软件在不同进程中运行，通过进程间通信进行交互
+D. 以动态链接的方式使用GPL软件，使产品代码不会被GPL传染
+21、 产品计划引入选型OpenSSL软件，下列说法正确的是(C)
+A. 修改的OpenSSL软件源码如果得到作者的认可，产品可以不用回馈社区直接引入选型OpenSSL
+B. 从官网下载OpenSSL源码太麻烦，可以直接使用git命令下载github上的openssl源码
+C. openssl-fips是OpenSSL的一个分支开源的独立项目，应该以新软件的方式引入
+D. 可以从任意网站下载OpenSSL源码包，只要扫描不出病毒
+21、 下面关于开源软件代码修改说法正确的是(BC)
+A. 产品P引入XX开源软件，工程师小A分析&应用后认为将XX软件的其中几个接口再重新封装成新接口，可以更好支撑业务，于是小A在XX软件代码文件中新增一个功能接口，并且归档到开源软件目录支撑产品编译发布
+B. 产品P引入XX开源软件，工程师小A分析&应用后确认只使用其中2个特性，将开源软件归到开源代码目录，并通过部分编译的形式，仅编译需要的特性进行打包发布
+C. 产品P引入XX开源软件，工程师小A分析&应用后认为需要对开源代码进行少量修改才能满足产品需求，通过团队架构评审等确认后，将修改代码以Patch的方式进行管理
+D. 产品P引入XX开源软件，工程师小A分析&应用后确认只使用其中2个特性，于是将其它特性代码删除后，归档到开源代码目录支撑产品编译发布
+21、 针对FOSSID上扫描出来的，和开源相似的代码，是否可以确认为自研，判断原则是什么(B)
+A. 判断原则是基于工具，如果FOSSID无法扫描出来，则都是自研代码
+B. 判断原则是基于事实，没看过开源代码的人写出来的东西叫自研，其他任何形式直接参考开源写的代码都算开源
+C. 判断原则是基于目录结构，自研目录下的都是自研代码，open_source目录下都是开源软件
+D. 判断原则是相似度，如果相似度很低，如低于5%可以判断为自研
+31、 某CT产品3年前从供应商购买的一款第三方软件X，并在产品V1R1C00软件版本中配套A01单板使用。目前现网V1R1C01版本存量大，客户反馈较稳定，产品准备新立项V1R4C00版本，发现第三方软件X存在新版本，并且新版本也兼容A01单板，但切换测试成本较大，同时该软件版本标准维保即将到期，但供应商表示可以为华为单独提供延长维保服务，根据第三方软件生命周期规则，产品应该采取的策略是(A)
+A. 切换第三方版本X的新版本，确保能享受供应商完整的保障能力
+B. 由于不是新产品，不考虑升级第三方软件X新版本
+C. 考虑测试成本，通过购买供应商延长维保服务，继续使用X的老版本
+D. 由于架构未调整，不考虑升级第三方软件X新版本
+解析：b8299143 chooses C whereas others(b8302521, b8338303, b8395535, b8214821, b8194499, b8186353, b8194499) chooseA
+21、 为了有效支撑事后审计，并向内部、外部客户证明研发过程风险是可控的，须准确记录所有参与软件研发环节的相关人员的信息和其交付件的信息，保证获取的上下游信息准确，需跟踪和记录的研发过程阶段有(ABD)
+A. 软件编码与构建
+B. 需求分析与设计
+C. 现网部署
+D. 验证发布
+21、 为了促进开源回馈被社区接纳，下述哪个行为不值得推荐(D)
+A. 在社区邮件列表/issue列表里充分交流提交的方案，并根据意见反复修改
+B. 在社区线下会议上介绍自己的方案，赢得社区的认可
+C. 和社区维护者进行沟通，理解对方的规划思路
+D. 由于社区一直未采纳提交补丁，自己在社区中fork一个新项目出来维护
+31、 以下关于开源选型的说法，哪些是正确的(BD)
+A. 铲平A使用一款tinyxml软件，内存分配和解析速度均可满足产品要求，且现网已稳定运行10+年，社区近期发布了tinyxml2，且社区也表示后续主要在tinyxml2上进行维护，其解析速度为tinyxml的5倍，但综合考虑升级成本及新版本的影响，产品确定继续使用tinyxml
+B. Json-lib软件社区2013年后社区已无人贡献，建议产品独臂Jackson、fastJson、Gson等同类软件，结合产品使用场景，选择生态、license较友好的开源软件
+C. XML解析开源软件SAX性能比Dom4j快10倍，SAX 2004年发布最后一个稳定版本，当前平均每周下载量34+次，对性能要求较高，且使用场景为只读不写（xml文件）的产品可以考虑选择此软件
+D. Log4j日志组件的作者2015年发布log4j2.X和logback；性能比log4j1.X高10倍，建议使用log4j1.X的产品考虑切换到log2.X或logback
+31、 关于开源义务履行，下面说法错误的是(D)
+A. 原则上只要使用了开源软件，就需要履行开源使用声明义务。
+B. 代码对外开源义务是值按照开源许可证要求将一定范围内的代码对外开源，开源范围视具体许可证要求的和产品使用具体方式而定。
+C. 修改声明是指公司做出的对修改过的开源软件就修改期间，修改的代码以及修改过的文件做出声明，无强制要求产品执行，但建议产品在修改GPL/LGPL类开源软件时，履行该义务。
+D. 不同许可证的开源代码不存在兼容性问题(如GPL License与BSD License)，只需要申请后即可按规范使用。
+31、 在进行二进制文件差异消除时，需要根据不同的差异引入原因拟定差异消除方案进行业务功能性能测试，确保差异消除不影响业务功能和性能，下列差异消除方案哪一个是不合适的(D)
+A. 通过BepKit辅助消除python编译pyc文件时引入的时间差异
+B. 为消除自验代码中时间宏引入的二进制差异，可以选择删除DATE/TIME宏，并测试删除后是否影响业务功能
+C. 对于arj等压缩引入二进制差异的情况，可以通过反解的方式辅助进行差异消除
+D. gcc lto优化引入二进制差异，直接删除lto优化选项消除差异，无需对业务性能进行测试
+31、 选用开源软件时，需考虑以下哪些方面(ABCD)
+A. 合法合规
+B. 网络安全风险
+C. 生命周期情况
+D. 开源软件的技术生态
+31、 关于开源软件常见license的解读正确的是(ABC)
+A. BSD类license，如Apache/BSD/MIT等，原则上没有对外开源要求
+B. MPL类软件若无修改，则无需对外开源
+C. GPL软件本身须开源，且具有传染性，与该软件在同一进程中运行的代码都必须对外开源
+D. LGPL软件本身须开源，且具有传染性，与其动态链接部分的代码也必须以LGPL许可开源；静态链接则不被传染
+31、 某产品进行开源选型时，其中功能、性能等匹配度同属最高的有软件A和软件B，以下做法正确的是(ABC)
+A. 假定软件A的License为GPL V2，软件B的License为BSD类，由于GPL V2的License可能导致产品整体被迫开源，而BSD类License商业更为友好，所以推荐使用软件B
+B. 假定软件B的License为LGPL V2，如果选择软件B，为防止自研代码被传染，则只允许动态链接方式使用
+C. 假定软件A的License为MPL类，如果选择软件A，则必须关注修改后对应的开源义务
+D. 假定软件A的License为Apache V2.0，软件B的License为WTFPL，虽然Apache V2.0 License的商业比较友好，但WTFPL的License限制更少，所以建议选择软件B
+1、 下列关于B+树的说法不正确的是(C)
+A. B+树通常用于数据库和操作系统的文件系统中
+B. 非叶子节点中的每个索引顼通常只含有对应子树的最大关键字和指向该子树的指针
+C. 在B+树中的所有非叶子节点不仅起到索引的作用，还可以直接在非叶子节点中词到每个关键字对应的value
+D. B+树的特点是能够保持数据稳定有序，其插入与修改拥有较稳定的对数时间复杂度
+1、 在任意一颗非空二叉排序树T1中，删除某结点v之后形成二叉排序树T2，再将v插入T2形成二叉排序树T3，下列关于T1与T3的描述中，正确的是(AD)
+A. 若v不是T1的叶节点，则T1与T3可能不同
+B. 若v不是T1的叶节点，则T1与T3相同
+C. 若v是T1的叶节点，则T1与T3不同
+D. 若v是T1的叶节点，则T1与T3相同
+1、 栈的入栈顺序为1、2、3、...、N，在入栈过程中随机出栈随机序列，若第一个元素是 i，则第 j 个出栈元素是(D)
+A. j-i+1
+B. i-j
+C. i-j-1
+D. 不确定
+1、 以下哪个说法是正确的(ABD)
+A. 顺序表插入变动的时间复杂度为O(n)
+B. 顺序表按下表查找的时间复杂度为O(1)
+C. 顺序表在使用时，长度可随意变动
+D. 顺序表存储空间连续，即允许元素的随机访问
+1、 对于下列关键字序列，不可能构成某二叉排序树中一条查找路径的序列是(D)
+A. 92,20,91,34,88,35
+B. 12,25,71,68,33,34
+C. 21,89,77,29,36,38
+D. 95,22,91,24,94,71
+1、 已知一颗完全二叉树的第8层（设根为第1层）有10个叶节点，则该完全二叉树的节点个数可能有(BD)
+A. 329
+B. 137
+C. 201
+D. 491
+1、 无向图G有12条边，6个3度定点，其余定点的度均小于3，则G中可以有(ABC)个顶点
+A. 9
+B. 10
+C. 11
+D. 8
+1、 已知一棵二叉树，如果先序遍历的节点顺序是 KDCEFGHB, 中序遍历是 CDFEGHKB, 则后序遍历的结果为(D)
+A. CFHGEBDK
+B. CDFEGHBK
+C. FGHCDEBK
+D. CFHGEDBK
+11、 一个栈的入栈顺序是abcde，则不可能的出栈顺序是(C)
+A. edcba
+B. decba
+C. dceab
+D. abcde
+11、 元素a,b,c,d,e,f,g依次放入一个初始为空的栈中，若元素进栈后可以立即出栈，也可停留，直到所有元素都出栈，出栈顺序为b,d,c,f,e,a,g，则栈容量最小为多少(C)
+A. 2
+B. 1
+C. 3
+D. 6
+11、 假设有四个队列Q1、Q2、Q3、Q4，容量无限大。Q1是原始队列，其中有四个元素：a、b、c、d；Q2和Q3是中转队列；Q4是目标队列。现在要将原始队列中的元素经过一个或者多个中间队列中转后存入目标队列（中转的意思是说原始队列每个元素出队后入队到中间队列，原始队列全部出队后，再从中间队列出队并入队到目标队列）下列哪些序列是目标可能出现的？(AD)
+A. a、b、c、d
+B. d、b、c、a
+C. d、c、b、a
+D. a、c、b、d
+11、 一个链队列，头尾指针分别为front和rear，在进行出队操作时(D)
+A. 仅修改队头指针
+B. 仅修改队尾指针
+C. 队头、队尾指针都要修改
+D. 队头、对位指针可能都要修改
+11、 如果一颗非空的二叉树的前序遍历结果与后序遍历结果正好相反，则该二叉树一定满足(C)
+A. 所有的结点均无左孩子
+B. 所有的结点均无右孩子
+C. 只有一个叶子结点
+D. 是任意的一颗二叉树
+1、 对快速排序算法，在最差的情况下，它的时间复杂度的递归公式和时间复杂度是(C)
+A. T(n) = T(n/10) + T(9n/10) + O(n) 和 O(nLogn）
+B. T(n) = 2T(n/2) + O(n) 和 O(nLogn)
+C. T(n) = T(n-1) + O(n) 和 O(n^2)
+D. T(n) = T(n-2) + O(n) 和 O(n^2)
+1、 递归以下说法正确的是(ABCE)
+A. 在函数中直接调用自己成为函数的直接递归调用
+B. 递归是一种分而治之、将复杂问题转换成简单问题的求解方法
+C. 递归可以使编写的程序简洁、结构清晰
+D. 在使用递归时，可以无限递归下去，不需要考虑其他因素
+E. 函数f1调用了函数f2又再次调用了函数f1，这种调用的方式我们称之为间接递归调用
+4、 DevOps新型研发模式的目的(ABC)
+A. 促进研发（应用程序/软件工程）、技术运营（运维）部门之间的沟通、协作与整合，持续交付可靠的软件产品和服务。
+B. DevOps是以业务驱动的软件交付方法。从需求到交付生产环境，研发与运维间紧密协的文化运动与实践。
+C. DevOps文化更注重沟通，快速获得用户反馈提升创新能力。
+D. 开发和运营关注点和目标不匹配，业务交付模式需要独立开展以提高效率
+5、 SCRUM是以短周期迭代为核心，包含团队、工作件、管理和技术优秀实践的集合，Sprint事件包括(BCDE)
+A. 产品Backlog
+B. 冲刺
+C. 计划
+D. 每日站会
+E. 评审会议
+F. 回顾会议
+1、 下面的描述中，哪些属于敏捷宣言的主要内容(ABCD)
+A. 个体与交互重于过程和工具
+B. 可工作的软件重于完备的文档
+C. 客户协作重于合同谈判
+D. 响应变更重于遵循计划
+E. 计划驱动，阶段分离，顺序执行
+1、 在敏捷开发模式中，Scrum Master角色的主要作用包括(ABD)
+A. 负责确保Scrum被理解并实施
+B. 按需推动Scrum事件
+C. 有权要求团队做事以及改变列表条目优先级
+D. 担当教练角色， 引领团队达到更高级的凝聚力、自组织和表现
+8、 SCRUM框架的工件包括(BCD)
+A. 开发文档
+B. 产品Backlog
+C. SprintBacklog
+D. 产品增量
+9、 SCRUM框架的关键角色包括(ABC)
+A. 产品负责人(Product Owner)
+B. Scrum Master
+C. 开发团队
+D. 软件工程师
+11、 瀑布式模型的优缺点描述正确的是(ACD)
+A. 模型简单过程易于理解
+B. 交付周期长
+C. 反馈周期短
+D. 无法应对需求快速变化的场景和领域
+11、 下面关于系统之系统描述错误的是(D)
+A. 系统之系统中的系统的不同部分可分别对应不同的管理和控制策略和规则
+B. 系统之系统中并不存在一个对系统各个部分进行管理的管理者
+C. 系统之系统是两个或以上独立管理和治理的系统的集合
+D. 系统之系统不可能是最小规模系统，如包含不同提供商提供的服务的较小的系统，大规模系统经常是系统之系统"
+11、 关于软件工程，以下说法错误的是(B)
+A. 软件工程发展的目的就是希望找到合适的方法和技术适用软件系统
+B. 软件工程仅指实现软件生产开发的活动序列
+C. 软件工程是一门研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科，它涉及程序设计语言、数据库、软件开发工具、系统平台、标准、设计模式灯方面
+D. 软件工程的目的是支持专业化的软件开发、而不仅仅是个人编程
+11、 某电商公司的网站的部署周期（需求提出到部署产品环境的时间）为4周（工作日20天），其中需求分析3天，开发时间为5天，测试人员手动进行功能测试时间为6天，环境准备和部署时间为4天，该公司为了提升自身竞争力，目标在半年内将部署周期降低到2周，以下哪些DevOps时间可以帮助该公司实现目标(ABC)
+A. 功能测试自动化
+B. 自动化部署
+C. 软件开发过程引入敏捷、精益思维，最小化需求范围(MVP)
+D. 微服务拆分
+11、 面向服务的方法的好处(ABCD)
+A. 服务提供商会公开服务的信息，任何获得授权的用户都可以使用相应服务
+B. 组织内部或外部的服务提供商都可以提供服务
+C. 服务的用户能根据使用而不是提供商提供的服务来付费
+D. 应用能够延迟服务绑定直到这些服务被部署或执行
+11、 当一个企业不得不支持许多相似但不完全相同的系统时，最有效的一种复用方法是(A)
+A.软件产品工程SPLE
+B.分布式系统
+C.应用框架
+D.应用系统复用
+11、 关于软件开发和维护工作，以下说法错误的是(B)
+A. 软件交付的主要工作是将程序代码和相关文档交给用户
+B. 持续集成是频繁持续地将团队成员的工作进行集成
+C. 用户培训是帮助用户理解产品并掌握系统的使用和操作
+D. 软件部署是通过配置、安装和激活等活动保证软件系统的正常运行
+解析：持续集成是一个将集成提前至开发周期早期阶段的软件开发实践方式，是指软件个人研发部分向软件整体部分交付，让构建、测试和集成代码更经常性地发生，并且每次集成都要通过自动化的构建来验证，使集成错误尽早被发现。
+11、 下面正确地描述了SaaS和SOA的是(D)
+A. SaaS和SOA本质都是基于服务的思想，只是说法不同
+B. SaaS必须以SOA技术为基础
+C. SaaS环境下考虑可伸缩模型时，我们一般采用增强扩展，SOA技术能很好地支持增强扩展
+D. SaaS是向用户交付应用功能的方法，而SOA是应用系统的一种设计技术
+11、 以下哪一项不属于工程化软件开发所面临的根本性困难(B)
+A. 软件是庞大的逻辑产品
+B. 软件开发工具所提供的开发支持弱
+C. 软件的复杂程度高
+D. 软件系统的问题空间和解空间之间的巨大鸿沟
+11、 下面描述正确或分析方法正确的是(ABC)
+A. 可以使用gcore输出进程的运行coredump快照作分析
+B. 两个线程可能发生了互锁
+C. 可以attach到进程，查看两个std::mutex的_owner信息，是否为对方线程ID
+D. 两个线程可能同时在访问一个锁
+1、 GCC安全编译选项-fstack-protector-all的作用有哪些(DE)
+A. GCC安全编译选项-fstack-protector-all的作用有哪些
+B. 在栈顶插入一个随机数防止栈溢出
+C. 设置栈为代码不可执行
+D. 将字符串数组调整到栈的高地址
+E. 在栈底插入一个随机数防止栈溢出
+1、 下面哪些选项是IPD中要求使用gcc编译器必须开启的编译选项(ABCDE)
+A. -fPIC\-fPIE
+B. -fstack-protector-all 栈溢出保护
+C. -Wl,-z,relro          保护got表 - 部分重定向只读
+D. -Wl,-z,noexecstack    堆+栈不可执行
+E. -z,now                保护got表 - 全部重定向只读
+F. -ftrapv
+1、 攻击者通过逆向分析可执行程序或动态库，获取程序运行过程，下面哪个选项可以删除可执行程序或动态库的符号表信息，提高逆向分析的难度(B)
+A.-Wpointer-arith
+B.-s
+C.-ftrapv
+D.-Wl,-z,relro
+1、 以下关于-Wl,-z,noexecstack选项描述正确的是(AD)
+A．可有效提高缓冲区溢出的难度，但仍可以被ret2lib、rop等攻击绕过
+B．只能保护栈的不可执行
+C．不能保护数据段的不可执行
+D．可以保护堆的不可执行
+1、 链接选项-Wl, --disable-new-dtags,-rpath [path]阻止LD_Library_PATH攻击的原理是什么(A)
+A. 设置程序启动时优先加载[path]路径下的共享库
+B. 设置只有[path]路径下的动态库才允许被加载
+C. 设置程序启动时优先加载[path]路径下的静态库
+D. 设置[path]路径没有代码可执行权限
+6、 GCC安全编译选项-fstack-protector-all的作用有哪些(DE)
+A. 将字符串数组调整到栈的低地址
+B. 在栈顶插入一个随机数防止栈溢出
+C. 设置栈代码为代码不可执行
+D. 将字符串数组调整到栈的高地址
+E. 在栈底插入一个随机数防止栈溢出
+1、 如下关于编译构建环境的说法，哪些是正确的(D)
+A. 构建环境上的工具，可以由CIE从公司外网下载直接安装。
+B. 每一次构建成功后，都应该记录生成的版本包和构建环境镜像的关联关系,方便以后溯源。
+C. 为了方便开发人员定位构建问题，构建环境应该对所有开发者开放。
+D. 版本发布构建所用的环境，应该是封闭的，只能有任命的CIE可以访问环境。
+1、 对于构建一致性的必要性和要求，说法正确的有(ABD)
+A. 基于相同源码、环境、生产与客户现网部署逐比特一致的二进制
+B. 随机差异要全部消除，除非能准确知晓这些差异的内容
+C. 随机差异优先消除，时间差异太大时没必要消除
+D. 交付源码和二进制要保持一致
+1、 某产品在进行源码交付时被认证机构认定为所集成的A平台源码无法溯源，经过确认发现了根源，产品经理小强通过文件夹共享方式获取到A平台的联调版本并集成了该版本，A平台二进制对应的源码信息未做基线，产品在正式发布版本仍然使用A平台该联调版本，源码交付后，认证机构经过验证发现A平台源码缺失，上述行为违背了哪些配置管理原则(ABCD)
+A.A平台二进制及源码没有进行配置标识及基线，导致源码缺失
+B.产品正式发布的版本应配套使用A平台的正式发布版本，不应使用A平台的联调版本
+C.联调版本没有通过联调版本发布流程发布，而是通过文件共享方式私下进行传递
+D.具备在任意时刻都能交付二进制对应的准确源代码的能力
+1、 按照二进制文件的差异现象，可以将差异分为时间戳差异和随机差异，时间戳差异表现为各种形式的时间信息，下列哪些场景属于时间戳差异(ABCD)
+A. 其他自定义格式：1990+月-日-天-小时-分-秒的偏移量
+B. 构建时刻距离1970/01/01秒数
+C. "NOV1,2016，21：04：16“字符串
+D. “20170304180056"字符串
+1、 以下哪些是链接选项(BCD)
+A. -Fpic
+B. -Wl,-z,relro
+C. -pie
+D. -Wl,-z,noexecstack
+1、 下面关于-fPIC和-fPIE -pie选项描述正确的是(BC)
+A. 两者作用相似可以互相替换
+B. -fPIC是编译选项
+C. -fPIE -pie用于可执行程序
+D. -fPIC用于静态库
+1、 关于工程构建，以下说法错误的是(ABD)
+A. 允许使用-w选项屏蔽所有告警
+B. 使用虚拟化OS工具在Windows上来模拟Linux进行构建
+C. 构建输出的日志简洁明晰，信息应分级为error/warning/info；出现error信息表示构建失败，必须终止构建
+D. 构建模块较多时，对于子模块私有的配置，可以在模块内定义config.xml作为子模块的配置
+11、 有关构建脚本，下列说法正确的是(ABC)
+A. 构建脚本必须使用相对路径，禁止使用绝对路径
+B. 构建脚本成功返回0；构建失败，应以非0的退出码退出
+C. 每个文件开头包含一个注释，简要概述文件源代码的功能、版权声明
+D. 产品软件构建脚本语言智能选择一种，推荐Python
+1、 关于过载控制设计原则，下列说法错误的是 (B)
+A.自保恢复原则：负荷下降到设计能力范围之内后，网元可以立即恢复处理能力
+B.业务保证原则：确保在出现大流量冲击时所有业务不被丢弃
+C.及早控制原则：应尽可能在业务流程处理前端或业务处理较早的处理单元（网元/单板/芯片等）或底层协议层次上控制业务接入
+D.优先级保证原则：系统过载时保证高优先级的业务能够优先获得资源，优先得到处理
+1、 以下描述关于网络韧性工程的架构/技术的描述错误的是 (C)
+A.非持久性是在有限的时间内保留信息、服务和连接，从而减少攻击者利用漏洞并建立持久立足点的机会
+B.权限限制是指根据关键性和信任模型，限制使用网络资源所需的权限，以及分配给用户和网络实体的权限，以最大限度的减少对手活动的潜在后果
+C.多样性使用异构技术（例如 硬件、软件、固件、协议），这样增加了网络建设的成本，运维的难度，是不可取的
+D.分割可以根据系统的重要级别进行划分，以限制成功攻击的传播或损害
+1、 关于冗余设计，下面说法错误的是(B)
+A.主用单元和备用单元的故障检测率都直接影响冗余系统可用度
+B.系统的冗余设计是硬件独立完成的，与软件关系不大
+C.电信产品要求具备高可用性，但同时也需要考虑成本等多方面的因素，所有冗余设计并不是使用的越多越好
+D.资源池冗余设计中要考虑负载均衡
+1、 以下哪一条是软件选课系统的质量需求，并且满足原子性要求？(A)
+A.用户规模不超过5千人时，登录密码验证时间不超过2秒，用户规模不超过2万人时，登录密码验证不超过5秒
+B.课程属性与学生专业属性不符时不允许选课
+C.系统应当在2018年9月1日之前上线部署运行
+D.系统可按照院系统计学生选课请款个，指定统计范围后1秒内返回统计结果
+1、 某公司产品开发人员，功能实现时预留后门，在特定场景下可以绕过支付机制获利，并成功在商用版本中发布，可以通过哪项活动避免该问题出现(D)
+A.威胁建模
+B.软件包完整性保护
+C.设计架构审查
+D.代码检视
+1、 基于威胁建模的测试设计方法需要在安全测试活动中哪个阶段使用？(B)
+A.动态分析和Fuzz测试
+B.测试方案设计
+C.总体测试策略
+D.静态分析
+1、 FMEA(Failure Mode and Effects Analysis)是一种可靠性分析方法，FMEA分析过程中，我们常说的补偿措施，不包括以下哪个选项（）(C)
+A.通过负荷分担保护业务
+B.主备单板倒换
+C.现场更换单板
+D.自动复位单板
+1、 关于“开放设计安全原则”，下面描述不正确的是（）(C)
+A.涉及加密算法选择时，多使用业界公开标准的成熟算法，而不要设计私有的，自以为安全可靠的算法
+B.设计不应该是秘密的，不应依赖对设计和实现的保密，以及攻击者的无知
+C.加密秘钥要公开开放
+D.密钥禁止硬编码
+1、 关于故障预测预防技术，以下说法错误的是（）(B)
+A.通过故障预测预防，用户可以根据故障出现的概率以及出现的位置，采取相应的手段提前避免这些有可能出现的故障
+B.故障预测预防是一种被动故障处理技术
+C.故障预测预防技术是一种有效的主动故障处理技术
+D.故障预测可以在系统故障出现之前，通过分析系统的状态得到故障可能出现的概率以及出现的故障种类

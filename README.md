@@ -26,3 +26,4 @@
  
 -[x] 收藏题
 
+update question_重要备份 a,question b SET a.error_times=b.error_times,a.right_times=b.right_times,a.doubted_times=b.doubted_times  WHERE a.id=b.id;

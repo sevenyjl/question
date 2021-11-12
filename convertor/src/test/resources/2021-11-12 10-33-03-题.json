@@ -1,0 +1,927 @@
+[
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_10.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "关于开源软件选型，以下说法错误的是 A. 尽量选择商业友好的开源license B. 不考虑那些社区被竞争对手控制的开源软件 C. 若采用商业不友好的license，产品要评估其开源风险 D. 开源软件选型只要从软件功能、license和社区三个维度考虑就可以了"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_10.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率74% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_10.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_11.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下关于公司IPD中开源软件风险管控活动的说法正确的是 A. 产品只要选择功能符合需求的开源软件就可以使用了 B. 对于产品中应用的如压缩小工具等开源软件，其功能简单，独立，可替代性强，可以不用申请，直接使用 C. 开源自检的目的是确认产品所使用的开源软件是否超出申请范围，争取问题早发现，早解决 D. 产品在发布后需要进行开源认证"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_11.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率78% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_11.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_12.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下行为属于哪一级开源违规:新使用开源软件未通过电子流申报，或在申报过程中提供错误虚假信息。 A. 一级 B. 二级 C. 三级 D. 未对公司造成损失，不构成违规"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_12.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率54% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_12.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_13.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下对于开源义务履行的描述，哪项是正确的 A. 只要没有修改开源软件的代码，就可以不用履行开源义务 B. 开源义务主要包括形式声明义务，对外开源义务，以及支持社区开发义务 C. 企业向社区捐款越多，其在社区中的影响力也越大 D. 社区一般都有正式或非正式的网络支持"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_13.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率51% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_13.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_14.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪个开源license属于公司推荐使用的类型 A. EPL B. GPL C. LGPL D. Apache"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_14.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率69% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_14.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_15.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪项对开源软件的描述是错误的 A. 一般都有社区支持 B. 只有参与社区，才能获取到源代码 C. license规定了使用开源软件时的限制 D. 大多有特定License"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_15.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率78% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_15.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_16.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "商业公司一般采用那种方式履行对外开源义务 A. Written Offer模式 B. 随产品分发 C. 网站开源 D. 通过邮件分发"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_16.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率69% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_16.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_17.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪种License属于“商业不友好” A. EPL B. Apache C. BSD D. GPL"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_17.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率73% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_17.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_18.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "对于常见开源社区组织中，Committer和contributor描述正确的有 A. 前者具有代码块的写权限；后者没有 B. 后者具有代码块的写权限；前者没有 C. 任何人都可以是Committer D. 由PMCer提议并投票后，Committer可提升为contributor"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_18.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率62% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_18.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_19.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪项行为有可能导致公司遭受外界开源维权 A. 在公司内部使用EPL许可开源的文档编辑器，不对外开源 B. 修改使用GPL许可的开源软件代码，并将其作为研发工具自用，不对外开源 C. 修改使用GPL许可的开源软件源码，并将其作为产品进行发布销售，不对外开源 D. 修改使用BSD许可的开源软件源码，并将其作为产品销售，不对外开源"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_19.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率75% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_19.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_2.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "以下哪些不是公司开源应用的指导原则 A. 无缝审批 B. 质量优先 C. 零风险 D. 业务优先"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_2.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率50% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_2.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_20.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "某产品使用了某开源软件作为其核心功能模块，在社区参与方面应该如何做？ A. 由于产品核心模块属公司机密，不得泄露任何相关信息，因此任何情况下不能参与社区 B. 仅需有限的社区参与，关注社区版本更新，修复社区发布的漏洞即可 C. 参与并贡献社区，培养committer，使本地修改的bug和特性能够合入社区版本 D. 深入参与并贡献社区，培养committer甚至PMCer,建立社区影响力，成为社区领导者，驱动社区项目向着对产品有利的方向发展"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_20.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率73% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_20.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_21.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪个是开源软件管理的执行组织 A. 软件管理委员会 B. 开源软件工作组 C. 中央软件部 D. 开源软件中心"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_21.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率54% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_21.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_22.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "产品线想要在产品中应用开源软件，可以从那个组织得到相应技术和认证支撑 A. 软件管理委员会 B. 开源软件工作组 C. 中央软件部 D. 开源软件中心"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_22.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率62% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_22.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_23.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "对于一级开源违规行为，公司的处罚措施是什么 A. 直接责任人：通报批评，并记录员工个人诚信档案；开发代表：书面检查，通报批评；平台/产品部/研究部主管：通报批评 B. 直接责任人：严重警告，记录关键时间，并记录员工个人诚信档案；开发代表：书面检查，降职、降级和降薪；平台/产品部/研究部主管：降职或降薪 C. 直接责任人：辞退，并记录员工个人诚信档案；开发代表：书面检查，并予以免职；平台/产品部/研究部主管：降职和降级 D. 直接责任人：严重警告，降级降薪，并记录员工个人诚信档案；开发代表：书面检查，并予以免职；平台/产品部/研究部主管：降职和降级"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_23.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率65% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_23.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_24.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪项行为属于二级开源违规 A. 新使用开源软件未通过电子流申报，或在申报过程中提供错误虚假信息 B. 将开源软件的License和申明删除，然后作为组件合如产品，结果遭到开源组织维权诉讼，赔偿10万美元 C. 某款交换机的芯片中使用了开源软件，但却没有按照该开源软件License规定将该交换机的源码开源，结果遭到开源组织维权，被迫停止销售并召回全部相关产品，导致客户关系严重受损 D. 对于已经发现开源风险，未及时给出风险整改计划，或这未能够按照风险整改计划完成整改"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_24.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率51% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_24.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_25.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "公司对于使用开源软件的指导原则是 A. 无缝审批、安全优先、优选优先、零风险、信息安全 B. 无缝审批、业务优先、质量优先、风险可控、禁止侵权或违约 C. 无缝审批、业务优先、优选优先、零风险、禁止侵权或违约、信息安全 D. 无缝审批、业务优先、优选优先、风险可控、禁止侵权或违约、信息安全"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_25.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率69% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_25.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_26.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下对开源License的描述哪项是正确的 A. 公认的开源License的认证机构是开源社区 B. 业界开源License一般分为三类，分别为:GPL类，MPL类和EPL类 C. 开源License在法律上规定了在开源软件使用时享有的权利和必须履行的义务 D. 开源License一般只在开源软件官方网站上提供下载"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_26.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率74% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_26.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_27.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "开源软件的三大要素不包括以下哪项 A. License B. 社区开发模式 C. 商业模式 D. 免费使用"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_27.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率60% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_27.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_28.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪项对开源软件的描述是错误的 A. 大多有特定License B. 可获得源代码，并且可以对其进行修改 C. 可免费使用，但是需要得到软件版权所有人许可才能复制和分发 D. 英文缩写为OSS"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_28.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率58% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_28.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_29.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "产品可通过PDM开源软件使用电子流申请产品代码对外开源 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_29.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率48% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_29.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_3.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "开源社区中，主要是哪些人是参与开源项目开发 A. contributor B. PMCer C. committer D. 社区基金董事会成员"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_3.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率62% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_3.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_30.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "开源软件已经逐渐成为商业公司的一种新的商业谋利手段 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_30.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率75% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_30.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_31.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "企业可以通过在开源社区中培养committer或PMC来增强对社区项目的影响力 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_31.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率81% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_31.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_32.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "对于那些有基金会支持的开源社区，由于社区项目多被基金会所控制，所以我们在选择开源软件时，尽量不要选择此类 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_32.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率61% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_32.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_33.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "公司已经将开源license风险控制活动融入了IPD流程 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_33.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率81% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_33.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_34.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "公司外购的商业软件中也有可能使用了开源软件，可能会将相关开源风险引入产品，必须予以关注 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_34.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率82% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_34.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_35.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "在产品生命周期中，要注意开源软件的漏洞闭环处理 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_35.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率81% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_35.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_36.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "开源社区基金董事会对开源项目的发展方向有决策权 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_36.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率54% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_36.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_37.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "BSD类license为了保证开源软件能够永久开源，它要求使用者也要把与开源软件相集成的代码开源 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_37.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率69% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_37.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_38.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "在任何情况下，公司都鼓励优先使用市场上已有的商业软件，然后再考虑开源软件 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_38.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率73% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_38.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_39.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "开源软件是可以免费获取和使用的，但其使用也受到开源License的限制 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_39.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率81% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_39.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_4.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "进行以下哪些行为可以帮助参与者成为一个committer A. 向社区贡献bug补丁 B. 在邮件列表中回答别人的技术问题 C. 向社区捐款 D. 向社区贡献测试用例"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_4.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率69% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_4.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_40.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "产品在发布之前就经过了开源认证，维护阶段就不必关注该产品中的开源软件了 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_40.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率82% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_40.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_41.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "若产品代码要对外开源，需经过知识产权部门的法务评审，再由开源软件中心决策 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_41.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率41% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_41.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_42.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "在合理的情况下，我司允许的产品代码对外开源 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_42.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率79% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_42.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_43.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "对于违反开源软件管理规定者，还要追究其主管管理者连带责任 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_43.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率81% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_43.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_44.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "项目需要使用某款开源软件，只需SE和开发代表批准即可 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_44.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率81% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_44.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_45.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "开源软件社区是由开源软件的用户、代码贡献者和相关项目资源构成的 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_45.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答正确 我的得分： 2 考生平均正确率80% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_45.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_46.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "若客户没有提出要求，产品在发布时可以不履行开源相关义务 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_46.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率81% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_46.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_47.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "使用开源软件时，只需将开源软件中的许可证和声明信息删除，去除相关标识信息，就可以不履行相关开源义务 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_47.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率82% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_47.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_48.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "以下哪些不是公司开源应用的指导原则 A. 无缝审批 B. 质量优先 C. 零风险 D. 业务优先"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_49.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "在开源社区中，以下哪些角色具有代码库的写权限 A. contributor B. PMCer C. committer D. 社区基金董事会成员"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_5.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "以下哪些是公司对于开源的相关发文 A. 开源软件使用及管理办法 B. 开源软件及软件开源管理办法 C. 关于违反《开源软件及软件开源管理办法》的问责制度 D. 开源软件违规使用问责制度"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_5.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率41% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_5.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_50.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "进行以下哪些行为可以帮助参与者成为一个committer A. 向社区贡献bug补丁 B. 在邮件列表中回答别人的技术问题 C. 向社区捐款 D. 向社区贡献测试用例"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_51.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "开源软件义务主要包含哪些内容 A. 形式声明义务 B. 对外开源的义务 C. 知会软件版权所有人的义务 D. 再次发行的义务"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_52.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "对外开源的义务有哪些履行方式 A. Written Offer模式 B. 通过网站开源 C. 通过邮件分发 D. 随产品分发"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_53.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "以下哪些是公司对于开源的相关发文 A. 开源软件使用及管理办法 B. 开源软件及软件开源管理办法 C. 关于违反《开源软件及软件开源管理办法》的问责制度 D. 开源软件违规使用问责制度"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_54.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "对于企业，参加开源社区有哪些好处 A. 可以加快产品上市的周期 B. 可以降低产品维护成本 C. 软件质量有保障 D. 能够通过社区了解友商的动态"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_55.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "开源社区中，主要是哪些人是参与开源项目开发 A. contributor B. PMCer C. committer D. 社区基金董事会成员"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_56.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下关于公司IPD中开源软件风险管控活动的说法正确的是 A. 产品只要选择功能符合需求的开源软件就可以使用了 B. 对于产品中应用的如压缩小工具等开源软件，其功能简单，独立，可替代性强，可以不用申请，直接使用 C. 开源自检的目的是确认产品所使用的开源软件是否超出申请范围，争取问题早发现，早解决 D. 产品在发布后需要进行开源认证"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_57.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "关于开源软件选型，以下说法错误的是 A. 尽量选择商业友好的开源license B. 不考虑那些社区被竞争对手控制的开源软件 C. 若采用商业不友好的license，产品要评估其开源风险 D. 开源软件选型只要从软件功能、license和社区三个维度考虑就可以了"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_58.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪项对开源软件的描述是错误的 A. 大多有特定License B. 可获得源代码，并且可以对其进行修改 C. 可免费使用，但是需要得到软件版权所有人许可才能复制和分发 D. 英文缩写为OSS"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_59.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "开源软件的三大要素不包括以下哪项 A. License B. 社区开发模式 C. 商业模式 D. 免费使用"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_6.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "对于企业，参加开源社区有哪些好处 A. 可以加快产品上市的周期 B. 可以降低产品维护成本 C. 软件质量有保障 D. 能够通过社区了解友商的动态"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_6.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率55% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_6.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_60.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下对开源License的描述哪项是正确的 A. 公认的开源License的认证机构是开源社区 B. 业界开源License一般分为三类，分别为:GPL类，MPL类和EPL类 C. 开源License在法律上规定了在开源软件使用时享有的权利和必须履行的义务 D. 开源License一般只在开源软件官方网站上提供下载"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_61.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "公司对于使用开源软件的指导原则是 A. 无缝审批、安全优先、优选优先、零风险、信息安全 B. 无缝审批、业务优先、质量优先、风险可控、禁止侵权或违约 C. 无缝审批、业务优先、优选优先、零风险、禁止侵权或违约、信息安全 D. 无缝审批、业务优先、优选优先、风险可控、禁止侵权或违约、信息安全"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_62.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪项行为属于二级开源违规 A. 新使用开源软件未通过电子流申报，或在申报过程中提供错误虚假信息 B. 将开源软件的License和申明删除，然后作为组件合如产品，结果遭到开源组织维权诉讼，赔偿10万美元 C. 某款交换机的芯片中使用了开源软件，但却没有按照该开源软件License规定将该交换机的源码开源，结果遭到开源组织维权，被迫停止销售并召回全部相关产品，导致客户关系严重受损 D. 对于已经发现开源风险，未及时给出风险整改计划，或这未能够按照风险整改计划完成整改"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_63.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "对于一级开源违规行为，公司的处罚措施是什么 A. 直接责任人：通报批评，并记录员工个人诚信档案；开发代表：书面检查，通报批评；平台/产品部/研究部主管：通报批评 B. 直接责任人：严重警告，记录关键时间，并记录员工个人诚信档案；开发代表：书面检查，降职、降级和降薪；平台/产品部/研究部主管：降职或降薪 C. 直接责任人：辞退，并记录员工个人诚信档案；开发代表：书面检查，并予以免职；平台/产品部/研究部主管：降职和降级 D. 直接责任人：严重警告，降级降薪，并记录员工个人诚信档案；开发代表：书面检查，并予以免职；平台/产品部/研究部主管：降职和降级"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_64.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪个是开源软件管理的执行组织 A. 软件管理委员会 B. 开源软件工作组 C. 中央软件部 D. 开源软件中心"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_65.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "某产品使用了某开源软件作为其核心功能模块，在社区参与方面应该如何做？ A. 由于产品核心模块属公司机密，不得泄露任何相关信息，因此任何情况下不能参与社区 B. 仅需有限的社区参与，关注社区版本更新，修复社区发布的漏洞即可 C. 参与并贡献社区，培养committer，使本地修改的bug和特性能够合入社区版本 D. 深入参与并贡献社区，培养committer甚至PMCer,建立社区影响力，成为社区领导者，驱动社区项目向着对产品有利的方向发展"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_66.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪项行为有可能导致公司遭受外界开源维权 A. 在公司内部使用EPL许可开源的文档编辑器，不对外开源 B. 修改使用GPL许可的开源软件代码，并将其作为研发工具自用，不对外开源 C. 修改使用GPL许可的开源软件源码，并将其作为产品进行发布销售，不对外开源 D. 修改使用BSD许可的开源软件源码，并将其作为产品销售，不对外开源"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_67.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "对于常见开源社区组织中，Committer和contributor描述正确的有 A. 前者具有代码块的写权限；后者没有 B. 后者具有代码块的写权限；前者没有 C. 任何人都可以是Committer D. 由PMCer提议并投票后，Committer可提升为contributor"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_68.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪种License属于“商业不友好” A. EPL B. Apache C. BSD D. GPL"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_69.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "商业公司一般采用那种方式履行对外开源义务 A. Written Offer模式 B. 随产品分发 C. 网站开源 D. 通过邮件分发"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_7.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "在开源社区中，以下哪些角色具有代码库的写权限 A. contributor B. PMCer C. committer D. 社区基金董事会成员"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_7.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率54% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_7.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_70.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "商业公司一般采用那种方式履行对外开源义务 A. Written Offer模式 B. 随产品分发 C. 网站开源 D. 通过邮件分发"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_71.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下哪个开源license属于公司推荐使用的类型 A. EPL B. GPL C. LGPL D. Apache"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_72.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下对于开源义务履行的描述，哪项是正确的 A. 只要没有修改开源软件的代码，就可以不用履行开源义务 B. 开源义务主要包括形式声明义务，对外开源义务，以及支持社区开发义务 C. 企业向社区捐款越多，其在社区中的影响力也越大 D. 社区一般都有正式或非正式的网络支持"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_73.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "产品线想要在产品中应用开源软件，可以从那个组织得到相应技术和认证支撑 A. 软件管理委员会 B. 开源软件工作组 C. 中央软件部 D. 开源软件中心"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_74.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下行为属于哪一级开源违规:新使用开源软件未通过电子流申报，或在申报过程中提供错误虚假信息。 A. 一级 B. 二级 C. 三级 D. 未对公司造成损失，不构成违规"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_75.txt",
+    "type": "checkSubject.subjectType ==1",
+    "context": "以下行为属于哪一级开源违规:新使用开源软件未通过电子流申报，或在申报过程中提供错误虚假信息。 A. 一级 B. 二级 C. 三级 D. 未对公司造成损失，不构成违规"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_76.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "产品可通过PDM开源软件使用电子流申请产品代码对外开源 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_77.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "开源软件已经逐渐成为商业公司的一种新的商业谋利手段 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_78.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "企业可以通过在开源社区中培养committer或PMC来增强对社区项目的影响力 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_79.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "对于那些有基金会支持的开源社区，由于社区项目多被基金会所控制，所以我们在选择开源软件时，尽量不要选择此类 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_8.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "对外开源的义务有哪些履行方式 A. Written Offer模式 B. 通过网站开源 C. 通过邮件分发 D. 随产品分发"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_8.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率54% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_8.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_80.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "公司已经将开源license风险控制活动融入了IPD流程 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_81.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "公司外购的商业软件中也有可能使用了开源软件，可能会将相关开源风险引入产品，必须予以关注 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_82.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "在产品生命周期中，要注意开源软件的漏洞闭环处理 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_83.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "开源社区基金董事会对开源项目的发展方向有决策权 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_84.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "BSD类license为了保证开源软件能够永久开源，它要求使用者也要把与开源软件相集成的代码开源 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_85.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "在任何情况下，公司都鼓励优先使用市场上已有的商业软件，然后再考虑开源软件 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_86.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "开源软件是可以免费获取和使用的，但其使用也受到开源License的限制 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_87.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "产品在发布之前就经过了开源认证，维护阶段就不必关注该产品中的开源软件了 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_88.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "若产品代码要对外开源，需经过知识产权部门的法务评审，再由开源软件中心决策 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_89.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "在合理的情况下，我司允许的产品代码对外开源 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_9.txt",
+    "type": "checkSubject.subjectType ==2",
+    "context": "开源软件义务主要包含哪些内容 A. 形式声明义务 B. 对外开源的义务 C. 知会软件版权所有人的义务 D. 再次发行的义务"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_9.txt",
+    "type": "isShowResult && publicStatus==1",
+    "context": "回答错误 我的得分： 0 考生平均正确率48% 错题反馈"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_9.txt",
+    "type": "isShowResult",
+    "context": ""
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_90.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "对于违反开源软件管理规定者，还要追究其主管管理者连带责任 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_91.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "项目需要使用某款开源软件，只需SE和开发代表批准即可 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_92.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "开源软件社区是由开源软件的用户、代码贡献者和相关项目资源构成的 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_93.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "若客户没有提出要求，产品在发布时可以不履行开源相关义务 对 错"
+  },
+  {
+    "filePath": "D:\\temp\\kaiyuan\\开源基本认识题_94.txt",
+    "type": "checkSubject.subjectType ==3",
+    "context": "使用开源软件时，只需将开源软件中的许可证和声明信息删除，去除相关标识信息，就可以不履行相关开源义务 对 错"
+  }
+]
