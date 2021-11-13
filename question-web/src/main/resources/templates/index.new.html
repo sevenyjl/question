@@ -10,14 +10,19 @@
 
 <div id="app">
     <div>
-
+        <input v-model="searchConditions.searchKey" placeholder="输入关键字">
+        <button @click="listData">搜索</button>
+        <a href="./exams.new.html"><button>开始考试</button></a>
+    </div>
+    <br>
+    <div>
         <div v-for="(item,index) in list" key="index">
             <div>
                 <span v-show="item.qtype=='SINGLE_CHOICE'">(单选)</span>
                 <span v-show="item.qtype=='MULTI_CHOICE'">(多选)</span>
                 {{item.id}}、
                 <span v-show="editId!==index">
-                    <span style="white-space: pre;">{{item.title}}</span>
+                    <span style="white-space: pre;font-weight:bold">{{item.title}}</span>
                 </span>
                 <span v-show="editId===index">
                     <textarea style="width: 100%;height: 80px" v-model="item.title"></textarea>
@@ -35,10 +40,24 @@
                 </div>
             </div>
             <div v-show="!item.hideAnswer||editId===index">
+                <div>
+                    <span>
+                        答案：<span v-for="(v,i) in item.optionInfoList" key="i">
+                            <span v-show="editId!==index">
+                                <span v-show="v.selected===true">{{String.fromCharCode(65 + i)}}</span>
+                            </span>
+                        </span>
+                        <span v-for="(v,i) in item.optionInfoList" key="i">
+                            <span v-show="editId===index">
+                                <input type="checkbox" v-model="v.selected">{{String.fromCharCode(65 + i)}}
+                            </span>
+                        </span>
+                    </span>
+                </div>
                 <div>解析：</div>
                 <span v-for="(v,i) in item.optionInfoList" key="i">
                     <span v-show="editId!==index" style="white-space: pre;">
-                        <p>{{String.fromCharCode(65 + i)}}：{{v.parsing}}</p>
+                        <p v-show="v.parsing!=''">{{String.fromCharCode(65 + i)}}：{{v.parsing}}</p>
                     </span>
                     <span v-show="editId===index">
                         {{String.fromCharCode(65 + i)}}：
@@ -47,11 +66,12 @@
                 </span>
             </div>
             <div v-show="editId!==index">
-                <button @click="editAction(item,index)">编辑</button>
-                <button @click="showAnswer(item,index)">显示答案</button>
+                <button @click="editAction(index)">编辑</button>
+                <button @click="showAnswer(index)">显示答案</button>
             </div>
             <div v-show="editId===index">
                 <button @click="updateDo(index)">提交修改</button>
+                <button @click="cancelUpdate(index)">取消修改</button>
             </div>
             <hr>
         </div>
@@ -59,14 +79,30 @@
 </div>
 
 <script>
+    var clone = function (obj) {
+        if (obj === null) return null
+        if (typeof obj !== 'object') return obj;
+        if (obj.constructor === Date) return new Date(obj);
+        if (obj.constructor === RegExp) return new RegExp(obj);
+        var newObj = new obj.constructor();  //保持继承链
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) {   //不遍历其原型链上的属性
+                var val = obj[key];
+                newObj[key] = typeof val === 'object' ? arguments.callee(val) : val; // 使用arguments.callee解除与函数名的耦合
+            }
+        }
+        return newObj;
+    };
     const requestUrl = "http://localhost:8080/"
     var vm = new Vue({
         el: '#app',
         data: {
             editId: -1,
+            editQuestion: {},
             searchConditions: {
                 pageNo: 1,
                 pageSize: 10,
+                searchKey: "",
             },
             list: []
         },
@@ -88,12 +124,32 @@
                 })
             },
             // 开启编辑
-            editAction(item, index) {
+            editAction(index) {
                 this.editId = index;
+                this.editQuestion = clone(this.list[index])
             },
             // 显示答案
-            showAnswer(item, index) {
-                item.hideAnswer=!item.hideAnswer
+            showAnswer(index) {
+                this.list[index].hideAnswer = !this.list[index].hideAnswer
+            },
+            // 取消答案
+            cancelUpdate(index) {
+                const that = this;
+                this.editId = -9991;
+                this.list[index] = this.editQuestion
+                this.editQuestion = {}
+
+            },
+            // 通过id获取
+            listById(id) {
+                const that = this;
+                return axios({
+                    method: "get",
+                    url: requestUrl + "/v2/question/get/" + id,
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    return res.data;
+                })
             },
             // 请求数据
             listData() {
@@ -101,7 +157,9 @@
                 axios({
                     method: "get",
                     url: requestUrl + "/v2/question/page?pageNo=" + that.searchConditions.pageNo
-                        + "&pageSize=" + that.searchConditions.pageSize,
+                        + "&pageSize=" + that.searchConditions.pageSize
+                        + "&searchKey=" + that.searchConditions.searchKey
+                    ,
                     header: {'Content-Type': 'application/json'}
                 }).then(res => {
                     that.list = res.data.records;

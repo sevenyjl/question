@@ -15,5 +15,5 @@ import java.util.List;
  * @since 2021-10-11
  */
 public interface QuestionService extends IService<Question> {
-
+    void fengList(List<Question> list);
 }

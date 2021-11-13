@@ -72,96 +72,110 @@ class QuestionApplicationTests {
     void changeOptions() {
         List<Question> list = questionService.list();
         list.forEach(question -> {
-            String options = question.getOptions();
-            String[] split = options.split("\n");
-            HashMap<Character, Character> changeMap = new HashMap<>();
-            int start = 0;
-            // 统计选项个数
-            for (String s : split) {
-                if (StrUtil.isNotEmpty(s)) {
-                    char c = s.charAt(0);
-                    if (start == 0) {
-                        changeMap.put(c, c);
-                        start = ++c;
-                    } else if (c == start) {
-                        changeMap.put(c, c);
-                        start = ++c;
-                    }
-                }
-            }
-            // 随机生成
-            List<Character> collect = changeMap.values()
-                .stream()
-                .sorted((o1, o2) -> RandomUtil.randomBoolean() ? -1 : 1)
-                .collect(Collectors.toList());
-            int index = 0;
-            for (Character character : changeMap.keySet()) {
-                changeMap.put(character, collect.get(index));
-                index++;
-            }
-            // 生成随机选项
-            HashMap<Character, String> optionsMap = new HashMap<>();
-            StringBuilder tempSB = new StringBuilder();
-            start = 0;
-            for (String s : split) {
-                if (StrUtil.isNotEmpty(s)) {
-                    char c = s.charAt(0);
-                    if (start == 0) {
-                        Character character = changeMap.get('A');
-                        s = character + s.substring(1);
-                        start = ++c;
-                    } else if (c == start) {
-                        optionsMap.put((char) (start - 1), tempSB.toString());
-                        tempSB = new StringBuilder();
-                        Character character = changeMap.get(c);
-                        s = character + s.substring(1);
-                        start = ++c;
-                    }
-                }
-                tempSB.append(s).append("\n");
-            }
-            optionsMap.put((char) (start - 1), tempSB.toString());
-            // 答案获取
-            String[] answerSplit = question.getAnswer().split("");
-            StringBuilder answerSB = new StringBuilder();
-            for (String s : answerSplit) {
-                answerSB.append(changeMap.get(s.charAt(0)));
-            }
-            // 合成
-            StringBuilder optionsSB = new StringBuilder();
-            optionsMap.values().stream().sorted().forEach(optionsSB::append);
-
-            // 解析
-            String parsing = question.getParsing();
-            ArrayList<String> strings = new ArrayList<>();
-            StringBuilder temp = new StringBuilder();
-            if (StrUtil.isNotEmpty(parsing)) {
-                String[] parsingSplit = parsing.split("\n");
-                for (String s : parsingSplit) {
-                    if (StrUtil.isNotEmpty(s)) {
-                        Character character = changeMap.get(s.charAt(0));
-                        if (character != null) {
-                            temp.append(character).append(s.substring(1));
-                            strings.add(temp.toString());
-                            temp = new StringBuilder();
-                            continue;
+            for (String s : question.getAnswer().split("")) {
+                question.getOptionInfoList().forEach(optionInfo -> {
+                    if (optionInfo.getRemark().equals(s)) {
+                        optionInfo.setSelected(true);
+                        try {
+                            optionService.updateById(optionInfo);
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
                     }
-                    temp.append(s);
-                }
-                strings.add(temp.toString());
-                StringBuilder parsingSB = new StringBuilder();
-                strings.stream().sorted().forEach(s -> parsingSB.append(s).append("\n"));
-                question.setParsing(parsingSB.toString());
-            }
-            question.setOptions(optionsSB.toString());
-            question.setAnswer(answerSB.toString());
-            try {
-                questionService.updateById(question);
-            }catch (Exception e){
-                System.out.println("保存错误："+question);
+                });
             }
         });
+//        list.forEach(question -> {
+//            String options = question.getOptions();
+//            String[] split = options.split("\n");
+//            HashMap<Character, Character> changeMap = new HashMap<>();
+//            int start = 0;
+//            // 统计选项个数
+//            for (String s : split) {
+//                if (StrUtil.isNotEmpty(s)) {
+//                    char c = s.charAt(0);
+//                    if (start == 0) {
+//                        changeMap.put(c, c);
+//                        start = ++c;
+//                    } else if (c == start) {
+//                        changeMap.put(c, c);
+//                        start = ++c;
+//                    }
+//                }
+//            }
+//            // 随机生成
+//            List<Character> collect = changeMap.values()
+//                    .stream()
+//                    .sorted((o1, o2) -> RandomUtil.randomBoolean() ? -1 : 1)
+//                    .collect(Collectors.toList());
+//            int index = 0;
+//            for (Character character : changeMap.keySet()) {
+//                changeMap.put(character, collect.get(index));
+//                index++;
+//            }
+//            // 生成随机选项
+//            HashMap<Character, String> optionsMap = new HashMap<>();
+//            StringBuilder tempSB = new StringBuilder();
+//            start = 0;
+//            for (String s : split) {
+//                if (StrUtil.isNotEmpty(s)) {
+//                    char c = s.charAt(0);
+//                    if (start == 0) {
+//                        Character character = changeMap.get('A');
+//                        s = character + s.substring(1);
+//                        start = ++c;
+//                    } else if (c == start) {
+//                        optionsMap.put((char) (start - 1), tempSB.toString());
+//                        tempSB = new StringBuilder();
+//                        Character character = changeMap.get(c);
+//                        s = character + s.substring(1);
+//                        start = ++c;
+//                    }
+//                }
+//                tempSB.append(s).append("\n");
+//            }
+//            optionsMap.put((char) (start - 1), tempSB.toString());
+//            // 答案获取
+//            String[] answerSplit = question.getAnswer().split("");
+//            StringBuilder answerSB = new StringBuilder();
+//            for (String s : answerSplit) {
+//                answerSB.append(changeMap.get(s.charAt(0)));
+//            }
+//            // 合成
+//            StringBuilder optionsSB = new StringBuilder();
+//            optionsMap.values().stream().sorted().forEach(optionsSB::append);
+//
+//            // 解析
+//            String parsing = question.getParsing();
+//            ArrayList<String> strings = new ArrayList<>();
+//            StringBuilder temp = new StringBuilder();
+//            if (StrUtil.isNotEmpty(parsing)) {
+//                String[] parsingSplit = parsing.split("\n");
+//                for (String s : parsingSplit) {
+//                    if (StrUtil.isNotEmpty(s)) {
+//                        Character character = changeMap.get(s.charAt(0));
+//                        if (character != null) {
+//                            temp.append(character).append(s.substring(1));
+//                            strings.add(temp.toString());
+//                            temp = new StringBuilder();
+//                            continue;
+//                        }
+//                    }
+//                    temp.append(s);
+//                }
+//                strings.add(temp.toString());
+//                StringBuilder parsingSB = new StringBuilder();
+//                strings.stream().sorted().forEach(s -> parsingSB.append(s).append("\n"));
+//                question.setParsing(parsingSB.toString());
+//            }
+//            question.setOptions(optionsSB.toString());
+//            question.setAnswer(answerSB.toString());
+//            try {
+//                questionService.updateById(question);
+//            } catch (Exception e) {
+//                System.out.println("保存错误：" + question);
+//            }
+//        });
     }
 
     @Test

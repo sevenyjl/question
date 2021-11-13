@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../static/vue.min.js"></script>
+    <script type="text/javascript" src="../static/axios.min.js"></script>
+</head>
+<style>
+    .right {
+        color: green;
+    }
+
+    .error {
+        color: red;
+    }
+
+</style>
+<body>
+
+<div id="app">
+    <div>
+        <button v-for="item in subjectList" @click="changeSubject(item)">{{item}}</button>
+        <a href="./index.new.html">
+            <button>返回首页</button>
+        </a>
+    </div>
+    <hr>
+    <br>
+    <div>
+        <div v-for="(item,index) in list" key="index">
+            <div>
+                <span v-show="item.qtype=='SINGLE_CHOICE'">(单选)</span>
+                <span v-show="item.qtype=='MULTI_CHOICE'">(多选)</span>
+                <span style="white-space: pre;font-weight:bold">{{index + 1}}、{{item.title}}</span>
+            </div>
+            <div>
+                <div v-for="(v,i) in item.optionInfoList" key="i"  style="white-space: pre;">
+                    <!--todo 单选用单选按钮问题-->
+                    <input type="checkbox" v-model="item.selected[i]">{{String.fromCharCode(65 + i)}}：{{v.context}}
+                </div>
+            </div>
+            <div v-show="item.hideAnswer">
+                <button @click="subAnswer(item)">提交</button>
+            </div>
+            <div v-show="!item.hideAnswer">
+                <button @click="subAnswer(item)">提交</button>
+                <div>
+                    <span>
+                    答案：<span v-for="(v,i) in item.optionInfoList" key="i"  style="white-space: pre;">
+                            <span v-bind:class="{right:item.isRight,error:!item.isRight}"
+                                  v-show="v.selected===true">{{String.fromCharCode(65 + i)}}</span>
+                        </span>
+                    </span>
+                </div>
+                <div>解析：</div>
+                <span v-for="(v,i) in item.optionInfoList" key="i" style="white-space: pre;">
+                    <p v-show="v.parsing!=''">{{String.fromCharCode(65 + i)}}：{{v.parsing}}</p>
+                </span>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var clone = function (obj) {
+        if (obj === null) return null
+        if (typeof obj !== 'object') return obj;
+        if (obj.constructor === Date) return new Date(obj);
+        if (obj.constructor === RegExp) return new RegExp(obj);
+        var newObj = new obj.constructor();  //保持继承链
+        for (var key in obj) {
+            if (obj.hasOwnProperty(key)) {   //不遍历其原型链上的属性
+                var val = obj[key];
+                newObj[key] = typeof val === 'object' ? arguments.callee(val) : val; // 使用arguments.callee解除与函数名的耦合
+            }
+        }
+        return newObj;
+    };
+    const requestUrl = "http://localhost:8080/"
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            list: [],
+            subjectList: [],
+            subjectCondition: {
+                subjectNow: null,
+                error: 0,
+                right: 0,
+                doubted: 0,
+            },
+            count: {
+                errorTime: 0,
+                rightTime: 0,
+                noAnswerTime: 50
+            },
+        },
+        methods: {
+            // 提交答案
+            subAnswer(item) {
+                const that = this
+                const temp = [];
+                for (let i = 0; i < item.optionInfoList.length; i++) {
+                    temp[i] = item.optionInfoList[i].selected
+                    item.selected[i] = item.selected[i] === undefined ? false : item.selected[i];
+                    item.optionInfoList[i].selected = item.selected[i]
+                }
+                axios({
+                    method: "post",
+                    url: requestUrl + "v2/question/checkAnswer",
+                    data: item,
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    item.isRight = res.data
+                    item.hideAnswer = false
+                })
+                for (let i = 0; i < item.selected.length; i++) {
+                    item.optionInfoList[i].selected = temp[i]
+                }
+            },
+            // 修改科目
+            changeSubject(item) {
+                this.subjectCondition.subjectNow = item
+                this.listSubjectQuestions()
+            },
+            // 获取考题
+            listSubjectQuestions() {
+                const that = this;
+                axios({
+                    method: "get",
+                    url: requestUrl + "v2/question/listExams?subject=" + that.subjectCondition.subjectNow
+                        + "&error=" + that.subjectCondition.error
+                        + "&right=" + that.subjectCondition.right
+                        + "&doubted=" + that.subjectCondition.doubted
+                    ,
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    res.data.forEach(function (ele) {
+                        ele.isRight = false
+                        ele.selected = []
+                    });
+                    that.list = res.data;
+                })
+            },
+            // 获取考试科目
+            listSubject() {
+                const that = this;
+                axios({
+                    method: "get",
+                    url: requestUrl + "/question/listSubject",
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    that.subjectList = res.data;
+                })
+            }
+        },
+        mounted() {
+            this.listSubject()
+        },
+        watch: {}
+    });
+</script>
+</body>
+</html>

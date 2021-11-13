@@ -42,6 +42,20 @@ public class QuestionAction {
     @Autowired
     private QuestionService questionService;
 
+    private static final ArrayList<String> subject = new ArrayList<>();
+
+    public static ArrayList<String> getSubject() {
+        return subject;
+    }
+
+    static {
+        subject.add("科目1");
+        subject.add("科目2");
+        subject.add("科目3");
+        subject.add("科目4");
+        subject.add("综合随机");
+    }
+
     @GetMapping("index")
     public String index(Model model) {
         // Page<Question> page = questionService.page(new Page<>(0, 5));
@@ -61,10 +75,10 @@ public class QuestionAction {
     @GetMapping("listExams")
     @ResponseBody
     public ResponseEntity listExams(
-        @RequestParam() String subject,
-        @RequestParam(required = false) Integer error,
-        @RequestParam(required = false) Integer right,
-        @RequestParam(required = false) Integer doubted
+            @RequestParam() String subject,
+            @RequestParam(required = false) Integer error,
+            @RequestParam(required = false) Integer right,
+            @RequestParam(required = false) Integer doubted
     ) {
         QueryWrapper<Question> questionQueryWrapper = new QueryWrapper<>();
         if (StrUtil.isNotEmpty(subject) && !"综合随机".equals(subject)) {
@@ -96,12 +110,12 @@ public class QuestionAction {
     @GetMapping("list")
     @ResponseBody
     public ResponseEntity list(
-        @RequestParam(required = false, defaultValue = "0") int pageNo,
-        @RequestParam(required = false, defaultValue = "10") int pageSize,
-        @RequestParam(required = false) boolean hideAnswer,
-        @RequestParam(required = false) Boolean likeable,
-        @RequestParam(required = false) Boolean doubtful,
-        @RequestParam(required = false) String searchWord
+            @RequestParam(required = false, defaultValue = "0") int pageNo,
+            @RequestParam(required = false, defaultValue = "10") int pageSize,
+            @RequestParam(required = false) boolean hideAnswer,
+            @RequestParam(required = false) Boolean likeable,
+            @RequestParam(required = false) Boolean doubtful,
+            @RequestParam(required = false) String searchWord
     ) {
         QueryWrapper<Question> questionQueryWrapper = new QueryWrapper<>();
         if (likeable != null) {
@@ -112,9 +126,9 @@ public class QuestionAction {
         }
         if (StrUtil.isNotEmpty(searchWord)) {
             questionQueryWrapper.lambda()
-                .like(Question::getTitle, searchWord)
-                .or()
-                .like(Question::getOptions, searchWord);
+                    .like(Question::getTitle, searchWord)
+                    .or()
+                    .like(Question::getOptions, searchWord);
         }
         Page<Question> page = questionService.page(new Page<>(pageNo, pageSize), questionQueryWrapper);
         page.getRecords().forEach(s -> s.setHideAnswer(hideAnswer));
@@ -124,12 +138,6 @@ public class QuestionAction {
     @GetMapping("listSubject")
     @ResponseBody
     public ResponseEntity listSubject() {
-        ArrayList<String> subject = new ArrayList<>();
-        subject.add("科目1");
-        subject.add("科目2");
-        subject.add("科目3");
-        subject.add("科目4");
-        subject.add("综合随机");
         return new ResponseEntity(subject, HttpStatus.OK);
     }
 
@@ -146,7 +154,7 @@ public class QuestionAction {
         question.setHideAnswer(question.getHideAnswer() == null || question.getHideAnswer());
         if (question.getQType() == null) {
             question.setQType(
-                question.getAnswer().length() == 1 ? QuestionType.SINGLE_CHOICE : QuestionType.MULTI_CHOICE);
+                    question.getAnswer().length() == 1 ? QuestionType.SINGLE_CHOICE : QuestionType.MULTI_CHOICE);
         }
         question.setDoubtful(question.getDoubtful() == null || question.getDoubtful());
         question.setLikeable(question.getLikeable() == null || question.getLikeable());
