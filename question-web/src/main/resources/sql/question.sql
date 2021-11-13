@@ -3,15 +3,15 @@
 
  Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 80024
+ Source Server Version : 80011
  Source Host           : localhost:3306
  Source Schema         : question
 
  Target Server Type    : MySQL
- Target Server Version : 80024
+ Target Server Version : 80011
  File Encoding         : 65001
 
- Date: 12/11/2021 14:56:16
+ Date: 14/11/2021 00:48:26
 */
 
 SET NAMES utf8mb4;
@@ -22,7 +22,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `question`;
 CREATE TABLE `question`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '题目',
   `options` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '选项',
   `answer` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '答案',
@@ -31,19 +31,19 @@ CREATE TABLE `question`  (
   `original_information` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '原始信息',
   `subject` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '科目',
   `q_type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '题型',
-  `hide_answer` tinyint NULL DEFAULT 1 COMMENT '0隐藏1显示',
-  `doubtful` tinyint NULL DEFAULT 1 COMMENT '存疑的0存疑1不存疑',
-  `likeable` tinyint NULL DEFAULT 1 COMMENT '收藏 0收藏1不收藏',
-  `error_times` int NULL DEFAULT 0 COMMENT '错误次数',
-  `right_times` int NULL DEFAULT 0 COMMENT '正确次数',
-  `doubted_times` int NULL DEFAULT 0 COMMENT '存疑次数',
+  `hide_answer` tinyint(4) NULL DEFAULT 1 COMMENT '0隐藏1显示',
+  `doubtful` tinyint(4) NULL DEFAULT 1 COMMENT '存疑的0存疑1不存疑',
+  `likeable` tinyint(4) NULL DEFAULT 1 COMMENT '收藏 0收藏1不收藏',
+  `error_times` int(11) NULL DEFAULT 0 COMMENT '错误次数',
+  `right_times` int(11) NULL DEFAULT 0 COMMENT '正确次数',
+  `doubted_times` int(11) NULL DEFAULT 0 COMMENT '存疑次数',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 296 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 654 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of question
 -- ----------------------------
-INSERT INTO `question` VALUES (1, '下列说法错误的是（）', 'A 反射可以获取类的构造器\n\nB 反射可获以Method,通过invoke进行方法的调用；\n\nC 反射可以获取注解（@Target为Runtime）信息；\n\nD 反射能够直接get(obj)获取私有的Field成员的值；', 'CD', 'A:通过User.class.getConstructors()/.getDeclaredConstructors()能获取构造方法\nB:通过getMethods能获取方法并使用invoke进行调用\nC:没太懂@Target为Runtime这个的含义，只指定@Target是修饰自定义注解能修饰的位置\nD:首先私有成员需要通过getDeclaredField获取，才能通过field.get(实列对象)来获取实例对象的值\n故选择：CD', NULL, '1、 下列说法错误的是（）A 反射可以获取类的构造器B 反射可获以Method,通过invoke进行方法的调用；C 反射可以获取注解（@Target为Runtime）信息；D 反射能够直接get(obj)获取私有的Field成员的值；答案：CD', '科目2', 'MULTI_CHOICE', 1, 0, 0, 1, 4, 0);
+INSERT INTO `question` VALUES (1, '下列说法错误的是（）', 'A 反射可以获取类的构造器\n\nB 反射可获以Method,通过invoke进行方法的调用；\n\nC 反射可以获取注解（@Target为Runtime）信息；\n\nD 反射能够直接get(obj)获取私有的Field成员的值；', 'CD', 'A:通过User.class.getConstructors()/.getDeclaredConstructors()能获取构造方法\nB:通过getMethods能获取方法并使用invoke进行调用\nC:没太懂@Target为Runtime这个的含义，只指定@Target是修饰自定义注解能修饰的位置\nD:首先私有成员需要通过getDeclaredField获取，才能通过field.get(实列对象)来获取实例对象的值\n故选择：CD', NULL, '1、 下列说法错误的是（）A 反射可以获取类的构造器B 反射可获以Method,通过invoke进行方法的调用；C 反射可以获取注解（@Target为Runtime）信息；D 反射能够直接get(obj)获取私有的Field成员的值；答案：CD', '科目2', 'MULTI_CHOICE', 0, 0, 0, 1, 4, 0);
 INSERT INTO `question` VALUES (2, '下列程序执行结果说法正确的（）\npublic class Test {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        list.add(\"str1\");\n        list.add(2, \"str2\");\n        String str = list.get(1);\n        System.out.println(str);\n    }\n}', 'A 编译时出现异常；\nB 正确运行，输出str1;\nC 正确运行，输出str2;\nD 运行时出现异常', 'D', '运行时list.add(2, \"str2\");报错，因为ArrayList在添加前会调用rangeCheckForAdd方法判断当前索引是否大于了当前数组的size一句话list.add(2, \"str2\")只能替换不能追加', NULL, '2、 下列程序执行结果说法正确的（）1public class Test {23public static void main(String[]args) {4List<String> list = new ArrayList<>();5list.add(\"str1\");6list.add(2,\"str2\");7String str = list.get(1);8System.out.println(str);9}10}A 编译时出现异常；B 正确运行，输出str1;C 正确运行，输出str2;D 运行时出现异常答案：D', '科目2', 'SINGLE_CHOICE', 0, 0, 0, 0, 4, 0);
 INSERT INTO `question` VALUES (3, '关于代码格式如下说法错误的是（）\n\n', 'A 一个源文件按顺序包含版本、package、import、顶层、且用空行分隔；\n\nB 对于非空块和块状结构，左大括号放在行尾；\n\nC 空行不是代码，所以代码中多写几个空行没有关系；\n\nD 一个类或接口的声明部分应当按照类变、实例变量，构造器，方法的顺序出现，且用空行分隔；\n\n', 'C', NULL, NULL, '5、 关于代码格式如下说法错误的是（）\n\nA 一个源文件按顺序包含版本、package、import、顶层、且用空行分隔；\n\nB 对于非空块和块状结构，左大括号放在行尾；\n\nC 空行不是代码，所以代码中多写几个空行没有关系；\n\nD 一个类或接口的声明部分应当按照类变、实例变量，构造器，方法的顺序出现，且用空行分隔；\n\n答案：C', '科目2', 'SINGLE_CHOICE', 1, 0, 0, 0, 2, 0);
 INSERT INTO `question` VALUES (4, '哪个异常可能会泄露文件系统结构信息（）\n\n', 'A java.io.FileNotFountException\n\nB java.io.IOException\n\nC java.util.MissResourceException\n\nD java.sql.SQLException\n\n', 'A', NULL, NULL, '6、 哪个异常可能会泄露文件系统结构信息（）\n\nA java.io.FileNotFountException\n\nB java.io.IOException\n\nC java.util.MissResourceException\n\nD java.sql.SQLException\n\n答案：A', '科目2', 'SINGLE_CHOICE', 1, 0, 0, 0, 1, 0);
@@ -338,7 +338,6 @@ INSERT INTO `question` VALUES (292, '以下代码可以有效预防sql注入的�
 INSERT INTO `question` VALUES (293, '关于hashCode和equals说法正确的是', 'A. 同一次运行中，同一个对象如果equals方法中用到的信息没有改变，多次调用hashCode方法返回值必须相同；\nB. 如果两个对象调用equals方法时相等，则这两个对象的hashCode方法返回也相同；两个对象的hashCode方法返回值相等，则两个对象的equals也相等\nC. 如果两个对象调用equals方法时不相等，则这两个对象的hashCode方法，可以相同，也可以返回不同的值\nD. 覆写equals的时候，应同时覆写hashCode方法\n', 'ACD', 'B：两个对象的hashCode方法返回值相等，两个对象的equals不一定相等', NULL, NULL, '科目2', 'MULTI_CHOICE', 1, 1, 1, 0, 0, 0);
 INSERT INTO `question` VALUES (294, '父类的哪些方法不能被子类重写', 'A. private\nB. final\nC. static\nD. public', 'ABC', '（1）Java中的覆写(override)、重载(overload)、隐藏(hide)、遮蔽(shadow)和遮掩(obscure)\n\n  http://3ms.huawei.com/km/blogs/details/8912349\n\n（2）重写、覆写与重载的区别 http://3ms.huawei.com/km/blogs/details/8742817', NULL, NULL, '科目2', 'MULTI_CHOICE', 1, 1, 1, 0, 0, 0);
 INSERT INTO `question` VALUES (295, '以下使用的断言语句中哪些有副作用 ()', 'A. assert names.isEmpty();\nB. assert names.remove(null);\nC. assert names.add(null);\nD. Boolean nullsRemoved = names.remove(null);\n   Assert nullsRemoved\n', 'BC', '这个断言的副作用是因为它修改了程序中变量的值并且未抛出错误，这样的错误如果不细心的检查是很难发现的。但是同时我们可以根据以上的副作用得到一个有用的特性，根据它来测试断言是否打开。\n一句话：断言不要修改值？\n// A.\nassert names.isEmpty();\n// B.IDEA 提示 \'assert\' has side effects: call to \'add()\' mutates \'names\'\nassert names.remove(null);\n//\n// C.IDEA 提示 \'assert\' has side effects: call to \'add()\' mutates \'names\'\nassert names.add(null);\n// D.\nboolean nullsRemoved = names.remove(null);\nassert nullsRemoved;', NULL, NULL, '科目2', 'MULTI_CHOICE', 1, 1, 1, 0, 0, 0);
-INSERT INTO `question` VALUES (296, '小张是某产品的CME（配置管理工程师）上，小张汇报了本阶段配置项的基线情况，请问小张的工作的哪个活动\r\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, 0);
 INSERT INTO `question` VALUES (297, '某开源软件迭代块，版本更新频繁（如代码增长、社区开发人源、版本发布呈上升趋势）。则可以判断为此软件属于：', 'A 成长期\nB 成熟期\nC 衰退期\nD 导入期', 'A', NULL, '可信科目三-真题 - 梁飞的博客', NULL, '科目3', 'SINGLE_CHOICE', 1, 1, 1, 0, 0, 0);
 INSERT INTO `question` VALUES (298, '可靠性测试FIT的定义是', 'A 通过向系统注入在实际应用中可能发生的故障，观察系统功能性性能变化，故障检测、定位、隔离以及故障恢复清空，发现产品缺陷、评估系统可靠性的测试方法\nB 通过设置逐级递增的加严的环境应力，来加速暴露试验样品的缺陷和薄弱点的一种测试方法\nC 通过注入故障，对业务质量指标及系统可靠性指标进行测试，多维度进行可靠性评价，反应处系统的综合可靠性水平\nD 通过采用温度循环加振动的应力来筛选生产阶段产品，剔除产品中有早期缺陷产品的测试方法', 'A', NULL, '可信科目三-真题 - 梁飞的博客', NULL, '科目3', 'SINGLE_CHOICE', 1, 1, 1, 0, 0, 0);
 INSERT INTO `question` VALUES (299, '以下对敏捷宣言理解错误的是哪一项：', 'A 注重人而不是过程，开发团队的技能应当被成分认识和利用\nB 要拥抱变化，期待系统需求变化，对系统进行设计以更好地融入这些变化\nC 所有过程活动均事先计划，按照计划衡量进度\nD 注重客户协作，客户应当在整个开发过程中紧密参与', 'C', NULL, '可信科目三-真题 - 梁飞的博客', NULL, '科目3', 'SINGLE_CHOICE', 1, 1, 1, 0, 0, 0);
