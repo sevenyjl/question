@@ -1,14 +1,15 @@
 package com.seven.question.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 /**
@@ -24,6 +25,8 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class Question implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -85,4 +88,7 @@ public class Question implements Serializable {
     private int errorTimes;
     private int rightTimes;
     private int doubtedTimes;
+
+    @TableField(exist = false)
+    private List<OptionInfo> optionInfoList=new ArrayList<>();
 }

@@ -4,8 +4,9 @@ import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.seven.question.entity.OptionInfo;
 import com.seven.question.entity.Question;
+import com.seven.question.service.OptionService;
 import com.seven.question.service.QuestionService;
 
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,10 +25,48 @@ class QuestionApplicationTests {
 
     @Test
     void contextLoads() {
+        List<Question> list = questionService.list();
+        list.forEach(question -> {
+            String options = question.getOptions();
+            String replace = options
+                    .replace("\n\n", "\n")
+                    .replace("\n\n", "\n")
+                    .replace("\n\n", "\n");
+            if (!replace.startsWith("\n")) {
+                replace = "\n" + replace;
+            }
+
+//            char now = 'A';
+            ArrayList<OptionInfo> result = new ArrayList<>();
+//            String context = null;
+            String[] split = replace.split("\n[A-J][. 、\n\r:：．，)]{1}");
+            if (split.length < 3) {
+                System.out.println();
+            }
+            char a = 'A';
+            for (String s : split) {
+                if (StrUtil.isNotEmpty(s)) {
+                    OptionInfo build = OptionInfo.builder()
+                            .context(s.trim())
+                            .parsing(question.getParsing())
+                            .questionId(question.getId())
+                            .remark(a + "")
+                            .build();
+                    result.add(build);
+                    a++;
+                }
+            }
+            optionService.saveBatch(result);
+            if (result.size() != 4) {
+                System.out.println(result);
+            }
+        });
     }
 
     @Autowired
     QuestionService questionService;
+    @Autowired
+    OptionService optionService;
 
     @Test
     void changeOptions() {
@@ -130,13 +168,13 @@ class QuestionApplicationTests {
     void sort() {
         int id = 1;
         List<String> strings = FileUtil.readLines("D:\\my\\question-master\\src\\main\\resources\\sql\\question.sql",
-            StandardCharsets.UTF_8);
+                StandardCharsets.UTF_8);
         for (String string : strings) {
             String str = "INSERT INTO `question` VALUES (";
             int i = string.indexOf(str);
             if (i != -1) {
                 FileUtil.appendString(str + id + string.substring(string.indexOf(", '")) + "\n",
-                    "D:\\my\\question-master\\src\\main\\resources\\sql\\question2.sql", StandardCharsets.UTF_8);
+                        "D:\\my\\question-master\\src\\main\\resources\\sql\\question2.sql", StandardCharsets.UTF_8);
                 id++;
             }
         }
@@ -147,7 +185,7 @@ class QuestionApplicationTests {
         // 使用前请备份数据
         List<Question> list = questionService.list();
         Map<String, List<Question>> collect = list.stream()
-            .collect(Collectors.groupingBy(s -> s.getTitle() + s.getOptions()));
+                .collect(Collectors.groupingBy(s -> s.getTitle() + s.getOptions()));
         collect.forEach((k, v) -> {
             if (v.size() > 1) {
                 v.remove(0);

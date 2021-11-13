@@ -51,7 +51,7 @@ import cn.hutool.core.io.FileUtil;
         method = "query",
         args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})
 })
-@Component
+//@Component
 public class SqlInterceptor implements Interceptor {
 
     @Override

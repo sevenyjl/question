@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../static/vue.min.js"></script>
+    <script type="text/javascript" src="../static/axios.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <div>
+
+        <div v-for="(item,index) in list" key="index">
+            <div>
+                <span v-show="item.qtype=='SINGLE_CHOICE'">(单选)</span>
+                <span v-show="item.qtype=='MULTI_CHOICE'">(多选)</span>
+                {{item.id}}、
+                <span v-show="editId!==index">
+                    <span style="white-space: pre;">{{item.title}}</span>
+                </span>
+                <span v-show="editId===index">
+                    <textarea style="width: 100%;height: 80px" v-model="item.title"></textarea>
+                </span>
+            </div>
+            <div>
+                <div v-for="(v,i) in item.optionInfoList" key="i">
+                    <span v-show="editId!==index" style="white-space: pre;">
+                        <p>{{String.fromCharCode(65 + i)}}：{{v.context}}</p>
+                    </span>
+                    <span v-show="editId===index">
+                        {{String.fromCharCode(65 + i)}}：
+                        <textarea style="width: 100%;height: 50px" v-model="v.context"></textarea>
+                    </span>
+                </div>
+            </div>
+            <div v-show="!item.hideAnswer||editId===index">
+                <div>解析：</div>
+                <span v-for="(v,i) in item.optionInfoList" key="i">
+                    <span v-show="editId!==index" style="white-space: pre;">
+                        <p>{{String.fromCharCode(65 + i)}}：{{v.parsing}}</p>
+                    </span>
+                    <span v-show="editId===index">
+                        {{String.fromCharCode(65 + i)}}：
+                        <textarea style="width: 100%;height: 50px" v-model="v.parsing"></textarea>
+                    </span>
+                </span>
+            </div>
+            <div v-show="editId!==index">
+                <button @click="editAction(item,index)">编辑</button>
+                <button @click="showAnswer(item,index)">显示答案</button>
+            </div>
+            <div v-show="editId===index">
+                <button @click="updateDo(index)">提交修改</button>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<script>
+    const requestUrl = "http://localhost:8080/"
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            editId: -1,
+            searchConditions: {
+                pageNo: 1,
+                pageSize: 10,
+            },
+            list: []
+        },
+        methods: {
+            // 更新答案
+            updateDo(index) {
+                const that = this
+                this.editId = -9991;
+                axios({
+                    method: "post",
+                    url: requestUrl + "v2/question/update",
+                    data: that.list[index],
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    console.log('res=>', res);
+                    if (!res) {
+                        alert("修改失败了")
+                    }
+                })
+            },
+            // 开启编辑
+            editAction(item, index) {
+                this.editId = index;
+            },
+            // 显示答案
+            showAnswer(item, index) {
+                item.hideAnswer=!item.hideAnswer
+            },
+            // 请求数据
+            listData() {
+                const that = this;
+                axios({
+                    method: "get",
+                    url: requestUrl + "/v2/question/page?pageNo=" + that.searchConditions.pageNo
+                        + "&pageSize=" + that.searchConditions.pageSize,
+                    header: {'Content-Type': 'application/json'}
+                }).then(res => {
+                    that.list = res.data.records;
+                })
+            }
+        },
+        mounted() {
+            this.listData();
+        },
+        watch: {}
+    });
+</script>
+</body>
+</html>

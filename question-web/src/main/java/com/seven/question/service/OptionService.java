@@ -1,9 +1,9 @@
 package com.seven.question.service;
 
-import com.seven.question.entity.Question;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.seven.question.entity.OptionInfo;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -14,6 +14,7 @@ import java.util.List;
  * @author seven
  * @since 2021-10-11
  */
-public interface QuestionService extends IService<Question> {
+public interface OptionService extends IService<OptionInfo> {
 
+    List<OptionInfo> listByQuestionId(Integer questionId);
 }
