@@ -11,7 +11,7 @@
  Target Server Version : 80011
  File Encoding         : 65001
 
- Date: 14/11/2021 00:48:26
+ Date: 14/11/2021 21:37:26
 */
 
 SET NAMES utf8mb4;
@@ -305,7 +305,7 @@ INSERT INTO `question` VALUES (259, '关于类加载器以下说法正确的是�
 INSERT INTO `question` VALUES (260, 'String str = \"a\" + \"b\" + \"c\" + \"d\";总共会创建几个对象？', 'A. 1\nB. 2\nC. 3\nD. 4\nE. 5', 'A', NULL, '科目二来着熊绒的博客', NULL, '科目2', 'SINGLE_CHOICE', 1, 1, 0, 1, 4, 0);
 INSERT INTO `question` VALUES (261, '下面程序的输出是：\nint count1 = 0;\nfor (int rowNum = 0; rowNum < 3; rowNum++) {\n    for (int colNum = 0; colNum < 4; colNum++) {\n        if (colNum % 2 == 1) {\n            continue;\n        }\n        count1++;\n    }\n}\nint count2 = 0;\nfor (int rowNum = 0; rowNum < 3; rowNum++) {\n    for (int colNum = 0; colNum < 4; colNum++) {\n        if (colNum % 2 == 1) {\n            break;\n        }\n        count2++;\n    }\n}\nSystem.out.println(count1 + \",\" + count2);', 'A. 6, 6\nB. 9, 6\nC. 3, 3\nD. 6, 3', 'D', NULL, '科目二来着熊绒的博客', NULL, '科目2', 'SINGLE_CHOICE', 0, 0, 0, 0, 1, 0);
 INSERT INTO `question` VALUES (262, '下列说法错误的是：', 'A. TreeMap可以有\'null\'的key和value\nB. HashTable不允许有\'null\'的key和value\nC. HashMap线程不安全，但效率高\nD. HashTable是线程安全的，推荐使用', 'A', '解析：\nTreeMap键可以为\'null\'，值不允许\nD:也很牵强，HashTable 不如ConcurentMap好呀', '科目二来着熊绒的博客', NULL, '科目2', 'SINGLE_CHOICE', 0, 0, 0, 1, 4, 0);
-INSERT INTO `question` VALUES (263, '关于HashMap的描述，以下说法错误的是：', 'A. HashMap能够保证其中元素的顺序\nB. HashMap允许将\'null\'作为值\nC. HashMap允许将\'null\'用作键\nD. HashMap使用键值的形式保存数据', 'A', NULL, '科目二来着熊绒的博客', NULL, '科目2', 'SINGLE_CHOICE', 1, 1, 0, 0, 1, 0);
+INSERT INTO `question` VALUES (263, '关于HashMap的描述，以下说法错误的是：', 'A. HashMap能够保证其中元素的顺序\nB. HashMap允许将\'null\'作为值\nC. HashMap允许将\'null\'用作键\nD. HashMap使用键值的形式保存数据', 'A', NULL, '科目二来着熊绒的博客', NULL, '科目2', 'SINGLE_CHOICE', 0, 1, 0, 0, 1, 0);
 INSERT INTO `question` VALUES (264, 'Java NIO Channel通道和IO流的区别，说法正确的是：', 'A. 通道可以异步读写，流是同步读写\nB. 通道和流都可以支持Selector选择器多路复用\nC. 通道可以读也可以写，流一般来说是单向的\nD. 通道是面向缓冲区的，流是面向流的', 'ACD', NULL, '科目二来着熊绒的博客', NULL, '科目2', 'MULTI_CHOICE', 1, 1, 0, 2, 3, 0);
 INSERT INTO `question` VALUES (265, '以下哪些关键字是与线程安全相关的', 'A. const\nB. synchronized\nC. protected\nD. volatile', 'BD', NULL, '科目二来着熊绒的博客', NULL, '科目2', 'MULTI_CHOICE', 1, 1, 0, 0, 1, 0);
 INSERT INTO `question` VALUES (266, '关于CountDownLatch的描述，正确的是', 'A. CountDownLatch.countDown()计数为0就会释放所有线程\nB. CountDownLatch计数为0后，无法重置\nC. CountDownLatch.countdown()为计数减控制\nD. CountDownLatch.await()只能触发阻塞等待，计数不会-1', 'ACD', NULL, '科目二来着熊绒的博客', NULL, '科目2', 'MULTI_CHOICE', 1, 1, 0, 3, 4, 1);

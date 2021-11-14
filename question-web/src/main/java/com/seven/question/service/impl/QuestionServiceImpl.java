@@ -95,11 +95,14 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
                 Set<Integer> collect = optionService.list(new QueryWrapper<OptionInfo>().lambda()
                         .like(OptionInfo::getContext, questionSelectWrapper.getSearchKey()))
                         .stream().map(OptionInfo::getQuestionId).collect(Collectors.toSet());
-                questionSelectWrapper.lambda().or().in(Question::getId, collect);
+                if (!collect.isEmpty()){
+                    questionSelectWrapper.lambda().or().in(Question::getId, collect);
+                }
             }
         }
     }
 
+    @Override
     public void fengList(List<Question> list) {
         list.forEach(this::fengQuestion);
     }
